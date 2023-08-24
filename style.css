@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: hsl(215, 85%, 52%);
+    --color-success: hsl(120, 100%, 30%);
+    --color-error: hsl(0, 85%, 52%);
+    --color-warning: hsl(45, 90%, 52%);
+    --color-info: hsl(209, 70%, 70%);
+
+    --border-radius-extra-small: 0.2rem;
+    --border-radius-small: 0.3rem;
+    --border-radius-medium: 0.5rem;
+    --border-radius-large: 0.8rem;
+}
+
+body {
+    font-family: "Segoe UI", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+small {
+    display: block;
+    font-size: 0.8rem;
+}
+
+.navbar {
+    background: linear-gradient(100deg, gray, #2c2c32);
+    padding: 0.7rem;
+    /* background-image: url(https://i.pinimg.com/originals/76/f2/59/76f25978aca6f32240ca289b41856466.jpg); */
+    background-size: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: #9d9d9d;
+    padding: 0 1rem;
+    transition: 0.2s;
+}
+.nav-link:hover {
+    color: white;
+}
+
+.nav-brand-link {
+    font-size: 1.4rem;
+    background-image: url(images/logo.png);
+    background-size: 2rem;
+    background-repeat: no-repeat;
+    background-position: left 50%;
+    padding-left: 2.5rem;
+    color: white;
+}
+
+#search-box {
+    height: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-image: url(images/searchIcon.png);
+    background-size: 1.5rem;
+    background-repeat: no-repeat;
+    background-position: 98% 50%;
+    width: 11rem;
+    border: none;
+    margin-left: 1rem;
+}
+
+#download-heading {
+    margin-top: 5rem;
+    text-align: center;
+    font-weight: 400;
+}
+#download-heading > p {
+    font-size: 1rem;
+}
+
+#download-cards-wrapper {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    margin-top: 5rem;
+}
+
+.download-card {
+    padding: 2rem;
+    border-radius: var(--border-radius-large);
+    background-color: lightgray;
+    width: 18rem;
+    height: 18rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+.download-card > img {
+    width: 8rem;
+    height: 8rem;
+    margin-bottom: 1rem;
+}
+.download-card a {
+    font-size: 1.1rem;
+    width: 100%;
+    background-color: #0066b8;
+    border: none;
+    padding: 1rem 3rem;
+    color: white;
+    transition: background-color 0.2s;
+    text-decoration: none;
+}
+.download-card a:hover {
+    background-color: #02579c;
+}
+.download-card > .download-button-split-wrapper {
+    display: flex;
+    gap: 0.3rem;
+    width: 100%;
+}
+.download-card > .download-button-split-wrapper > a {
+    width: 50%;
+    padding: 1rem 2rem;
+}
+
+
+a#download-button {
+    transition: 0.2s;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    background-color: lightgray;
+    padding: 0.5rem 1rem;
+    border: 0.1rem solid black;
+}
+a#download-button:hover {
+    background-color: lightblue;
+}
+a#download-button:active {
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+@media (max-width: 1030px) {
+    #download-cards-wrapper {
+        gap: 2rem;
+    }
+    .download-card {
+        width: 15rem;
+        height: 15rem;
+    }
+    .download-card > img {
+        width: 6rem;
+        height: 6rem;
+    }
+    .download-card button {
+        padding: 1rem 2rem;
+    }
+}
+
+@media (max-width: 1122px) {
+    #search-box {
+        display: none;
+    }
+}
