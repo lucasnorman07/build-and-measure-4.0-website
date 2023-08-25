@@ -14,3 +14,7 @@
 //     downloadVersion.textContent = latestRelease.tag_name;
 //     downloadButton.href = latestInstallerURL;
 // });
+
+document.querySelector("#hamburger").onclick = () => {
+    document.querySelector("#nav-links").classList.toggle("active");
+}

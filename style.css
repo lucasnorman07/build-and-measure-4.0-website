@@ -15,10 +15,17 @@
     --border-radius-small: 0.3rem;
     --border-radius-medium: 0.5rem;
     --border-radius-large: 0.8rem;
+
+    --navbar-height: 3rem;
 }
 
 body {
     font-family: "Segoe UI", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+}
+
+main {
+    padding-top: var(--navbar-height);
+    padding-bottom: 1rem;
 }
 
 button {
@@ -30,6 +37,10 @@ small {
     font-size: 0.8rem;
 }
 
+.nowrap {
+    white-space: nowrap;
+}
+
 .navbar {
     background: linear-gradient(100deg, gray, #2c2c32);
     padding: 0.7rem;
@@ -38,6 +49,15 @@ small {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100vw;
+    height: var(--navbar-height);
+    position: fixed;
+}
+
+#nav-links {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
 }
 
 .nav-link {
@@ -132,44 +152,61 @@ small {
     padding: 1rem 2rem;
 }
 
-
-a#download-button {
-    transition: 0.2s;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    color: black;
-    background-color: lightgray;
-    padding: 0.5rem 1rem;
-    border: 0.1rem solid black;
-}
-a#download-button:hover {
-    background-color: lightblue;
-}
-a#download-button:active {
-    transform: translate(-50%, -50%) scale(0.9);
+#hamburger {
+    display: none;
+    background-image: url(images/hamburgerIcon.png);
+    border: none;
+    background-size: 2rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: var(--border-radius-small);
 }
 
-@media (max-width: 1030px) {
+@media (max-width: 900px) {
     #download-cards-wrapper {
-        gap: 2rem;
+        flex-direction: column;
+        align-items: center;
     }
-    .download-card {
-        width: 15rem;
-        height: 15rem;
-    }
-    .download-card > img {
-        width: 6rem;
-        height: 6rem;
-    }
-    .download-card button {
-        padding: 1rem 2rem;
+}
+@media (max-width: 1050px) {
+    #download-cards-wrapper {
+        gap: 1rem;
     }
 }
 
 @media (max-width: 1122px) {
+    .navbar {
+        justify-content: space-between;
+    }
+
+    #nav-links {
+        flex-direction: column;
+        background: #2c2c32;
+        position: fixed;
+        left: 0;
+        top: var(--navbar-height);
+        width: 100vw;
+        align-items: flex-start;
+        gap: 0.5rem;
+        transition: height 0.3s, padding 0.3s;
+        height: 0;
+        padding: 0 0.5rem;
+        pointer-events: none;
+        overflow: hidden;
+    }
+    #nav-links.active {
+        height: 100vh;
+        padding: 1rem 0.5rem;
+        pointer-events: all;
+    }
+    .nav-link {
+        color: white;
+    }
+
     #search-box {
         display: none;
+    }
+    #hamburger {
+        display: block;
     }
 }
