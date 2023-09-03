@@ -17,4 +17,16 @@
 
 document.querySelector("#hamburger").onclick = () => {
     document.querySelector("#nav-links").classList.toggle("active");
-}
+};
+
+const main = document.querySelector("main");
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.onclick = e => {
+        e.preventDefault();
+
+        main.scrollTo({
+            top: e.target.offsetTop,
+            behavior: "smooth"
+        });
+    };
+});
