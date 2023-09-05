@@ -25,10 +25,10 @@
                     <a class="nav-link" href="docs.html">FAQ</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="contact.html">Report issue</a>
+                    <a class="nav-link" href="report-issue.html">Report issue</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="contact.html">Request Feature</a>
+                    <a class="nav-link" href="request-feature.html">Request Feature</a>
                 </li>
             </ul>
             <button id="hamburger"></button>
@@ -36,29 +36,33 @@
 
         <main>
             <div id="documentation">
-                <ul id="table-of-content">
-                    <li>
-                        <input id="search-box" type="text" placeholder="Search docs" />
-                    </li>
-                    <li><a href="#">Usage</a></li>
-                    <li><a href="#">Project management</a></li>
-                    <li>
-                        <a href="#">Editor</a>
-                        <ul>
-                            <li><a href="#">Drawing pallete</a></li>
-                            <li><a href="#">Tool-bar</a></li>
-                            <li><a href="#">Context menu</a></li>
-                            <li><a href="#">Command-bar</a></li>
-                            <li>
-                                <a href="#">Command box</a>
-                                <ul>
-                                    <li><a href="#">Usage</a></li>
-                                    <li><a href="#">Commands</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                <div id="table-of-content-wrapper">
+                    <ul id="table-of-content">
+                        <li>
+                            <input id="search-box" type="text" placeholder="Search docs" />
+                        </li>
+                        <li><a href="#">Usage</a></li>
+                        <li><a href="#">Project management</a></li>
+                        <li>
+                            <a href="#">Editor</a>
+                            <ul>
+                                <li><a href="#">Drawing pallete</a></li>
+                                <li><a href="#">Tool-bar</a></li>
+                                <li><a href="#">Context menu</a></li>
+                                <li><a href="#">Command-bar</a></li>
+                                <li>
+                                    <a href="#">Command box</a>
+                                    <ul>
+                                        <li><a href="#">Usage</a></li>
+                                        <li><a href="#">Commands</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button id="toggle-table-of-content-button"></button>
+                </div>
+
 
                 <article id="documentation-content">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quas nihil

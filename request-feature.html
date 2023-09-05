@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/request-feature.css" />
+        <script defer src="main.js"></script>
+        <title>Build and Measure - request feature</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <a class="nav-link nav-brand-link" href="index.html">Build and Measure</a>
+            <ul id="nav-links">
+                <li>
+                    <a class="nav-link" href="download.html">Download</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="docs.html">Docs</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="release-notes.html">Release notes</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="docs.html">FAQ</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="report-issue.html">Report issue</a>
+                </li>
+                <li>
+                    <a class="nav-link active-nav-link" href="request-feature.html"
+                        >Request Feature</a
+                    >
+                </li>
+            </ul>
+            <button id="hamburger"></button>
+        </nav>
+
+        <main>
+            <form id="request-feature-form">
+                <h2>Missing a feature?</h2>
+                <br />
+                <label>
+                    <strong>Please state the feature you need *</strong><br />
+                    <input
+                        type="text"
+                        id="request-feature-title"
+                        name="title"
+                        placeholder="Title"
+                        required
+                    />
+                </label>
+                <br />
+                <label>
+                    <strong>Please provide a detailed description of the feature you need *</strong><br />
+                    The more details you can share, the better.<br />
+                    <textarea
+                        name="description"
+                        id="request-feature-content"
+                        rows="10"
+                        placeholder="Describe the feature"
+                        required
+                    ></textarea>
+                </label>
+                <!-- <label>
+                    <input type="text" name="title" placeholder="Enter a title" />
+                </label> -->
+                <br />
+                <button id="request-feature-submit">Send feature request</button>
+            </form>
+        </main>
+    </body>
+</html>

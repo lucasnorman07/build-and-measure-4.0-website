@@ -30,3 +30,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     };
 });
+
+document.querySelector("#toggle-table-of-content-button").onclick = () => {
+    document.querySelector("#table-of-content-wrapper").classList.toggle("active");
+};

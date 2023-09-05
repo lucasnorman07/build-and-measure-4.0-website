@@ -27,7 +27,7 @@ body {
 
 main {
     overflow: hidden auto;
-    height: calc(100vh - var(--navbar-height));
+    height: calc(100dvh - var(--navbar-height));
 }
 
 button {
@@ -92,8 +92,8 @@ small {
 #hamburger {
     display: none;
     background-image: url(../images/hamburgerIcon.png);
-    border: none;
     background-size: 2rem;
+    border: none;
     width: 2rem;
     height: 2rem;
     border-radius: var(--border-radius-small);
@@ -120,7 +120,7 @@ small {
         overflow: hidden;
     }
     #nav-links.active {
-        height: 100vh;
+        height: 100dvh;
         padding: 1rem 0.5rem;
         pointer-events: all;
     }

@@ -3,7 +3,8 @@
     width: 90vw;
     margin: auto;
     gap: 2rem;
-    min-height: calc(100vh - var(--navbar-height));
+    min-height: calc(100dvh - var(--navbar-height));
+    justify-content: center;
 }
 
 #list-of-release-notes {
@@ -11,7 +12,7 @@
     background: rgba(211, 211, 211, 0.6);
     padding: 0.5rem;
     border-left: 0.15rem solid #0071bc;
-    height: calc(100vh - var(--navbar-height) - 4rem);
+    height: calc(100dvh - var(--navbar-height) - 4rem);
     position: sticky;
     top: 2rem;
     list-style: none;
@@ -44,4 +45,10 @@
     list-style-position: inside;
     padding: 1rem;
     border-radius: var(--border-radius-large);
+    margin-bottom: 2rem;
+    color: #535353;
+}
+
+.release > h2 {
+    color: black;
 }
