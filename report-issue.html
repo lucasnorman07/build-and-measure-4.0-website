@@ -4,9 +4,9 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/request-feature.css" />
+        <link rel="stylesheet" href="css/report-issue.css" />
         <script defer src="main.js"></script>
-        <title>Build and Measure - request feature</title>
+        <title>Build and Measure - report issue</title>
     </head>
     <body>
         <nav class="navbar">
@@ -25,46 +25,46 @@
                     <a class="nav-link" href="docs.html#doc-faq">FAQ</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="report-issue.html">Report issue</a>
+                    <a class="nav-link active-nav-link" href="report-issue.html">Report issue</a>
                 </li>
                 <li>
-                    <a class="nav-link active-nav-link" href="request-feature.html"
-                        >Request Feature</a
-                    >
+                    <a class="nav-link" href="request-feature.html">Request Feature</a>
                 </li>
             </ul>
             <button id="hamburger"></button>
         </nav>
 
         <main>
-            <form id="request-feature-form">
-                <h2>Missing a feature?</h2>
+            <form id="report-issue-form">
+                <h2>Found an issue?</h2>
                 <br />
                 <label>
-                    <strong>Please state the feature you need *</strong><br />
-                    <input
-                        type="text"
-                        id="request-feature-title"
-                        name="title"
-                        placeholder="Title"
-                        required
-                    />
-                </label>
-                <br />
-                <label>
-                    <strong>Please provide a detailed description of the feature you need *</strong
+                    <strong>Please provide a detailed description of the issue your facing *</strong
                     ><br />
                     The more details you can share, the better.<br />
                     <textarea
                         name="description"
-                        id="request-feature-content"
+                        id="report-issue-content"
                         rows="10"
-                        placeholder="Describe the feature"
+                        placeholder="Describe the issue"
                         required
                     ></textarea>
                 </label>
                 <br />
-                <button id="request-feature-submit">Send feature request</button>
+                <label>
+                    <strong>Please provide a detailed description of how to reproduce it *</strong
+                    ><br />
+                    This is super important or else it will be hard to fix!<br />
+                    <textarea
+                        name="reproduce"
+                        id="report-issue-reproduce"
+                        rows="10"
+                        placeholder="Describe how to reproduce the issue"
+                        required
+                    ></textarea>
+                </label>
+                <br />
+                <button id="report-issue-submit">Send issue</button>
             </form>
         </main>
     </body>

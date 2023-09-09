@@ -3,6 +3,7 @@
     width: 90vw;
     margin: auto;
     gap: 2rem;
+    min-height: calc(100dvh - var(--navbar-height));
 }
 
 #table-of-content {
@@ -37,6 +38,21 @@
 
 #documentation-content {
     margin: 2rem 0;
+    list-style-position: inside;
+}
+
+#documentation-content section {
+    /* background-color: red; */
+    /* background-color: gray; */
+    margin-top: 1rem;
+    padding: 1rem;
+    /* outline: 0.1rem solid blue; */
+}
+#documentation-content section > section {
+    /* background-color: green; */
+}
+#documentation-content section > section > section {
+    /* background-color: orange; */
 }
 
 #search-box {
@@ -76,7 +92,7 @@
         position: absolute;
         left: -12rem;
         top: 0;
-        transition: left 1s;
+        transition: left 0.65s;
     }
     
     #table-of-content-wrapper.active {
@@ -89,6 +105,8 @@
         top: var(--navbar-height);
         height: calc(100dvh - var(--navbar-height));
         border-radius: 0;
+        border-left: none;
+        border-right: 0.15rem solid #0071bc;
     }
 
     #toggle-table-of-content-button {

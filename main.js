@@ -19,18 +19,19 @@ document.querySelector("#hamburger").onclick = () => {
     document.querySelector("#nav-links").classList.toggle("active");
 };
 
-const main = document.querySelector("main");
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.onclick = e => {
-        e.preventDefault();
-
-        main.scrollTo({
-            top: e.target.offsetTop,
-            behavior: "smooth"
-        });
+const toggleTableOfContentButton = document.querySelector("#toggle-table-of-content-button");
+if (toggleTableOfContentButton) {
+    const tableOfContent = document.querySelector("#table-of-content-wrapper");
+    toggleTableOfContentButton.onclick = () => {
+        tableOfContent.classList.toggle("active");
     };
-});
-
-document.querySelector("#toggle-table-of-content-button").onclick = () => {
-    document.querySelector("#table-of-content-wrapper").classList.toggle("active");
-};
+}
+const toggleListOfReleaseNotesButton = document.querySelector(
+    "#toggle-list-of-release-notes-button"
+);
+if (toggleListOfReleaseNotesButton) {
+    const listOfReleaseNotes = document.querySelector("#list-of-release-notes-wrapper");
+    toggleListOfReleaseNotesButton.onclick = () => {
+        listOfReleaseNotes.classList.toggle("active");
+    };
+}

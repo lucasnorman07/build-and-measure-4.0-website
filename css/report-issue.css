@@ -1,4 +1,4 @@
-#request-feature-form {
+#report-issue-form {
     background-color: lightgray;
     width: 60vw;
     height: 80dvh;
@@ -10,19 +10,12 @@
     flex-direction: column;
 }
 
-#request-feature-form label {
+#report-issue-form label {
     color: #535353;
 }
 
-#request-feature-title {
-    padding: 0.5rem;
-    border: none;
-    border-radius: var(--border-radius-medium);
-    width: 100%;
-    margin-top: 0.3rem;
-}
-
-#request-feature-content {
+#report-issue-content,
+#report-issue-reproduce {
     padding: 0.5rem;
     border: none;
     border-radius: var(--border-radius-medium);
@@ -32,19 +25,19 @@
     margin-top: 0.3rem;
 }
 
-#request-feature-submit {
+#report-issue-submit {
     background-color: #5390D9;
     border: none;
     padding: 0.7rem;
     border-radius: var(--border-radius-medium);
 }
 
-#request-feature-submit:hover {
+#report-issue-submit:hover {
     filter: brightness(90%);
 }
 
 @media (max-width: 940px) {
-    #request-feature-form {
+    #report-issue-form {
         width: 100vw;
         height: calc(100dvh - var(--navbar-height));
         margin: 0;

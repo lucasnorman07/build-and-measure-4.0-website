@@ -28,6 +28,7 @@ body {
 main {
     overflow: hidden auto;
     height: calc(100dvh - var(--navbar-height));
+    scroll-behavior: smooth;
 }
 
 button {
