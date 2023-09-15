@@ -19,6 +19,7 @@
     list-style: none;
     white-space: nowrap;
     border-radius: 0 var(--border-radius-large) var(--border-radius-large) 0;
+    overflow: auto;
 }
 #list-of-release-notes ul {
     list-style: none;
@@ -57,22 +58,17 @@
 .release ul {
     padding-left: 1rem !important;
 }
-
 #toggle-list-of-release-notes-button {
     display: none;
     position: absolute;
     left: 0;
     top: var(--navbar-height);
-    width: 2rem;
-    height: 2rem;
-    border: none;
     background-color: lightblue;
+    border-radius: 0;
     border-bottom-right-radius: var(--border-radius-medium);
-    background-image: url(../images/hamburgerIcon.png);
-    background-size: 2rem;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 900px) or (max-height: 600px) {
     #list-of-release-notes-wrapper {
         position: absolute;
         left: -7rem;
@@ -95,7 +91,7 @@
     }
 
     #toggle-list-of-release-notes-button {
-        display: block;
+        display: flex;
         left: 7rem;
     }
 

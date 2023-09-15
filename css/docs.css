@@ -18,6 +18,7 @@
     white-space: nowrap;
     border-radius: 0 var(--border-radius-large) var(--border-radius-large) 0;
     width: 12rem;
+    overflow: auto;
 }
 #table-of-content ul {
     list-style: none;
@@ -78,16 +79,12 @@
     position: absolute;
     left: 0;
     top: var(--navbar-height);
-    width: 2rem;
-    height: 2rem;
-    border: none;
     background-color: lightblue;
+    border-radius: 0;
     border-bottom-right-radius: var(--border-radius-medium);
-    background-image: url(../images/hamburgerIcon.png);
-    background-size: 2rem;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 900px) or (max-height: 600px) {
     #table-of-content-wrapper {
         position: absolute;
         left: -12rem;
@@ -110,7 +107,7 @@
     }
 
     #toggle-table-of-content-button {
-        display: block;
+        display: flex;
         left: 12rem;
     }
 }
