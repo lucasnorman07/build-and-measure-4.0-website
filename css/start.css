@@ -54,7 +54,7 @@ section:first-child {
     gap: 1rem;
 
 }
-.feature-section:nth-child(odd) {
+.feature-section:nth-child(even) {
     flex-wrap: wrap-reverse;
 }
 .feature-section img {
