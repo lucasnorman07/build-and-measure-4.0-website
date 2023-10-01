@@ -1,9 +1,18 @@
+.image {
+    max-width: 60rem;
+    width: 60vw;
+    height: auto;
+    outline: 0.1rem solid black;
+    box-shadow: 0 0 0.5rem black;
+    border-radius: var(--border-radius-small);
+}
+
 #documentation {
     display: flex;
     width: 90vw;
     margin: auto;
     gap: 2rem;
-    min-height: calc(100dvh - var(--navbar-height));
+    /* min-height: calc(100dvh - var(--navbar-height)); */
 }
 
 #table-of-content {
@@ -13,7 +22,7 @@
     border-left: 0.15rem solid #0071bc;
     height: calc(100dvh - var(--navbar-height) - 4rem);
     position: sticky;
-    top: 2rem;
+    top: calc(var(--navbar-height) + 2rem);
     list-style: none;
     white-space: nowrap;
     border-radius: 0 var(--border-radius-large) var(--border-radius-large) 0;
@@ -38,22 +47,13 @@
 }
 
 #documentation-content {
-    margin: 2rem 0;
+    margin-bottom: 2rem;
     list-style-position: inside;
 }
 
 #documentation-content section {
-    /* background-color: red; */
-    /* background-color: gray; */
     margin-top: 1rem;
     padding: 1rem;
-    /* outline: 0.1rem solid blue; */
-}
-#documentation-content section > section {
-    /* background-color: green; */
-}
-#documentation-content section > section > section {
-    /* background-color: orange; */
 }
 
 #search-box {
@@ -86,7 +86,7 @@
 
 @media (max-width: 900px) or (max-height: 600px) {
     #table-of-content-wrapper {
-        position: absolute;
+        position: fixed;
         left: -12rem;
         top: 0;
         transition: left 0.65s;
@@ -109,5 +109,9 @@
     #toggle-table-of-content-button {
         display: flex;
         left: 12rem;
+    }
+
+    .image {
+        width: 80vw;
     }
 }

@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-margin-top: calc(var(--navbar-height) + 2rem);
 }
 
 :root {
@@ -17,18 +18,13 @@
     --border-radius-large: 0.8rem;
 
     --navbar-height: 3rem;
+    
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: "Segoe UI", "Helvetica Neue", "Helvetica", Arial, sans-serif;
-    overflow: hidden;
-    padding-top: var(--navbar-height);
-}
-
-main {
-    overflow: hidden auto;
-    height: calc(100dvh - var(--navbar-height));
-    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 button {
@@ -46,7 +42,6 @@ small {
 
 .navbar {
     background: linear-gradient(100deg, gray, #2c2c32);
-    padding: 0 0.7rem;
     /* background-image: url(https://i.pinimg.com/originals/76/f2/59/76f25978aca6f32240ca289b41856466.jpg); */
     /* background-size: auto; */
     display: flex;
@@ -54,7 +49,7 @@ small {
     justify-content: center;
     width: 100vw;
     height: var(--navbar-height);
-    position: fixed;
+    position: sticky;
     top: 0;
     z-index: 1;
 }
@@ -131,6 +126,7 @@ small {
 @media (max-width: 1122px) {
     .navbar {
         justify-content: space-between;
+        padding: 0 1.5rem;
     }
 
     #nav-links {

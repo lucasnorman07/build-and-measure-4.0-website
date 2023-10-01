@@ -43,7 +43,13 @@
                         <li>
                             <input id="search-box" type="text" placeholder="Search docs" />
                         </li>
-                        <li><a href="#doc-introduction">Introduction</a></li>
+                        <li>
+                            <a href="#doc-overview">Overview</a>
+                            <ul>
+                                <li><a href="#doc-overview-about">About</a></li>
+                                <li><a href="#doc-overview-setup">Setup</a></li>
+                            </ul>
+                        </li>
                         <li>
                             <a href="#doc-project_management">Project management</a>
                             <ul>
@@ -62,34 +68,63 @@
                         <li>
                             <a href="#doc-editor">Editor</a>
                             <ul>
-                                <li><a href="#doc-editor-views_and_sheets">Views and sheets</a></li>
                                 <li>
                                     <a href="#doc-editor-control_panel">Control panel</a>
                                     <ul>
-                                        <li><a href="#doc-editor-control_panel-home">Home</a></li>
                                         <li>
-                                            <a href="#doc-editor-control_panel-save"
-                                                >Save/Save As</a
+                                            <a href="#doc-editor-control_panel-home_button">Home</a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="#doc-editor-control_panel-undo_and_redo_buttons"
+                                                >Undo/Redo</a
                                             >
                                         </li>
                                         <li>
-                                            <a href="#doc-editor-control_panel-export">Export</a>
+                                            <a href="#doc-editor-control_panel-save_button">Save</a>
                                         </li>
                                         <li>
-                                            <a href="#doc-editor-control_panel-views_and_sheets"
-                                                >Views/Sheets</a
+                                            <a href="#doc-editor-control_panel-save_as_button"
+                                                >Save As</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a href="#doc-editor-control_panel-export_button"
+                                                >Export</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a
+                                                href="#doc-editor-control_panel-view_and_sheet_buttons"
+                                                >View/sheet tabs</a
                                             >
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a href="#doc-Tool-bar">Tool-bar</a></li>
-                                <li><a href="#doc-Drawing pallete">Drawing pallete</a></li>
-                                <li><a href="#doc-Command-bar">Command-bar</a></li>
-                                <li><a href="#doc-Context menu">Context menu</a></li>
+                                <li>
+                                    <a href="#doc-editor-views_and_sheets">Views and Sheets</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#doc-editor-views_and_sheets-views">Views</a>
+                                        </li>
+                                        <li>
+                                            <a href="#doc-editor-views_and_sheets-sheets">Sheets</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#doc-editor-drawing_objects">Drawing objects</a></li>
+                                <li>
+                                    <a href="#doc-editor-selecting_objects">Selecting objects</a>
+                                </li>
+                                <li><a href="#doc-editor-tool_bar">Tool-bar</a></li>
+                                <li><a href="#doc-editor-command_bar">Command-bar</a></li>
+                                <li><a href="#doc-editor-drawing_palette">Drawing palette</a></li>
+                                <li><a href="#doc-editor-context_menu">Context menu</a></li>
                                 <li><a href="#doc-editor-command_box">Command box</a></li>
-                                <li><a href="#doc-Settings menu">Settings menu</a></li>
+                                <li><a href="#doc-editor-settings_menu">Settings menu</a></li>
                             </ul>
                         </li>
+                        <li><a href="#tutorials">Tutorials</a></li>
                         <li><a href="#doc-faq">FAQs</a></li>
                     </ul>
                     <button id="toggle-table-of-content-button" class="hamburger-button">
@@ -98,21 +133,37 @@
                 </div>
 
                 <article id="documentation-content">
-                    <section id="doc-introduction">
-                        <h1>Build and Measure <strong>*</strong></h1>
-                        <p>
-                            <strong>
-                                Build and Measure also called BAM is a lightweight 2d drafting
-                                program designed to be easy to use but still capable of creating
-                                precise drawings in no time!
-                            </strong>
-                        </p>
+                    <section id="doc-overview">
+                        <h1>Build and Measure</h1>
+                        <section id="doc-overview-about">
+                            <h1>About</h1>
+                            <p>
+                                Build and Measure, also known as BAM, is a user-friendly 2D drafting
+                                program that comes at no cost, aiming to provide a lightweight
+                                experience for users.
+                                <br />
+                                Build and Measure is created and maintained by a single developer,
+                                and if you find any issue and bugs, please report them and send
+                                feedback, it really helps!
+                            </p>
+                        </section>
+                        <section id="doc-overview-setup">
+                            <h1>Setup</h1>
+                            <p>
+                                Build And Measure is cross platform and available for:<br />
+                                <strong>
+                                    Windows<br />
+                                    MacOS<br />
+                                    Linux<br />
+                                </strong>
+                            </p>
+                        </section>
                     </section>
                     <hr />
                     <section id="doc-project_management">
-                        <h1>Project management <strong>*</strong></h1>
+                        <h1>Project management</h1>
                         <section id="doc-project_management-create_and_save_projects">
-                            <h1>Creating and saving projects <strong>**</strong></h1>
+                            <h1>Creating and saving projects</h1>
                             <p>
                                 To create a project, press the "create project" button in the left
                                 navbar when in the landing page. <br />
@@ -135,71 +186,230 @@
                             </p>
                         </section>
                         <section id="doc-project_management-opening-projects">
-                            <h1>Opening projects <strong>**</strong></h1>
+                            <h1>Opening projects</h1>
                             <p>
-                                To open an existing project, press the "open project" button in the
-                                left navbar when in the landing page. <br />
-                                This will open the editor with an
-                                <abbr
-                                    title="A temporary project that has just been created and not saved yet"
-                                >
-                                    unsaved project
-                                </abbr>
-                                which you can now save by pressing the save button. The first time
-                                you press the save button in a new project you will be required to
-                                specify a file location but after that the file location will be
-                                remembered.
-                            </p>
-
-                            <p>
-                                You can also save a project with the "save as" button which write
-                                the project to a new file, although the file location won't be
-                                stored so the save button will still save in the same file
+                                To open an existing project from a file, press the "open project"
+                                button in the left navbar when in the landing page. <br />
+                                This will let you let you select a project in the file explorer
+                                which will then be opened in the editor, when you press save the
+                                changes will now be written to the opened file
                             </p>
                         </section>
                     </section>
                     <hr />
                     <section id="doc-editor">
-                        <h1>The project editor <strong>*</strong></h1>
-                        Editing projects...
-                        <section id="doc-editor-views_and_sheets">
-                            <h1>Views and sheets <strong>**</strong></h1>
-                            Views and sheets are...
-                        </section>
-                        <hr />
+                        <h1>The project editor</h1>
+
+                        <br />
+                        <img src="images/editor.png" alt="Editor image" class="image" />
+                        <br />
+
                         <section id="doc-editor-control_panel">
-                            <h1>Control panel <strong>**</strong></h1>
-                            The control panel is super duper usefully good!
-                            <section id="doc-editor-control_panel-home">
-                                <h1>Home button <strong>***</strong></h1>
-                                Pressing the home button will take you home
+                            <h1>Control panel</h1>
+                            <p>
+                                The control panel is positioned in the top left corner of the editor
+                                and has buttons to for example save and export the project.
+                            </p>
+                            <section id="doc-editor-control_panel-home_button">
+                                <h1>Home button</h1>
+                                <p>The home button takes you back to the start page.</p>
                             </section>
-                            <hr />
-                            <section id="doc-editor-control_panel-save">
-                                <h1>Save and save as <strong>***</strong></h1>
-                                Saving projects...
+                            <section id="doc-editor-control_panel-save_button">
+                                <h1>Save button</h1>
+                                <p>
+                                    The save button saves the project. More on saving projects
+                                    <a href="#doc-project_management-create_and_save_projects"
+                                        >here</a
+                                    >.
+                                </p>
                             </section>
-                            <hr />
-                            <section id="doc-editor-control_panel-export">
-                                <h1>Export <strong>***</strong></h1>
-                                Export to pdf and svg
+                            <section id="doc-editor-control_panel-save_as_button">
+                                <h1>Save As</h1>
+                                <p>
+                                    The save as button lets you choose a file to save the project
+                                    in. More on saving projects
+                                    <a href="#doc-project_management-create_and_save_projects"
+                                        >here</a
+                                    >.
+                                </p>
                             </section>
-                            <hr />
-                            <section id="doc-editor-control_panel-views_and_sheets">
-                                <h1>Views and Sheets in the control panel <strong>***</strong></h1>
-                                Text introduction the view and sheet tabs and buttons
+                            <section id="doc-editor-control_panel-export_button">
+                                <h1>Export button</h1>
+                                <p>
+                                    The export button toggles a dropdown with two options to export
+                                    to either SVG or PDF.
+                                </p>
                             </section>
                         </section>
-                        <hr />
+
+                        <section id="doc-editor-views_and_sheets">
+                            <h1>Views and sheets</h1>
+                            <p>
+                                A project consists of multiple views and sheets. <br />
+                                Views and sheets are similar in many ways, but one difference is
+                                that the sheets allow you to export the a drawing within a title
+                                block. A view is where you can draw in 1:1 scale, but to export to a
+                                drawing with a title block you need to use a sheet
+                            </p>
+                        </section>
+
+                        <section id="doc-editor-drawing_objects">
+                            <h1>Drawing objects</h1>
+                            <p>
+                                To draw an object, select which object to draw in the
+                                <a href="#doc-editor-tool_bar">tool-bar</a> and then press on the
+                                canvas to start drawing.
+                                <br />
+                                Each object requires a different amount of clicks:
+                            </p>
+                            <ul>
+                                <li>Line - <a href="">polyline</a></li>
+                                <li>Rectangle - 2 clicks</li>
+                                <li>Circle - 2 clicks</li>
+                                <li>Ellipse - 2 clicks</li>
+                                <li>Arc - 3 clicks</li>
+                                <li>Spline - <a href="">polyline</a></li>
+                                <li>Dimension - 3 clicks</li>
+                                <li>Textbox - 1 click</li>
+                                <li>Textbox With Leader - 2 clicks</li>
+                                <li>
+                                    Viewport - 1 click (only available in <a href="">sheets</a>)
+                                </li>
+                            </ul>
+                            <p>
+                                Some objects like the Line and Spline objects are
+                                <a href="">polylines</a>, meaning that they wont stop drawing until
+                                you press the escape key on your keyboard.
+                                <br />
+                                To change for example the line width and stroke color of the object
+                                that will be drawn, you can change the drawing properties in the
+                                <a href="#doc-editor-drawing_palette">drawing palette</a>.
+                            </p>
+                        </section>
+
+                        <section id="doc-editor-selecting_objects">
+                            <h1>Selecting objects</h1>
+                            <p>
+                                To select an object you need to activate the select tool in the
+                                <a href="#doc-editor-tool_bar">tool-bar</a>.<br />
+                                You can select an object by clicking on it or by clicking on a
+                                <a href="">snap point</a> on that object.<br />
+                                You can also drag the mouse (with the left mouse button down) to
+                                select the objects inside of the area that appears.<br />
+                                If you press the <a href="">control key</a> while clicking on an
+                                object or dragging the mouse, any object that were previsly select
+                                will remain selected. Select an object by pressing on it or by
+                                pressing on a <a href="">snap point</a> on that object. To select
+                                multiple object you can drag the mouse around the objects to select
+                                them. An object needs to be fully within the reactangle for it to be
+                                selected.
+                                <br />
+                                You can also select multiple objects by pressing control when
+                                pressing on an object.
+                            </p>
+                        </section>
+
+                        <section id="doc-editor-tool_bar">
+                            <h1>Tool-bar</h1>
+                            <p>
+                                The tool-bar which is located on the left side is used to select the
+                                current tool and to open the <a href="">drawing palette</a>.<br />
+                                There are 11 different tools, the first one is used for selecting
+                                objects and the other are used to draw objects
+                            </p>
+                        </section>
+
+                        <section id="doc-editor-command_bar">
+                            <h1>Command-bar</h1>
+                            <p>
+                                The command-bar is similar to the tool-bar in many ways but it is
+                                only available when you have one or more objects
+                                <a href="">selected</a> and instead of selecting a tool it allows
+                                you to activate a command on the currently selected objects
+                            </p>
+                        </section>
+
+                        <section id="doc-editor-drawing_palette">
+                            <h1>Drawing palette</h1>
+                            <p>
+                                The drawing palette lets you change different drawing
+                                properties/settings on the next object that will be drawn.<br />
+                                Here is a list of all of the drawing properties:
+                            </p>
+                            <ul>
+                                <li>Stroke color - the color of the stroke</li>
+                                <li>Line width - the width of the stroke</li>
+                                <li>Line dash - the dash of the stroke</li>
+                                <li>Font size - the size of the text</li>
+                                <li>Fill color - the color inside of an object</li>
+                                <li>Fill active - if the fill should be visible</li>
+                                <li>
+                                    Show measurements - whether to show the measurements of an
+                                    object
+                                </li>
+                                <li>
+                                    Scale text by line width - whether to scale the text size by the
+                                    line width instead of the font size
+                                </li>
+                                <li>Selected image - the selected image of the image</li>
+                                <li>Image active - if the selected image should be visible</li>
+                                <li>Insulation active - whether to activate insulation</li>
+                                <li>Insulation height - the height of the insulation</li>
+                                <li>Insulation radius - the radius of the insulation</li>
+                                <li>Visible angle - the amount of visible degrees</li>
+                                <li>
+                                    Angle shift - how many degrees the visible angle should
+                                    rotate/shift
+                                </li>
+                                <li>Border radius - the radius of the corners on the object</li>
+                            </ul>
+
+                            <p>
+                                Not every drawing property is available for every object, when you
+                                select a tool you can see which drawing properties that are grayed
+                                out and which ones that are available for that object.
+                            </p>
+                        </section>
+
+                        <section id="doc-editor-context_menu">
+                            <h1>Context menu</h1>
+                            <p>
+                                The context menu is similar to the drawing palette in that it has
+                                the almost same drawing propeties, now called object properties with
+                                the exception of one extra: "Text"<br />
+                                The context menu is only active when one or more objects are
+                                selected
+                            </p>
+                        </section>
+
                         <section id="doc-editor-command_box">
                             <h1>Command box</h1>
-                            if you need create an object with precise dimensions then you can use
-                            the command box
+                            <p>
+                                The command box lets you specify precise distances when drawing and
+                                moving objects.<br />
+                                The command box can either take a single value representing a
+                                distance or two values representing a distance in the x-axis and
+                                y-axis<br />
+                                One cool feature that you can use with the command box is to leave
+                                one section empty (a section is basically a measurement). You can
+                                for example type ",100cm" or "100m," (note the ",") now you're still
+                                using two sections because of the "," but one of the sections is
+                                empty, when a section is empty it will default to the mouse
+                                position, so you could for example draw a line where the x
+                                coordinate is calculated based on the number you provided in the
+                                command box and the y coordinate is calculated based on the mouse
+                                position.
+                            </p>
+                        </section>
+
+                        <section id="doc-editor-settings-menu">
+                            <h1>Settings menu</h1>
+                            <p>TODO</p>
                         </section>
                     </section>
                     <hr />
                     <section id="doc-faq">
-                        <h1>FAQs: <strong>*</strong></h1>
+                        <h1>FAQs:</h1>
                         <ul>
                             <li>What is BAM?</li>
                             <li>How do I install BAM?</li>

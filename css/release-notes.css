@@ -14,7 +14,7 @@
     border-left: 0.15rem solid #0071bc;
     height: calc(100dvh - var(--navbar-height) - 4rem);
     position: sticky;
-    top: 2rem;
+    top: calc(var(--navbar-height) + 2rem);
     width: 7rem;
     list-style: none;
     white-space: nowrap;
@@ -70,7 +70,7 @@
 
 @media (max-width: 900px) or (max-height: 600px) {
     #list-of-release-notes-wrapper {
-        position: absolute;
+        position: fixed;
         left: -7rem;
         top: 0;
         transition: left 0.5s;
