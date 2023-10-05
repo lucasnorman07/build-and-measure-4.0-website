@@ -3,6 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Build and Measure, read the documentation" />
+        <meta name="theme-color" content="#1d73ed" />
+        <link rel="manifest" href="manifest.json" />
+        <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/docs.css" />
         <script defer src="main.js"></script>
@@ -69,6 +73,11 @@
                             <a href="#doc-editor">Editor</a>
                             <ul>
                                 <li>
+                                    <a href="#doc-editor-panning_and_zooming"
+                                        >Panning and zooming</a
+                                    >
+                                </li>
+                                <li>
                                     <a href="#doc-editor-control_panel">Control panel</a>
                                     <ul>
                                         <li>
@@ -119,12 +128,17 @@
                                 <li><a href="#doc-editor-tool_bar">Tool-bar</a></li>
                                 <li><a href="#doc-editor-command_bar">Command-bar</a></li>
                                 <li><a href="#doc-editor-drawing_palette">Drawing palette</a></li>
-                                <li><a href="#doc-editor-context_menu">Context menu</a></li>
+                                <li>
+                                    <a href="#doc-editor-context_menu">Context menu</a>
+                                    <ul>
+                                        <li><a href="#doc-editor-context_menu-differing">Differing</a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="#doc-editor-command_box">Command box</a></li>
                                 <li><a href="#doc-editor-settings_menu">Settings menu</a></li>
                             </ul>
                         </li>
-                        <li><a href="#tutorials">Tutorials</a></li>
+                        <li><a href="#doc-tutorials">Tutorials</a></li>
                         <li><a href="#doc-faq">FAQs</a></li>
                     </ul>
                     <button id="toggle-table-of-content-button" class="hamburger-button">
@@ -166,78 +180,119 @@
                             <h1>Creating and saving projects</h1>
                             <p>
                                 To create a project, press the "create project" button in the left
-                                navbar when in the landing page. <br />
+                                navbar when in the start page. <br />
                                 This will open the editor with an
                                 <abbr
                                     title="A temporary project that has just been created and not saved yet"
                                 >
                                     unsaved project
                                 </abbr>
-                                which you can now save by pressing the save button. The first time
-                                you press the save button in a new project you will be required to
-                                specify a file location but after that the file location will be
-                                remembered.
-                            </p>
-
-                            <p>
-                                You can also save a project with the "save as" button which write
-                                the project to a new file, although the file location won't be
-                                stored so the save button will still save in the same file
+                                which you can now save by pressing the <a href="">save button</a>.
+                                The first time you press the save button in a new project you will
+                                be required to specify a file location but after that the file
+                                location will be remembered. <br /><br />
+                                You can also save a project with the
+                                <a href="">save as button</a> which will let you select a file and
+                                write the project to that file, although the file location won't be
+                                stored so the save button will still save in the same file.
                             </p>
                         </section>
                         <section id="doc-project_management-opening-projects">
                             <h1>Opening projects</h1>
                             <p>
                                 To open an existing project from a file, press the "open project"
-                                button in the left navbar when in the landing page. <br />
-                                This will let you let you select a project in the file explorer
-                                which will then be opened in the editor, when you press save the
-                                changes will now be written to the opened file
+                                button in the left navbar when in the start page, this will let you
+                                let you select a project in the file explorer which will then be
+                                opened in the editor, when you press the
+                                <a href="">save button</a> the changes will now be written to the
+                                opened file.
                             </p>
                         </section>
                     </section>
                     <hr />
                     <section id="doc-editor">
                         <h1>The project editor</h1>
+                        <p>
+                            The project editor lets you create drawings by drawing and manipulating
+                            different kinds of objects on a canvas. <br />
+                        </p>
 
                         <br />
                         <img src="images/editor.png" alt="Editor image" class="image" />
                         <br />
 
+                        <section id="doc-editor-panning_and_zooming">
+                            <h1>Panning and zooming</h1>
+                            <p>
+                                In Build and Measure you can hold down the scrollwheel and move the
+                                mouse to pan around the canvas, and rotate/scroll the scrollwheel to
+                                zoom in and out.<br />
+                                You can also change the "zoom speed" in the
+                                <a href="">settings menu</a>.
+                            </p>
+                        </section>
+
                         <section id="doc-editor-control_panel">
                             <h1>Control panel</h1>
                             <p>
                                 The control panel is positioned in the top left corner of the editor
-                                and has buttons to for example save and export the project.
+                                and has buttons to save/export and control the
+                                <a href="">views and sheets</a> of the project.
                             </p>
+
                             <section id="doc-editor-control_panel-home_button">
                                 <h1>Home button</h1>
                                 <p>The home button takes you back to the start page.</p>
                             </section>
+
+                            <section id="doc-editor-control_panel-undo_and_redo_buttons">
+                                <h1>Undo/redo buttons</h1>
+                                <p>
+                                    The undo and redo buttons let you undo the changes you made to a
+                                    project as well as redo the changes that you have undone.
+                                </p>
+                            </section>
+
                             <section id="doc-editor-control_panel-save_button">
                                 <h1>Save button</h1>
                                 <p>
-                                    The save button saves the project. More on saving projects
-                                    <a href="#doc-project_management-create_and_save_projects"
-                                        >here</a
-                                    >.
+                                    The save button saves the project. If the project is an unsaved
+                                    project that has just been created, then you will be able to
+                                    specify a file location for the project, but after that it will
+                                    always save in that file location.
                                 </p>
                             </section>
+
                             <section id="doc-editor-control_panel-save_as_button">
                                 <h1>Save As</h1>
                                 <p>
                                     The save as button lets you choose a file to save the project
-                                    in. More on saving projects
-                                    <a href="#doc-project_management-create_and_save_projects"
-                                        >here</a
-                                    >.
+                                    in.
                                 </p>
                             </section>
+
                             <section id="doc-editor-control_panel-export_button">
                                 <h1>Export button</h1>
                                 <p>
                                     The export button toggles a dropdown with two options to export
                                     to either SVG or PDF.
+                                </p>
+                            </section>
+
+                            <section id="doc-editor-control_panel-view_and_sheet_buttons">
+                                <h1>View and sheet buttons</h1>
+                                <p>
+                                    The control panel also has buttons for controlling the different
+                                    <a href="">views and sheets</a> of the project.<br />
+                                    First are the view tabs which are located between the "export"
+                                    and "new view" buttons, to change the current view/sheet click
+                                    on a view/sheet tab. You can also rename a view/sheet by
+                                    pressing on it after it is active (is the current
+                                    view/sheet).<br />
+                                    To create a view or sheet press the "new view" and "new sheet"
+                                    buttons to the right of the view tabs.<br />
+                                    To delete the current view/sheet press the "delete view/sheet"
+                                    button to the right of the "new sheet" button;
                                 </p>
                             </section>
                         </section>
@@ -278,7 +333,7 @@
                             </ul>
                             <p>
                                 Some objects like the Line and Spline objects are
-                                <a href="">polylines</a>, meaning that they wont stop drawing until
+                                <a href="">polylines</a>, meaning that they won't stop drawing until
                                 you press the escape key on your keyboard.
                                 <br />
                                 To change for example the line width and stroke color of the object
@@ -290,22 +345,17 @@
                         <section id="doc-editor-selecting_objects">
                             <h1>Selecting objects</h1>
                             <p>
-                                To select an object you need to activate the select tool in the
+                                To select an object you need to activate the select tool which is
+                                the second to top button in the
                                 <a href="#doc-editor-tool_bar">tool-bar</a>.<br />
                                 You can select an object by clicking on it or by clicking on a
                                 <a href="">snap point</a> on that object.<br />
                                 You can also drag the mouse (with the left mouse button down) to
-                                select the objects inside of the area that appears.<br />
+                                select the objects that are fully within the area that appears.<br />
                                 If you press the <a href="">control key</a> while clicking on an
-                                object or dragging the mouse, any object that were previsly select
-                                will remain selected. Select an object by pressing on it or by
-                                pressing on a <a href="">snap point</a> on that object. To select
-                                multiple object you can drag the mouse around the objects to select
-                                them. An object needs to be fully within the reactangle for it to be
-                                selected.
-                                <br />
-                                You can also select multiple objects by pressing control when
-                                pressing on an object.
+                                object or dragging the mouse, any object that were previously select
+                                will remain selected, this allows you to select multiple objects by
+                                clicking on each one.
                             </p>
                         </section>
 
@@ -314,18 +364,32 @@
                             <p>
                                 The tool-bar which is located on the left side is used to select the
                                 current tool and to open the <a href="">drawing palette</a>.<br />
-                                There are 11 different tools, the first one is used for selecting
-                                objects and the other are used to draw objects
+                                Here is a list of all the buttons:
                             </p>
+                            <ul>
+                                <li>Toggle drawing palette button</li>
+                                <li>Select tool - to select objects</li>
+                                <li>Line tool</li>
+                                <li>Rectangle tool</li>
+                                <li>Circle tool</li>
+                                <li>Ellipse tool</li>
+                                <li>Arc tool</li>
+                                <li>Spline tool</li>
+                                <li>Dimension tool</li>
+                                <li>Textbox tool</li>
+                                <li>Textbox With Leader tool</li>
+                                <li>Viewport tool</li>
+                            </ul>
                         </section>
 
                         <section id="doc-editor-command_bar">
                             <h1>Command-bar</h1>
                             <p>
-                                The command-bar is similar to the tool-bar in many ways but it is
+                                The command-bar is similar to the
+                                <a href="#doc-editor-tool_bar">tool-bar</a> in many ways but it is
                                 only available when you have one or more objects
                                 <a href="">selected</a> and instead of selecting a tool it allows
-                                you to activate a command on the currently selected objects
+                                you to activate a command on the currently selected objects.
                             </p>
                         </section>
 
@@ -349,7 +413,7 @@
                                 </li>
                                 <li>
                                     Scale text by line width - whether to scale the text size by the
-                                    line width instead of the font size
+                                    line width (multipled by 20) instead of the font size
                                 </li>
                                 <li>Selected image - the selected image of the image</li>
                                 <li>Image active - if the selected image should be visible</li>
@@ -363,7 +427,6 @@
                                 </li>
                                 <li>Border radius - the radius of the corners on the object</li>
                             </ul>
-
                             <p>
                                 Not every drawing property is available for every object, when you
                                 select a tool you can see which drawing properties that are grayed
@@ -375,11 +438,16 @@
                             <h1>Context menu</h1>
                             <p>
                                 The context menu is similar to the drawing palette in that it has
-                                the almost same drawing propeties, now called object properties with
-                                the exception of one extra: "Text"<br />
+                                the almost same drawing propeties, now called "object properties" with
+                                the exception of one extra: "Text".<br />
                                 The context menu is only active when one or more objects are
-                                selected
+                                selected and the values in the context menu are the same as on the object.
                             </p>
+
+                            <section id="doc-editor-context_menu-differing">
+                                <h1>Differing</h1>
+                                <p>Two selected objects can have different values and then the object properties might look a little different, text/ number inputs now have the text "diff" and button are purple.</p>
+                            </section>
                         </section>
 
                         <section id="doc-editor-command_box">
@@ -408,6 +476,26 @@
                         </section>
                     </section>
                     <hr />
+                    <section id="doc-tutorial">
+                        <h1>Tutorials:</h1>
+                        <ul>
+                            <li>How to download and install the application</li>
+                            <li>How to pan and zoom</li>
+                            <li>How to create and save project</li>
+                            <li>How to open projects</li>
+                            <li>How to draw objects</li>
+                            <li>How to select objects</li>
+                            <li>How to manipulate objects with different commands</li>
+                            <li>
+                                How to draw precise with the command box, snapping and snap grid
+                            </li>
+                        </ul>
+                        <br />
+                        <!-- <video class="video" controls>
+                            <source src="videos/Obstacle roll.mp4" type="video/mp4" />
+                        </video> -->
+                    </section>
+                    <hr />
                     <section id="doc-faq">
                         <h1>FAQs:</h1>
                         <ul>
@@ -422,5 +510,10 @@
                 </article>
             </div>
         </main>
+        <script>
+            if ("serviceWorker" in navigator) {
+                navigator.serviceWorker.register("../service-worker.js");
+            }
+        </script>
     </body>
 </html>

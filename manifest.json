@@ -1,0 +1,31 @@
+{
+    "name": "Build and Measure - website",
+    "short_name": "BAM - web",
+    "background_color": "#ffffff",
+    "description": "Build and Measure, also known as BAM, is a user-friendly 2D drafting program that comes at no cost, aiming to provide a lightweight experience for users.",
+    "icons": [
+        {
+            "src": "images/logo.png",
+            "sizes": "any",
+            "type": "image/png"
+        },
+        {
+            "src": "images/logo.png",
+            "sizes": "any",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "images/logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "logo.ico",
+            "sizes": "256x256"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#6b6161"
+}

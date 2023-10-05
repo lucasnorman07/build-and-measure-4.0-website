@@ -3,6 +3,14 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Build and Measure, also known as BAM, is a user-friendly 2D drafting program
+        that comes at no cost, aiming to provide a lightweight experience for users. Author: Lucas Norman, Category: 2d drafting program"
+        />
+        <meta name="theme-color" content="#1d73ed" />
+        <link rel="manifest" href="manifest.json" />
+        <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/start.css" />
         <script defer src="main.js"></script>
@@ -138,7 +146,8 @@
                     <img src="images/example1.png" alt="Example image 1" />
                     <img src="images/example2.png" alt="Example image 2" />
                     <img src="images/example3.png" alt="Example image 3" />
-                    <img src="images/example1.png" alt="Example image 4" />
+                    <img src="images/example5.png" alt="Example image 4" />
+                    <div id="image-backdrop"></div>
                 </div>
             </section>
             <section>
@@ -146,7 +155,8 @@
                     <h2>Get started in an instant</h2>
                     <p>
                         Completely free, no ads and no accounts needed.<br />
-                        Downloading and installing the software takes less then a minute, what are you waiting for?
+                        Downloading and installing the software takes less then a minute, what are
+                        you waiting for?
                     </p>
                 </span>
             </section>
@@ -182,5 +192,10 @@
             </section>
             <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         </main>
+        <script>
+            if ("serviceWorker" in navigator) {
+                navigator.serviceWorker.register("../service-worker.js");
+            }
+        </script>
     </body>
 </html>

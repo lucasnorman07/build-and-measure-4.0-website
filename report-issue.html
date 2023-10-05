@@ -3,6 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Build and Measure, report an issue" />
+        <meta name="theme-color" content="#1d73ed" />
+        <link rel="manifest" href="manifest.json" />
+        <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/report-issue.css" />
         <script defer src="main.js"></script>
@@ -71,5 +75,10 @@
                 <p>For further support please send an email to "support.bam@gmail.com"</p>
             </form>
         </main>
+        <script>
+            if ("serviceWorker" in navigator) {
+                navigator.serviceWorker.register("../service-worker.js");
+            }
+        </script>
     </body>
 </html>

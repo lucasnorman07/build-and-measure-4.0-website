@@ -29,3 +29,16 @@ const intersectionObserver = new IntersectionObserver(entries => {
 document.querySelectorAll(".hidden").forEach(hiddenElement => {
     intersectionObserver.observe(hiddenElement);
 });
+
+const slidingImages = document.querySelectorAll("#sliding-examples > img");
+document.addEventListener("click", e => {
+    slidingImages.forEach(image => {
+        if (image === e.target) {
+            e.target.classList.toggle("fullscreen");
+        } else {
+
+            image.classList.remove("fullscreen");
+        }
+    });
+        
+})

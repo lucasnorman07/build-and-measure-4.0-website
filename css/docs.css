@@ -1,4 +1,5 @@
-.image {
+.image,
+.video {
     max-width: 60rem;
     width: 60vw;
     height: auto;
@@ -91,7 +92,7 @@
         top: 0;
         transition: left 0.65s;
     }
-    
+
     #table-of-content-wrapper.active {
         left: 0;
     }
@@ -111,7 +112,8 @@
         left: 12rem;
     }
 
-    .image {
+    .image,
+    .video {
         width: 80vw;
     }
 }
