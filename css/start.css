@@ -126,9 +126,9 @@ section:first-child {
 #sliding-examples > img.fullscreen {
     position: fixed;
     left: 0;
-    top: calc(var(--navbar-height) + 1rem);
+    top: var(--navbar-height);
     width: 100vw;
-    height: calc(100vh - var(--navbar-height) - 2rem);
+    height: calc(100dvh - var(--navbar-height));
     max-width: none;
     object-fit: contain;
     cursor: zoom-out;
@@ -138,6 +138,7 @@ section:first-child {
     transition: none !important;
     outline: 0;
     box-shadow: none;
+    margin: 0 !important;
 }
 #sliding-examples > img ~ #image-backdrop {
     display: none;
@@ -148,7 +149,7 @@ section:first-child {
     left: 0;
     top: var(--navbar-height);
     width: 100vw;
-    height: calc(100vh - var(--navbar-height));
+    height: calc(100dvh - var(--navbar-height));
     background-color: rgba(128, 128, 128, 0.596);
     z-index: 1;
 }

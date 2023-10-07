@@ -10,13 +10,13 @@
             "type": "image/png"
         },
         {
-            "src": "images/logo.png",
+            "src": "images/logo-maskable.png",
             "sizes": "any",
             "type": "image/png",
             "purpose": "maskable"
         },
         {
-            "src": "images/logo.png",
+            "src": "images/logo-512.png",
             "sizes": "512x512",
             "type": "image/png"
         },
@@ -27,5 +27,5 @@
     ],
     "start_url": "/",
     "display": "standalone",
-    "theme_color": "#6b6161"
+    "theme_color": "#565659"
 }

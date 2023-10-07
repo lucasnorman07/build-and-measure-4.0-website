@@ -33,12 +33,6 @@ document.querySelectorAll(".hidden").forEach(hiddenElement => {
 const slidingImages = document.querySelectorAll("#sliding-examples > img");
 document.addEventListener("click", e => {
     slidingImages.forEach(image => {
-        if (image === e.target) {
-            e.target.classList.toggle("fullscreen");
-        } else {
-
-            image.classList.remove("fullscreen");
-        }
+        if (image === e.target) e.target.classList.toggle("fullscreen");
     });
-        
-})
+});
