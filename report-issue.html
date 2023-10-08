@@ -10,7 +10,18 @@
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/report-issue.css" />
         <script defer src="main.js"></script>
+        <script defer src="report-issue.js"></script>
         <title>Build and Measure - report issue</title>
+        <!--For Emailjs-->
+        <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+        ></script>
+        <script type="text/javascript">
+            (function () {
+                emailjs.init("6ztAHWeCG45ArnneM");
+            })();
+        </script>
     </head>
     <body>
         <nav class="navbar">
