@@ -27,7 +27,7 @@
     list-style: none;
     white-space: nowrap;
     border-radius: 0 var(--border-radius-large) var(--border-radius-large) 0;
-    width: 12rem;
+    width: 12.5rem;
     overflow: auto;
 }
 #table-of-content ul {
@@ -57,22 +57,45 @@
     padding: 1rem;
 }
 
-#search-box {
+#search-box-wrapper {
+    width: 100%;
+    margin-bottom: 1rem;
+    display: flex;
+    border-radius: var(--border-radius-medium);
+}
+
+#search-box-wrapper > #search-box {
     height: 1rem;
     padding: 1rem;
-    border-radius: var(--border-radius-medium);
+    padding-right: 0;
+    border-radius: var(--border-radius-medium) 0 0 var(--border-radius-medium);
+    border: none;
+    outline: 0.01rem solid gray;
+    width: 100%;
+}
+
+#search-box-wrapper > button {
+    height: 1rem;
     background-image: url(../images/searchIcon.png);
     background-size: 1.5rem;
     background-repeat: no-repeat;
-    background-position: 98% 50%;
-    width: 100%;
+    background-position: 50% 50%;
+    padding: 1rem;
+    border-radius: 0 var(--border-radius-medium) var(--border-radius-medium) 0;
     border: none;
     outline: 0.01rem solid gray;
-    margin-bottom: 1rem;
+}
+#search-box-wrapper > #search-box::-webkit-calendar-picker-indicator {
+    display: none !important;
 }
 
-#search-box:focus {
+#search-box-wrapper:has(:focus-visible) {
     outline: 0.15rem solid black;
+}
+
+#search-box-wrapper > button:focus-visible,
+#search-box-wrapper > button:hover {
+    background-color: lightgray;
 }
 
 #toggle-table-of-content-button {
@@ -88,7 +111,7 @@
 @media (max-width: 900px) or (max-height: 600px) {
     #table-of-content-wrapper {
         position: fixed;
-        left: -12rem;
+        left: -12.5rem;
         top: 0;
         transition: left 0.65s;
     }
@@ -109,7 +132,7 @@
 
     #toggle-table-of-content-button {
         display: flex;
-        left: 12rem;
+        left: 12.5rem;
     }
 
     .image,

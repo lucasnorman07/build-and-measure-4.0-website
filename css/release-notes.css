@@ -15,7 +15,7 @@
     height: calc(100dvh - var(--navbar-height) - 4rem);
     position: sticky;
     top: calc(var(--navbar-height) + 2rem);
-    width: 7rem;
+    width: 7.3rem;
     list-style: none;
     white-space: nowrap;
     border-radius: 0 var(--border-radius-large) var(--border-radius-large) 0;
@@ -71,7 +71,7 @@
 @media (max-width: 900px) or (max-height: 600px) {
     #list-of-release-notes-wrapper {
         position: fixed;
-        left: -7rem;
+        left: -7.3rem;
         top: 0;
         transition: left 0.5s;
     }
@@ -92,7 +92,7 @@
 
     #toggle-list-of-release-notes-button {
         display: flex;
-        left: 7rem;
+        left: 7.3rem;
     }
 
     .release {

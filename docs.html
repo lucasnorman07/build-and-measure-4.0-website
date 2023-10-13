@@ -9,6 +9,7 @@
         <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/docs.css" />
+        <script defer src="searchDocs.js"></script>
         <script defer src="main.js"></script>
         <title>Build and Measure - docs</title>
     </head>
@@ -45,7 +46,11 @@
                 <div id="table-of-content-wrapper">
                     <ul id="table-of-content">
                         <li>
-                            <input id="search-box" type="text" placeholder="Search docs" />
+                            <form id="search-box-wrapper">
+                                <input required id="search-box" type="text" placeholder="Search docs" list="search-options" />
+                                <button></button>
+                                <datalist id="search-options"></datalist>
+                            </form>
                         </li>
                         <li>
                             <a href="#doc-overview">Overview</a>
@@ -152,7 +157,7 @@
 
                 <article id="documentation-content">
                     <section id="doc-overview">
-                        <h1>Build and Measure</h1>
+                        <h1>Overview</h1>
                         <section id="doc-overview-about">
                             <h1>About</h1>
                             <p>
