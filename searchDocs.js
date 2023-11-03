@@ -11,7 +11,6 @@ function setSearchOptions(sections) {
     sections.forEach(section => {
         const optionElement = document.createElement("option");
         optionElement.value = section.headerText;
-        optionElement.textContent = section.link;
         searchBoxOptions.append(optionElement);
     });
 }

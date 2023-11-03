@@ -47,7 +47,13 @@
                     <ul id="table-of-content">
                         <li>
                             <form id="search-box-wrapper">
-                                <input required id="search-box" type="text" placeholder="Search docs" list="search-options" />
+                                <input
+                                    required
+                                    id="search-box"
+                                    type="text"
+                                    placeholder="Search docs"
+                                    list="search-options"
+                                />
                                 <button></button>
                                 <datalist id="search-options"></datalist>
                             </form>
@@ -145,6 +151,7 @@
                                 </li>
                                 <li><a href="#doc-editor-command_box">Command box</a></li>
                                 <li><a href="#doc-editor-settings_menu">Settings menu</a></li>
+                                <li><a href="#doc-editor-shortcuts">Shortcuts</a></li>
                             </ul>
                         </li>
                         <li><a href="#doc-tutorials">Tutorials</a></li>
@@ -468,10 +475,12 @@
                             <h1>Command box</h1>
                             <p>
                                 The command box lets you specify precise distances when drawing and
-                                moving objects.<br />
-                                The command box can either take a single value representing a
-                                distance or two values representing a distance in the x-axis and
-                                y-axis<br />
+                                moving objects. The command box can either take a single value
+                                representing a distance or two values representing a distance in the
+                                x-axis and y-axis
+                            </p>
+                            <br />
+                            <p>
                                 One cool feature that you can use with the command box is to leave
                                 one section empty (a section is basically a measurement). You can
                                 for example type ",100cm" or "100m," (note the ",") now you're still
@@ -482,15 +491,56 @@
                                 command box and the y coordinate is calculated based on the mouse
                                 position.
                             </p>
+                            <br>
+                            <p>Here are some examples of how to use the command box:</p>
+                            <ul>
+                                <li>"100cm, 20mm" when drawing a rectangle - will create a rectangle with the width 100cm and the height 20mm</li>
+                                <li>"100" when drawing a line - will draw a line that's 100mm long (here we are assuming that the <a href="">default unit</a> is mm)</li>
+                                <li>"100cm, 5m" when drawing an ellipse - will create an ellipse with the radiusX of 100cm and the radiusY of 5m</li>
+                                <li>"10dm, 100" when moving an object - will move the selected objects 10dm in the <a href="">x-axis</a> and 100mm in the <a href="">y-axis</a> (here we are assuming that the <a href="">default unit</a> is mm)</li>
+                                <li>"10cm," when drawing a rectangle - will create a rectangle with the width 10cm and a height that will go to the mouse position is</li>
+                                <li>",5dm" when moving an object - will move the selected objects so that the <a href="">x-axis</a> will go to the mouse position and the y-axis 5dm</li>
+                            </ul>
+                            <br>
+                            <p>When using a command the distance you enter will go in the direction of the mouse position, but you can also enter negative numbers that will go the other way.</p>
                         </section>
 
-                        <section id="doc-editor-settings-menu">
+                        <section id="doc-editor-settings_menu">
                             <h1>Settings menu</h1>
                             <p>TODO</p>
                         </section>
+
+                        <section id="doc-editor-shortcuts">
+                            <h1>Shortcuts</h1>
+                            <p>TODO</p>
+                            <ul>
+                                <li><strong>escape</strong> - escaped out of the current action</li>
+                                <li><strong>control + z</strong> - undoes the latest action</li>
+                                <li><strong>control + y</strong> - redoes the latest action</li>
+                                <li><strong>control + a</strong> - selects all objects</li>
+                                <li><strong>control + r</strong> - resets the zoom</li>
+                                <li><strong>spacebar</strong> - activates the select tool</li>
+                                <li><strong>l</strong> - activates the line tool</li>
+                                <li><strong>r</strong> - activates the rectangle tool</li>
+                                <li><strong>c</strong> - activates the circle tool</li>
+                                <li><strong>e</strong> - activates the ellipse tool</li>
+                                <li><strong>a</strong> - activates the arc tool</li>
+                                <li><strong>d</strong> - activates the dimension tool</li>
+                                <li><strong>shift + v</strong> - activates the viewport tool</li>
+                                <li><strong>v</strong> - activates the angle tool</li>
+                                <li><strong>shift + s</strong> - activates the spline tool</li>
+                                <li><strong>shift + t</strong> - activates the textbox with leader tool</li>
+                                <li><strong>t</strong> - activates the textbox tool</li>
+                                <li><strong>delete or backspace</strong> - deletes the selected objects</li>
+                                <li><strong>m</strong> - activates the move command</li>
+                                <li><strong>q</strong> - activates the rotate command</li>
+                                <li><strong>s</strong> - activates the scale command</li>
+                                <li><strong>f</strong> - activates the flip command</li>
+                            </ul>
+                        </section>
                     </section>
                     <hr />
-                    <section id="doc-tutorial">
+                    <section id="doc-tutorials">
                         <h1>Tutorials:</h1>
                         <ul>
                             <li>How to download and install the application</li>
@@ -514,6 +564,7 @@
                         <h1>FAQs:</h1>
                         <ul>
                             <li>What is BAM?</li>
+                            <li>Is BAM free? - Build and Measure is completely free</li>
                             <li>How do I install BAM?</li>
                             <li>How can I create precise drawings?</li>
                             <li>What file formats can I import/export?</li>
