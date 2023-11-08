@@ -30,10 +30,20 @@
                     <a class="nav-link" href="docs.html#doc-faq">FAQ</a>
                 </li>
                 <li>
-                    <a class="nav-link" href="report-issue.html">Report issue</a>
+                    <a
+                        class="nav-link"
+                        target="_blank"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSfwx2RZTZRKdL08w1I6hkX3iR_oFSmka5vkHmC4uCR77JUVcg/viewform?usp=sf_link"
+                        >Report issue</a
+                    >
                 </li>
                 <li>
-                    <a class="nav-link" href="request-feature.html">Request Feature</a>
+                    <a
+                        class="nav-link"
+                        target="_blank"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSeKGur8yM9mvA4GAienLXH_NdfS9PxDFdiTtIk8YuBA0n4N_Q/viewform?usp=sf_link"
+                        >Request Feature</a
+                    >
                 </li>
             </ul>
             <button id="hamburger-button" class="hamburger-button">
@@ -62,7 +72,7 @@
                             <a href="#doc-overview">Overview</a>
                             <ul>
                                 <li><a href="#doc-overview-about">About</a></li>
-                                <li><a href="#doc-overview-setup">Setup</a></li>
+                                <li><a href="#doc-overview-get_started">Get started</a></li>
                             </ul>
                         </li>
                         <li>
@@ -177,7 +187,7 @@
                                 feedback, it really helps!
                             </p>
                         </section>
-                        <section id="doc-overview-setup">
+                        <section id="section-overview-get_started">
                             <h1>Setup</h1>
                             <p>
                                 Build And Measure is cross platform and available for:<br />
@@ -186,6 +196,7 @@
                                     MacOS<br />
                                     Linux<br />
                                 </strong>
+                                <a href="download.html">Download</a>
                             </p>
                         </section>
                     </section>
@@ -350,12 +361,19 @@
                             <p>
                                 Some objects like the Line and Spline objects are
                                 <a href="">polylines</a>, meaning that they won't stop drawing until
-                                you press the escape key on your keyboard.
+                                you press the escape key on your keyboard, unless you turn of polyline in the <a href="">settings menu</a>, then they will have a click count of 2.
                                 <br />
                                 To change for example the line width and stroke color of the object
                                 that will be drawn, you can change the drawing properties in the
                                 <a href="#doc-editor-drawing_palette">drawing palette</a>.
                             </p>
+                            <section id="doc-editor-drawing_objects-polylines">
+                                <h1>Polylins</h1>
+                                <p>
+                                    Polylines are objects that don't stop drawing until you escape by either pressing the escape key or by pressing on another tool.
+                                    
+                                </p>
+                            </section>
                         </section>
 
                         <section id="doc-editor-selecting_objects">
@@ -367,11 +385,11 @@
                                 You can select an object by clicking on it or by clicking on a
                                 <a href="">snap point</a> on that object.<br />
                                 You can also drag the mouse (with the left mouse button down) to
-                                select the objects that are fully within the area that appears.<br />
+                                select the objects that are fully within the area that appears. (it checks if all of the red edge points are within that area)<br />
                                 If you press the <a href="">control key</a> while clicking on an
                                 object or dragging the mouse, any object that were previously select
                                 will remain selected, this allows you to select multiple objects by
-                                clicking on each one.
+                                clicking on each one while holding control.
                             </p>
                         </section>
 
@@ -453,9 +471,10 @@
                         <section id="doc-editor-context_menu">
                             <h1>Context menu</h1>
                             <p>
-                                The context menu is similar to the drawing palette in that it has
-                                the almost same drawing propeties, now called "object properties"
-                                with the exception of one extra: "Text".<br />
+                                The context menu allows you to change properties of an object after
+                                it has been drawn and is similar to the <a href="">drawing palette</a> in that it
+                                has the almost same drawing propeties, now called "object
+                                properties" with the exception of one extra: "Text".<br />
                                 The context menu is only active when one or more objects are
                                 selected and the values in the context menu are the same as on the
                                 object.
@@ -466,7 +485,7 @@
                                 <p>
                                     Two selected objects can have different values and then the
                                     object properties might look a little different, text/ number
-                                    inputs now have the text "diff" and button are purple.
+                                    inputs now have the text "diff" and button inputs are purple.
                                 </p>
                             </section>
                         </section>
@@ -491,23 +510,55 @@
                                 command box and the y coordinate is calculated based on the mouse
                                 position.
                             </p>
-                            <br>
+                            <br />
                             <p>Here are some examples of how to use the command box:</p>
                             <ul>
-                                <li>"100cm, 20mm" when drawing a rectangle - will create a rectangle with the width 100cm and the height 20mm</li>
-                                <li>"100" when drawing a line - will draw a line that's 100mm long (here we are assuming that the <a href="">default unit</a> is mm)</li>
-                                <li>"100cm, 5m" when drawing an ellipse - will create an ellipse with the radiusX of 100cm and the radiusY of 5m</li>
-                                <li>"10dm, 100" when moving an object - will move the selected objects 10dm in the <a href="">x-axis</a> and 100mm in the <a href="">y-axis</a> (here we are assuming that the <a href="">default unit</a> is mm)</li>
-                                <li>"10cm," when drawing a rectangle - will create a rectangle with the width 10cm and a height that will go to the mouse position is</li>
-                                <li>",5dm" when moving an object - will move the selected objects so that the <a href="">x-axis</a> will go to the mouse position and the y-axis 5dm</li>
+                                <li>
+                                    "100cm, 20mm" when drawing a rectangle - will create a rectangle
+                                    with the width 100cm and the height 20mm
+                                </li>
+                                <li>
+                                    "100" when drawing a line - will draw a line that's 100mm long
+                                    (here we are assuming that the <a href="">default unit</a> is
+                                    mm)
+                                </li>
+                                <li>
+                                    "100cm, 5m" when drawing an ellipse - will create an ellipse
+                                    with the radiusX of 100cm and the radiusY of 5m
+                                </li>
+                                <li>
+                                    "10dm, 100" when moving an object - will move the selected
+                                    objects 10dm in the <a href="">x-axis</a> and 100mm in the
+                                    <a href="">y-axis</a> (here we are assuming that the
+                                    <a href="">default unit</a> is mm)
+                                </li>
+                                <li>
+                                    "10cm," when drawing a rectangle - will create a rectangle with
+                                    the width 10cm and a height that will go to the mouse position
+                                    is
+                                </li>
+                                <li>
+                                    ",5dm" when moving an object - will move the selected objects so
+                                    that the <a href="">x-axis</a> will go to the mouse position and
+                                    the y-axis 5dm
+                                </li>
                             </ul>
-                            <br>
-                            <p>When using a command the distance you enter will go in the direction of the mouse position, but you can also enter negative numbers that will go the other way.</p>
+                            <br />
+                            <p>
+                                When using a command the distance you enter will go in the direction
+                                of the mouse position, but you can also enter negative numbers that
+                                will go the other way.
+                            </p>
                         </section>
 
                         <section id="doc-editor-settings_menu">
                             <h1>Settings menu</h1>
-                            <p>TODO</p>
+                            <p>
+                                The settings menu allows you change different settings that effect
+                                the entire project.<br />
+                                Here is a list of all the settings:
+                            </p>
+                            TODO
                         </section>
 
                         <section id="doc-editor-shortcuts">
@@ -529,9 +580,15 @@
                                 <li><strong>shift + v</strong> - activates the viewport tool</li>
                                 <li><strong>v</strong> - activates the angle tool</li>
                                 <li><strong>shift + s</strong> - activates the spline tool</li>
-                                <li><strong>shift + t</strong> - activates the textbox with leader tool</li>
+                                <li>
+                                    <strong>shift + t</strong> - activates the textbox with leader
+                                    tool
+                                </li>
                                 <li><strong>t</strong> - activates the textbox tool</li>
-                                <li><strong>delete or backspace</strong> - deletes the selected objects</li>
+                                <li>
+                                    <strong>delete or backspace</strong> - deletes the selected
+                                    objects
+                                </li>
                                 <li><strong>m</strong> - activates the move command</li>
                                 <li><strong>q</strong> - activates the rotate command</li>
                                 <li><strong>s</strong> - activates the scale command</li>

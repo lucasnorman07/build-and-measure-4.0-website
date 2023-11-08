@@ -9,8 +9,6 @@ const FILES_TO_CACHE = [
     "docs.html",
     "download.html",
     "release-notes.html",
-    "report-issue.html",
-    "request-feature.html",
     // js
     "js/main.js",
     "js/startPageAnimations.js",
@@ -20,8 +18,6 @@ const FILES_TO_CACHE = [
     "css/docs.css",
     "css/download.css",
     "css/release-notes.css",
-    "css/report-issue.css",
-    "css/request-feature.css",
     // images
     "logo.ico",
     "images/editor.png",
@@ -39,8 +35,7 @@ const FILES_TO_CACHE = [
     "manifest.json"
 ];
 
-
-self.addEventListener("install", async e => {  
+self.addEventListener("install", async e => {
     console.log("[SW] install");
     const cache = await caches.open(CACHE_NAME);
     self.skipWaiting();
@@ -75,4 +70,5 @@ async function fetchAssets(e) {
 
 self.addEventListener("fetch", async e => {
     e.respondWith(fetchAssets(e));
-}); 
+});
+
