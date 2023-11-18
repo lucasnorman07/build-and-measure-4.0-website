@@ -1,0 +1,49 @@
+#report-issue-form {
+    background-color: lightgray;
+    width: 60vw;
+    height: 80dvh;
+    margin: 3rem auto;
+    margin-bottom: 0;
+    padding: 3rem;
+    border-radius: var(--border-radius-large);
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+#report-issue-form label {
+    color: #535353;
+}
+
+#report-issue-content,
+#report-issue-reproduce {
+    padding: 0.5rem;
+    border: none;
+    border-radius: var(--border-radius-medium);
+    width: 100%;
+    resize: vertical;
+    max-height: 30rem;
+    margin-top: 0.3rem;
+}
+
+#report-issue-submit {
+    background-color: #5390d9;
+    border: none;
+    padding: 0.7rem;
+    border-radius: var(--border-radius-medium);
+}
+
+#report-issue-submit:hover {
+    filter: brightness(90%);
+}
+
+@media (max-width: 940px) or (max-height: 600px) {
+    #report-issue-form {
+        width: 100vw;
+        height: calc(100dvh - var(--navbar-height));
+        margin: 0;
+        border-radius: 0;
+        position: fixed;
+        top: var(--navbar-height);
+        }
+}

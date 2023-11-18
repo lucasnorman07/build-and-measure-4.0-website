@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Build and Measure, also known as BAM, is a user-friendly 2D drafting program
+        that comes at no cost, aiming to provide a lightweight experience for users. Author: Lucas Norman, Category: 2d drafting program"
+        />
+        <meta name="theme-color" content="#565659" />
+        <link rel="manifest" href="manifest.json" />
+        <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/start.css" />
+
+        <!-- update the version number as needed -->
+        <script defer src="/__/firebase/10.5.2/firebase-app-compat.js"></script>
+        <!-- include only the Firebase features as you need -->
+        <script defer src="/__/firebase/10.5.2/firebase-auth-compat.js"></script>
+        <script defer src="/__/firebase/10.5.2/firebase-database-compat.js"></script>
+        <script defer src="/__/firebase/10.5.2/firebase-firestore-compat.js"></script>
+        <script defer src="/__/firebase/10.5.2/firebase-functions-compat.js"></script>
+        <script defer src="/__/firebase/10.5.2/firebase-messaging-compat.js"></script>
+        <script defer src="/__/firebase/10.5.2/firebase-storage-compat.js"></script>
+        <script defer src="/__/firebase/10.5.2/firebase-analytics-compat.js"></script>
+        <script defer src="/__/firebase/10.5.2/firebase-remote-config-compat.js"></script>
+        <script defer src="/__/firebase/10.5.2/firebase-performance-compat.js"></script>
+        <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+        <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+        <script defer src="js/main.js"></script>
+        <script defer src="js/startPageAnimations.js"></script>
+        <title>Build and Measure</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <a class="nav-link nav-brand-link active-nav-link" href="index.html"
+                >Build and Measure</a
+            >
+            <ul id="nav-links">
+                <li>
+                    <a class="nav-link" href="download.html">Download</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="docs.html">Docs</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="release-notes.html">Release notes</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="docs.html#doc-faq">FAQ</a>
+                </li>
+                <li>
+                    <a
+                        class="nav-link"
+                        target="_blank"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSfwx2RZTZRKdL08w1I6hkX3iR_oFSmka5vkHmC4uCR77JUVcg/viewform?usp=sf_link"
+                        >Report issue</a
+                    >
+                </li>
+                <li>
+                    <a
+                        class="nav-link"
+                        target="_blank"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSeKGur8yM9mvA4GAienLXH_NdfS9PxDFdiTtIk8YuBA0n4N_Q/viewform?usp=sf_link"
+                        >Request Feature</a
+                    >
+                </li>
+            </ul>
+            <button id="hamburger-button" class="hamburger-button">
+                <div class="hamburger-button-icon"></div>
+            </button>
+        </nav>
+
+        <main>
+            <section>
+                <svg
+                    id="logo-svg"
+                    version="1.0"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="256.000000pt"
+                    height="256.000000pt"
+                    viewBox="0 0 256.000000 256.000000"
+                    preserveAspectRatio="xMidYMid meet"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                >
+                    <g
+                        transform="translate(0.000000,256.000000) scale(0.100000,-0.100000)"
+                        fill="#000000"
+                        stroke="none"
+                    >
+                        <path
+                            d="M77 2234 c-4 -4 -7 -288 -7 -631 l0 -623 165 0 c91 0 165 1 165 3 0
+                   1 16 46 35 99 l34 97 -52 3 -52 3 0 165 0 165 112 3 c111 3 111 3 121 30 197
+                   557 223 635 210 643 -7 5 -35 17 -63 26 -42 14 -102 18 -355 21 -168 2 -309 0
+                   -313 -4z m538 -244 c37 -26 45 -37 50 -74 11 -73 -18 -132 -82 -165 -12 -6
+                   -67 -11 -122 -11 l-101 0 0 138 c0 76 3 142 8 147 4 4 51 5 105 1 88 -6 104
+                   -10 142 -36z"
+                            stroke-width="2"
+                            stroke="black"
+                            fill="none"
+                        />
+                        <path
+                            d="M1228 2235 c-3 -3 18 -72 47 -153 29 -81 128 -362 220 -624 l168
+                   -478 103 0 c57 0 104 1 104 3 0 8 153 457 164 482 8 17 47 129 87 250 l74 220
+                   3 -478 2 -477 140 0 140 0 -2 628 -3 627 -200 3 -201 2 -137 -397 c-75 -219
+                   -144 -426 -153 -460 -17 -63 -34 -75 -34 -25 0 23 -50 176 -257 780 l-35 102
+                   -112 0 c-62 0 -115 -2 -118 -5z"
+                            stroke-width="2"
+                            stroke="black"
+                            fill="none"
+                        />
+                        <path
+                            d="M982 1744 c-24 -69 -46 -132 -49 -140 -4 -11 14 -14 97 -14 78 0 101
+                   3 98 13 -3 6 -25 69 -49 139 -24 71 -46 128 -49 128 -3 0 -25 -57 -48 -126z"
+                            stroke-width="2"
+                            stroke="black"
+                            fill="none"
+                        />
+                        <path
+                            d="M815 1268 c-72 -200 -92 -258 -88 -262 8 -8 93 23 134 51 57 37 97
+                   83 126 145 36 78 36 78 -72 78 -67 0 -97 -4 -100 -12z"
+                            stroke-width="2"
+                            stroke="black"
+                            fill="none"
+                        />
+                        <path
+                            d="M1040 1130 l0 -150 125 0 125 0 0 83 c0 61 -6 99 -24 147 l-24 65
+                   -101 3 -101 3 0 -151z"
+                            stroke-width="2"
+                            stroke="black"
+                            fill="none"
+                        />
+                        <path
+                            d="M75 857 c-3 -7 -4 -127 -3 -267 l3 -255 100 0 100 0 3 83 3 82 994 0
+                   994 0 3 -82 3 -83 100 0 100 0 3 268 2 267 -105 0 -105 0 0 -75 0 -75 -995 0
+                   -995 0 0 75 0 75 -100 0 c-72 0 -102 -4 -105 -13z"
+                            stroke-width="2"
+                            stroke="black"
+                            fill="none"
+                        />
+                    </g>
+                </svg>
+                <div id="start-links">
+                    <a class="start-link" href="#about">Read more ▼</a>
+                    <a class="start-link" href="download.html">Download</a>
+                </div>
+            </section>
+            <section>
+                <span class="hidden" id="about">
+                    <h1>What is Build and Measure?</h1>
+                    <p>
+                        Build and Measure, also known as BAM, is a user-friendly 2D drafting program
+                        that comes at no cost, aiming to provide a lightweight experience for users.
+                        <br />
+
+                        Getting started with Build and Measure is a breeze. Dive into the
+                        <a href="">tutorials</a> to learn how to install the software and initiate
+                        your first project.
+
+                        <!-- To get started with Build and Measure you can watch the <a href="#">tutorials</a> on how to setup and begin your first project.
+                        You can also find more in depth info in the <a href="#">docs</a>. -->
+                    </p>
+                </span>
+            </section>
+            <section>
+                <h2 class="hidden center-aligned">Create drawings with ease</h2>
+                <br />
+                <div class="hidden" id="sliding-examples">
+                    <img src="images/example1.png" alt="Example image 1" />
+                    <img src="images/example2.png" alt="Example image 2" />
+                    <img src="images/example3.png" alt="Example image 3" />
+                    <img src="images/example5.png" alt="Example image 4" />
+                    <div id="image-backdrop"></div>
+                </div>
+            </section>
+            <section>
+                <span class="hidden">
+                    <h2>Get started in an instant</h2>
+                    <p>
+                        Completely free, no ads and no accounts needed.<br />
+                        Downloading and installing the software takes less then five minutes, what
+                        are you waiting for? Click here to <a href="download.html">Download</a>.
+                    </p>
+                </span>
+            </section>
+            <section class="feature-section">
+                <span class="hidden">
+                    <h2>Easy to use</h2>
+                    <p>
+                        Create complex drawings without having to spend hours,<br />
+                        or even days learning a complex cad software.
+                    </p>
+                </span>
+                <img class="hidden" src="images/example2.png" alt="Editor image" />
+            </section>
+            <section class="feature-section">
+                <img class="hidden" src="images/editor2.png" alt="Editor image" />
+                <span class="hidden">
+                    <h2>Draw precise</h2>
+                    <p>
+                        Create precise drawings with the command box,<br />
+                        snapping, guide grid and more...
+                    </p>
+                </span>
+            </section>
+            <section class="feature-section">
+                <span class="hidden">
+                    <h2>Export drawings</h2>
+                    <p>
+                        Export drawings to PDF and SVG<br />
+                        with different title blocks
+                    </p>
+                </span>
+                <img class="hidden" src="images/example4.png" alt="Editor image" />
+            </section>
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        </main>
+        <script>
+            if ("serviceWorker" in navigator) {
+                navigator.serviceWorker.register("../service-worker.js");
+            }
+        </script>
+    </body>
+</html>

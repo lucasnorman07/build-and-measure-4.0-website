@@ -1,0 +1,109 @@
+#release-notes-wrapper {
+    display: flex;
+    width: 90vw;
+    margin: auto;
+    gap: 2rem;
+    min-height: calc(100dvh - var(--navbar-height));
+    justify-content: center;
+}
+
+#list-of-release-notes {
+    /* background: linear-gradient(lightgray, rgba(211, 211, 211, 0.6)); */
+    background: lightgray;
+    padding: 0.5rem;
+    border-left: 0.15rem solid #0071bc;
+    height: calc(100dvh - var(--navbar-height) - 4rem);
+    position: sticky;
+    top: calc(var(--navbar-height) + 2rem);
+    width: 7.3rem;
+    list-style: none;
+    white-space: nowrap;
+    border-radius: 0 var(--border-radius-large) var(--border-radius-large) 0;
+    overflow: auto;
+}
+#list-of-release-notes ul {
+    list-style: none;
+    padding-left: 1rem;
+    width: max-content;
+}
+#list-of-release-notes a {
+    color: black;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 1.1rem;
+    transition: 0.2s;
+}
+#list-of-release-notes a:hover {
+    text-decoration: underline;
+    font-weight: 400;
+}
+
+#release-notes {
+    margin-top: 2rem;
+}
+
+.release {
+    background-color: lightgray;
+    list-style-position: inside;
+    padding: 1rem;
+    border-radius: var(--border-radius-large);
+    margin-bottom: 2rem;
+    color: #535353;
+}
+
+.release > h3 {
+    color: black;
+}
+
+.release ul {
+    padding-left: 1rem !important;
+}
+#toggle-list-of-release-notes-button {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: var(--navbar-height);
+    background-color: lightblue;
+    border-radius: 0;
+    border-bottom-right-radius: var(--border-radius-medium);
+}
+
+@media (max-width: 900px) or (max-height: 600px) {
+    #list-of-release-notes-wrapper {
+        position: fixed;
+        left: -7.3rem;
+        top: 0;
+        transition: left 0.5s;
+    }
+    
+    #list-of-release-notes-wrapper.active {
+        left: 0;
+    }
+
+    #list-of-release-notes {
+        position: absolute;
+        left: 0;
+        top: var(--navbar-height);
+        height: calc(100dvh - var(--navbar-height));
+        border-radius: 0;
+        border-left: none;
+        border-right: 0.15rem solid #0071bc;
+    }
+
+    #toggle-list-of-release-notes-button {
+        display: flex;
+        left: 7.3rem;
+    }
+
+    .release {
+        width: 100vw;
+        background-color: white;
+        border-radius: 0;
+        border-bottom: 0.1rem solid black;
+        margin: 0;
+    }
+
+    .release:last-child {
+        border-bottom: none;
+    }
+}
