@@ -4,17 +4,14 @@ document.querySelector("#hamburger-button").onclick = () => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-    const app = firebase.app();
     const auth = firebase.auth();
     const analytics = firebase.analytics();
 
     async function signIn() {
-        const res = await auth.signInAnonymously();
-        // console.log(res);
+        await auth.signInAnonymously();
     }
 
     auth.onAuthStateChanged(user => {
-        console.log(user);
         user && analytics.setUserId(user.uid);
     });
     signIn();

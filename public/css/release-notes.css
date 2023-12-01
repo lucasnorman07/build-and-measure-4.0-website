@@ -43,12 +43,15 @@
 }
 
 .release {
-    background-color: lightgray;
+    background-color: white;
     list-style-position: inside;
     padding: 1rem;
-    border-radius: var(--border-radius-large);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     color: #535353;
+    border-bottom: 0.1rem solid black;
+}
+.release:last-child {
+    border-bottom: none;
 }
 
 .release > h3 {
@@ -75,7 +78,7 @@
         top: 0;
         transition: left 0.5s;
     }
-    
+
     #list-of-release-notes-wrapper.active {
         left: 0;
     }
@@ -97,9 +100,6 @@
 
     .release {
         width: 100vw;
-        background-color: white;
-        border-radius: 0;
-        border-bottom: 0.1rem solid black;
         margin: 0;
     }
 

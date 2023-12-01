@@ -1,8 +1,8 @@
 #about h1 {
-    font-size: 3.75rem;
+    font-size: 3.5rem;
 }
 #about p {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
 }
 
 h2 {
@@ -82,8 +82,9 @@ section:first-child {
     white-space: nowrap;
 }
 #start-links .start-link:hover {
-    background-color: #02579c;
-    color: white;
+    /* background-color: #02579c; */
+    background-color: rgba(0, 0, 0, 0.13);
+    color: #0066b8;
     text-decoration: none;
 }
 

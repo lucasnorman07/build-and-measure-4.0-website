@@ -27,7 +27,7 @@
     list-style: none;
     white-space: nowrap;
     border-radius: 0 var(--border-radius-large) var(--border-radius-large) 0;
-    width: 12.5rem;
+    width: 13rem;
     overflow: auto;
 }
 #table-of-content ul {
@@ -55,6 +55,19 @@
 #documentation-content section {
     margin-top: 1rem;
     padding: 1rem;
+}
+
+#documentation-content ul {
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    list-style-type: none;
+}
+#documentation-content ul ul li {
+    margin-left: 0;
+    font-size: 1;
+    font-weight: normal;
+    list-style-type: disc;
 }
 
 #search-box-wrapper {
@@ -110,7 +123,7 @@
 @media (max-width: 900px) or (max-height: 600px) {
     #table-of-content-wrapper {
         position: fixed;
-        left: -12.5rem;
+        left: -13rem;
         top: 0;
         transition: left 0.65s;
     }
@@ -131,7 +144,7 @@
 
     #toggle-table-of-content-button {
         display: flex;
-        left: 12.5rem;
+        left: 13rem;
     }
 
     .image,

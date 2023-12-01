@@ -321,7 +321,10 @@
                                 <h1>Export button</h1>
                                 <p>
                                     The export button toggles a dropdown with two options to export
-                                    to either SVG or PDF.
+                                    the view/sheet to either SVG or PDF. Both views and sheets can
+                                    be exported, a view will export with the size of the
+                                    <a href="">crop region</a> and a sheet will export everything
+                                    inside of the <a href="">title block</a>.
                                 </p>
                             </section>
 
@@ -346,12 +349,31 @@
                         <section id="doc-editor-views_and_sheets">
                             <h1>Views and sheets</h1>
                             <p>
-                                A project consists of multiple views and sheets. <br />
-                                Views and sheets are similar in many ways, but one difference is
-                                that the sheets allow you to export the a drawing within a title
-                                block. A view is where you can draw in 1:1 scale, but to export to a
-                                drawing with a title block you need to use a sheet
+                                A project is divided up into multiple "views" and "sheets". Views
+                                are used to draw something in 1:1 scale which can then be exported
+                                to a sheet view via the <a href="">viewport tool</a> and then
+                                exported with a frame/title block.
                             </p>
+                            <section id="doc-editor-views_and_sheets-views">
+                                <h1>Views</h1>
+                                <p>
+                                    Each view has a scale and a crop region size, which can be
+                                    changed in the input boxes in the bottom of a view. The scale of
+                                    a view defines which scale the view should be in when it is
+                                    drawn with a viewport in a sheet view. And the crop region is
+                                    the area of the view that will be visible from a viewport and
+                                    cannot be moved (but you can move the objects into the crop
+                                    region).
+                                </p>
+                            </section>
+                            <section id="doc-editor-views_and_sheets-sheets">
+                                <h1>Sheets</h1>
+                                <p>
+                                    A sheet view doesn't have a scale and crop region, but instead
+                                    has a title block and paper size, which are used to create a
+                                    drawing frame/title block which will be used when exporting.
+                                </p>
+                            </section>
                         </section>
 
                         <section id="doc-editor-drawing_objects">
@@ -389,7 +411,7 @@
                                 <a href="#doc-editor-drawing_palette">drawing palette</a>.
                             </p>
                             <section id="doc-editor-drawing_objects-polylines">
-                                <h1>Polylins</h1>
+                                <h1>Polylines</h1>
                                 <p>
                                     Polylines are objects that don't stop drawing until you escape
                                     by either pressing the escape key or by pressing on another
@@ -407,8 +429,8 @@
                                 You can select an object by clicking on it or by clicking on a
                                 <a href="">snap point</a> on that object.<br />
                                 You can also drag the mouse (with the left mouse button down) to
-                                select the objects that are fully within the area that appears. (it
-                                checks if all of the red edge points are within that area)<br />
+                                select the objects that are fully within the area that appears (it
+                                checks if all of the red edge points are within that area).<br />
                                 If you press the <a href="">control key</a> while clicking on an
                                 object or dragging the mouse, any object that were previously select
                                 will remain selected, this allows you to select multiple objects by
@@ -582,7 +604,97 @@
                                 the entire project.<br />
                                 Here is a list of all the settings:
                             </p>
-                            TODO
+                            <ul>
+                                <li>
+                                    Appearance
+                                    <ul>
+                                        <li>Canvas background color - background color</li>
+                                        <li>Selected object color - color of selected objects</li>
+                                        <li>Line cap - how lines should look at the ends</li>
+                                        <li>Line join - how lines should look where they join</li>
+                                        <li>
+                                            Polyline - if <a href="">polylines</a> should be active
+                                        </li>
+                                        <li>
+                                            Render movement info - if there should be information
+                                            rendered when drawing
+                                        </li>
+                                        <li>
+                                            Fixed line width - if all objects will have the same
+                                            line width no matter the zoom
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Snapping
+                                    <ul>
+                                        <li>
+                                            Snap distance - how far away the mouse has to be to snap
+                                            to a point
+                                        </li>
+                                        <li>
+                                            Snap to point - if the mouse can snap the end points
+                                            (red)
+                                        </li>
+                                        <li>
+                                            Snap to center - if the mouse can snap the center points
+                                            (blue)
+                                        </li>
+                                        <li>
+                                            Snap on line - if the mouse can snap to nearest point on
+                                            a line (green)
+                                        </li>
+                                        <li>
+                                            Snap to intersection - if the mouse can snap the
+                                            intersection points between two objects (purple)
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Grid
+                                    <ul>
+                                        <li>Grid active - if the grid should be active</li>
+                                        <li>
+                                            Grid snap interval - the distance between all grid
+                                            squares
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Units and precision
+                                    <ul>
+                                        <li>
+                                            Default unit - the default unit of the project: mm, cm,
+                                            dm or m
+                                        </li>
+                                        <li>
+                                            Decimal precision - how many decimals each measurement
+                                            should be rounded to when being displayed (this does not
+                                            influence how precise calculations are, it is just
+                                            applies when displaying measurements)
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Zoom
+                                    <ul>
+                                        <li>
+                                            Zoom speed - what factor multiply the screen size with
+                                            every time you scroll/zoom (with other words how much
+                                            bigger the screen gets every time you zoom)
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Danger zone
+                                    <ul>
+                                        <li>
+                                            Reset settings - if this setting is checked when you
+                                            save the settings, all of the settings will be reset
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </section>
 
                         <section id="doc-editor-shortcuts">
