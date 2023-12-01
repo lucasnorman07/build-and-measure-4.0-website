@@ -57,7 +57,7 @@
     padding: 1rem;
 }
 
-#documentation-content ul {
+#documentation-content ul li:has(ul) {
     margin-left: 1rem;
     font-size: 1.1rem;
     font-weight: bold;
