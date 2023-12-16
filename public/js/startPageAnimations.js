@@ -26,7 +26,7 @@ const intersectionObserver = new IntersectionObserver(entries => {
     });
 });
 
-document.querySelectorAll(".hidden").forEach(hiddenElement => {
+document.querySelectorAll(".fade-in").forEach(hiddenElement => {
     intersectionObserver.observe(hiddenElement);
 });
 

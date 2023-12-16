@@ -172,11 +172,12 @@ section:first-child {
     transition: transform 1s 0.3s, scale 0.3s;
 }
 
-.hidden {
+.fade-in {
     opacity: 0;
     transition: 1s;
     filter: blur(5px);
-    transform: translateX(-100%);
+    /* If the translate is 100%, then the intersection observer doesn't function properly */
+    transform: translateX(-99%);
 }
 
 .show {

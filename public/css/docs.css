@@ -42,6 +42,15 @@
     font-size: 1.1rem;
     transition: 0.2s;
 }
+#table-of-content > li > a {
+    font-size: 1.2rem;
+}
+#table-of-content > li > ul > li > a {
+    font-size: 1.1rem;
+}
+#table-of-content > li > ul > li > ul > li > a {
+    font-size: 1rem;
+}
 #table-of-content a:hover {
     text-decoration: underline;
     font-weight: 400;
@@ -59,13 +68,11 @@
 
 #documentation-content ul li:has(ul) {
     margin-left: 1rem;
-    font-size: 1.1rem;
     font-weight: bold;
     list-style-type: none;
 }
 #documentation-content ul ul li {
     margin-left: 0;
-    font-size: 1;
     font-weight: normal;
     list-style-type: disc;
 }
