@@ -29,6 +29,8 @@ const FILES_TO_CACHE = [
     "images/example5.png",
     "images/editor.png",
     "images/hamburgerIcon.png",
+    "images/logo-512.png",
+    "images/logo-maskable.png",
     "images/logo.png",
     "images/searchIcon.png",
     // manifest
