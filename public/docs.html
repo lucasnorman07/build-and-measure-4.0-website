@@ -113,6 +113,9 @@
                             <a href="#doc-editor">Editor</a>
                             <ul>
                                 <li>
+                                    <a href="#doc-editor-coordinate_system">Coordinate system</a>
+                                </li>
+                                <li>
                                     <a href="#doc-editor-panning_and_zooming"
                                         >Panning and zooming</a
                                     >
@@ -161,7 +164,19 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a href="#doc-editor-drawing_objects">Drawing objects</a></li>
+                                <li>
+                                    <a href="#doc-editor-drawing_objects">Drawing objects</a>
+                                    <ul>
+                                        <li>
+                                            <a href="#doc-editor-drawing_objects-polylines"
+                                                >Polylines</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#doc-editor-snapping">Snapping</a>
+                                </li>
                                 <li>
                                     <a href="#doc-editor-selecting_objects">Selecting objects</a>
                                 </li>
@@ -202,21 +217,29 @@
                                 experience for users.
                                 <br />
                                 Build and Measure is created and maintained by a single developer,
-                                and if you find any issue and bugs, please report them and send
-                                feedback, it really helps!
+                                and if you find any issue and bugs,
+                                <a
+                                    href="https://docs.google.com/forms/d/e/1FAIpQLSfwx2RZTZRKdL08w1I6hkX3iR_oFSmka5vkHmC4uCR77JUVcg/viewform?usp=sf_link"
+                                    >report them</a
+                                >
+                                them and
+                                <a
+                                    href="https://docs.google.com/forms/d/e/1FAIpQLSeKGur8yM9mvA4GAienLXH_NdfS9PxDFdiTtIk8YuBA0n4N_Q/viewform?usp=sf_link"
+                                    >send feedback</a
+                                >, it really helps!
                             </p>
                         </section>
                         <section id="doc-overview-get_started">
                             <h1>Get started</h1>
                             <p>
-                                Get started <abbr title="Using Build And Measure (BAM)">BAMING</abbr> right away, by installing the software, with the tutorials and documentation
-                                Build And Measure is cross platform and available for:<br />
-                                <strong>
-                                    Windows<br />
-                                    MacOS<br />
-                                    Linux<br />
-                                </strong>
-                                <a href="download.html">Download</a>
+                                Get started with Build And Measure by diving into the
+                                <a href="#doc-tutorials">tutorials</a> or by reading the
+                                comprehensive documentation. You can find the download page
+                                <a href="download.html">here</a>. <br />
+                                Build And Measure is available for both Windows and Linux, although
+                                not yet for MacOS, because that would require a code signing
+                                certificate, and that would mean I wouldn't be able to keep this app
+                                free to use.
                             </p>
                         </section>
                     </section>
@@ -234,14 +257,18 @@
                                 >
                                     unsaved project
                                 </abbr>
-                                which you can now save by pressing the <a href="">save button</a>.
-                                The first time you press the save button in a new project you will
-                                be required to specify a file location but after that the file
-                                location will be remembered. <br /><br />
+                                which you can now save by pressing the
+                                <a href="#doc-editor-control_panel-save_button">save button</a>. The
+                                first time you press the save button in a new project you will be
+                                required to specify a file location but after that the file location
+                                will be remembered. <br /><br />
                                 You can also save a project with the
-                                <a href="">save as button</a> which will let you select a file and
-                                write the project to that file, although the file location won't be
-                                stored so the save button will still save in the same file.
+                                <a href="#doc-editor-control_panel-save_as_button"
+                                    >save as button</a
+                                >
+                                which will let you select a file and write the project to that file,
+                                although the file location won't be stored so the save button will
+                                still save in the same file.
                             </p>
                         </section>
                         <section id="doc-project_management-opening-projects">
@@ -251,8 +278,8 @@
                                 button in the left navbar when in the start page, this will let you
                                 let you select a project in the file explorer which will then be
                                 opened in the editor, when you press the
-                                <a href="">save button</a> the changes will now be written to the
-                                opened file.
+                                <a href="#doc-editor-control_panel-save_button">save button</a> the
+                                changes will now be written to the opened file.
                             </p>
                         </section>
                     </section>
@@ -268,6 +295,20 @@
                         <img src="images/editor.png" alt="Editor image" class="image" />
                         <br />
 
+                        <section id="doc-editor-coordinate_system">
+                            <h1>Coordinate system</h1>
+                            <p>
+                                The editor has a horizontal
+                                <a href="#doc-editor-coordinate_system">x</a>-axis, and a vertical
+                                y-axis, where the
+                                <a href="#doc-editor-coordinate_system">x-axis</a> starts at the
+                                left edge and goes to the right edge, and the y-axis goes from the
+                                top edge to the bottom edge. This means that the coordinates: (0, 0)
+                                will be in the top left corner of the screen and (screen_width,
+                                screen_height) will be the bottom right corner of the screen.
+                            </p>
+                        </section>
+
                         <section id="doc-editor-panning_and_zooming">
                             <h1>Panning and zooming</h1>
                             <p>
@@ -275,7 +316,7 @@
                                 mouse to pan around the canvas, and rotate/scroll the scrollwheel to
                                 zoom in and out.<br />
                                 You can also change the "zoom speed" in the
-                                <a href="">settings menu</a>.
+                                <a href="#doc-editor-settings_menu">settings menu</a>.
                             </p>
                         </section>
 
@@ -284,7 +325,10 @@
                             <p>
                                 The control panel is positioned in the top left corner of the editor
                                 and has buttons to save/export and control the
-                                <a href="">views and sheets</a> of the project.
+                                <a href="#doc-editor-control_panel-view_and_sheet_buttons"
+                                    >views and sheets</a
+                                >
+                                of the project.
                             </p>
 
                             <section id="doc-editor-control_panel-home_button">
@@ -323,9 +367,10 @@
                                 <p>
                                     The export button toggles a dropdown with two options to export
                                     the view/sheet to either SVG or PDF. Both views and sheets can
-                                    be exported, a view will export with the size of the
-                                    <a href="">crop region</a> and a sheet will export everything
-                                    inside of the <a href="">title block</a>.
+                                    be exported, a view will export everything inside of the
+                                    <a href="#doc-editor-views_and_sheets-views">crop region</a> and
+                                    a sheet will export everything inside of the
+                                    <a href="#doc-editor-views_and_sheets-sheets">title block</a>.
                                 </p>
                             </section>
 
@@ -333,7 +378,10 @@
                                 <h1>View and sheet buttons</h1>
                                 <p>
                                     The control panel also has buttons for controlling the different
-                                    <a href="">views and sheets</a> of the project.<br />
+                                    <a href="#doc-editor-control_panel-view_and_sheet_buttons"
+                                        >views and sheets</a
+                                    >
+                                    of the project.<br />
                                     First are the view tabs which are located between the "export"
                                     and "new view" buttons, to change the current view/sheet click
                                     on a view/sheet tab. You can also rename a view/sheet by
@@ -352,8 +400,9 @@
                             <p>
                                 A project is divided up into multiple "views" and "sheets". Views
                                 are used to draw something in 1:1 scale which can then be exported
-                                to a sheet view via the <a href="">viewport tool</a> and then
-                                exported with a frame/title block.
+                                to a sheet view via the
+                                <a href="#doc-editor-tool_bar">viewport tool</a> and then exported
+                                with a frame/title block.
                             </p>
                             <section id="doc-editor-views_and_sheets-views">
                                 <h1>Views</h1>
@@ -387,26 +436,27 @@
                                 Each object requires a different amount of clicks:
                             </p>
                             <ul>
-                                <li>Line - <a href="">polyline</a></li>
+                                <li>
+                                    Line -
+                                    <a href="#doc-editor-drawing_objects-polylines">polyline</a>
+                                </li>
                                 <li>Rectangle - 2 clicks</li>
                                 <li>Circle - 2 clicks</li>
                                 <li>Ellipse - 2 clicks</li>
                                 <li>Arc - 3 clicks</li>
-                                <li>Spline - <a href="">polyline</a></li>
+                                <li>
+                                    Spline -
+                                    <a href="#doc-editor-drawing_objects-polylines">polyline</a>
+                                </li>
                                 <li>Dimension - 3 clicks</li>
                                 <li>Textbox - 1 click</li>
                                 <li>Textbox With Leader - 2 clicks</li>
                                 <li>
-                                    Viewport - 1 click (only available in <a href="">sheets</a>)
+                                    Viewport - 1 click (only available in
+                                    <a href="#doc-editor-views_and_sheets-sheets">sheets</a>)
                                 </li>
                             </ul>
                             <p>
-                                Some objects like the Line and Spline objects are
-                                <a href="">polylines</a>, meaning that they won't stop drawing until
-                                you press the escape key on your keyboard, unless you turn of
-                                polyline in the <a href="">settings menu</a>, then they will have a
-                                click count of 2.
-                                <br />
                                 To change for example the line width and stroke color of the object
                                 that will be drawn, you can change the drawing properties in the
                                 <a href="#doc-editor-drawing_palette">drawing palette</a>.
@@ -414,11 +464,45 @@
                             <section id="doc-editor-drawing_objects-polylines">
                                 <h1>Polylines</h1>
                                 <p>
-                                    Polylines are objects that don't stop drawing until you escape
-                                    by either pressing the escape key or by pressing on another
-                                    tool.
+                                    Some objects are polylines meaning that don't stop drawing until
+                                    you escape by either pressing the escape key or by pressing on
+                                    another tool. You can also turn of polylines in the
+                                    <a href="#doc-editor-settings_menu">settings menu</a>, then they
+                                    will have a click count of 2.
                                 </p>
                             </section>
+                        </section>
+
+                        <section id="doc-editor-snapping">
+                            <h1>Snapping</h1>
+                            <p>
+                                When drawing, moving or selecting objects, you are able to press on
+                                certain "snap points" that will snap the mouse to that point. When
+                                drawing a line for example, you can hover over a snap point and the
+                                end of the line will snap to that point. <br />
+                                There are four different snap points:
+                            </p>
+                            <ul>
+                                <li>
+                                    End point - end points are <em>red</em> snap points, that are on
+                                    the edge of objects, like the four corners of rectangle.
+                                </li>
+                                <li>
+                                    Center point - center points are <em>blue</em> snap points, that
+                                    are position between two edge points, or in the middle of an
+                                    object.
+                                </li>
+                                <li>
+                                    On line point - on line points are <em>green</em> snap points,
+                                    that allow you snap to the closest point on for example a line.
+                                </li>
+                                <li>
+                                    Intersection point - intersection points, are
+                                    <em>purple</em> snap points, that allow you to snap to the
+                                    intersection between two objects (this doesn't work on all
+                                    objects, like for example splines).
+                                </li>
+                            </ul>
                         </section>
 
                         <section id="doc-editor-selecting_objects">
@@ -428,14 +512,14 @@
                                 the second to top button in the
                                 <a href="#doc-editor-tool_bar">tool-bar</a>.<br />
                                 You can select an object by clicking on it or by clicking on a
-                                <a href="">snap point</a> on that object.<br />
+                                <a href="#doc-editor-snapping">snap point</a> on that object.<br />
                                 You can also drag the mouse (with the left mouse button down) to
                                 select the objects that are fully within the area that appears (it
                                 checks if all of the red edge points are within that area).<br />
-                                If you press the <a href="">control key</a> while clicking on an
-                                object or dragging the mouse, any object that were previously select
-                                will remain selected, this allows you to select multiple objects by
-                                clicking on each one while holding control.
+                                If you press the control key while clicking on an object or dragging
+                                the mouse, any object that were previously select will remain
+                                selected, this allows you to select multiple objects by clicking on
+                                each one while holding control.
                             </p>
                         </section>
 
@@ -443,7 +527,8 @@
                             <h1>Tool-bar</h1>
                             <p>
                                 The tool-bar which is located on the left side is used to select the
-                                current tool and to open the <a href="">drawing palette</a>.<br />
+                                current tool and to open the
+                                <a href="#doc-editor-drawing_palette">drawing palette</a>.<br />
                                 Here is a list of all the buttons:
                             </p>
                             <ul>
@@ -468,8 +553,9 @@
                                 The command-bar is similar to the
                                 <a href="#doc-editor-tool_bar">tool-bar</a> in many ways but it is
                                 only available when you have one or more objects
-                                <a href="">selected</a> and instead of selecting a tool it allows
-                                you to activate a command on the currently selected objects.
+                                <a href="#doc-editor-selecting_objects">selected</a> and instead of
+                                selecting a tool it allows you to activate a command on the
+                                currently selected objects.
                             </p>
                         </section>
 
@@ -519,9 +605,9 @@
                             <p>
                                 The context menu allows you to change properties of an object after
                                 it has been drawn and is similar to the
-                                <a href="">drawing palette</a> in that it has the almost same
-                                drawing propeties, now called "object properties" with the exception
-                                of one extra: "Text".<br />
+                                <a href="#doc-editor-drawing_palette">drawing palette</a> in that it
+                                has the almost same drawing propeties, now called "object
+                                properties" with the exception of one extra: "Text".<br />
                                 The context menu is only active when one or more objects are
                                 selected and the values in the context menu are the same as on the
                                 object.
@@ -543,7 +629,8 @@
                                 The command box lets you specify precise distances when drawing and
                                 moving objects. The command box can either take a single value
                                 representing a distance or two values representing a distance in the
-                                x-axis and y-axis
+                                <a href="#doc-editor-coordinate_system">x-axis</a> and
+                                <a href="#doc-editor-coordinate_system">y-axis</a>
                             </p>
                             <br />
                             <p>
@@ -566,8 +653,11 @@
                                 </li>
                                 <li>
                                     "100" when drawing a line - will draw a line that's 100mm long
-                                    (here we are assuming that the <a href="">default unit</a> is
-                                    mm)
+                                    (here we are assuming that the
+                                    <a href="#doc-editor-settings_menu-default_unit"
+                                        >default unit</a
+                                    >
+                                    is mm)
                                 </li>
                                 <li>
                                     "100cm, 5m" when drawing an ellipse - will create an ellipse
@@ -575,9 +665,13 @@
                                 </li>
                                 <li>
                                     "10dm, 100" when moving an object - will move the selected
-                                    objects 10dm in the <a href="">x-axis</a> and 100mm in the
-                                    <a href="">y-axis</a> (here we are assuming that the
-                                    <a href="">default unit</a> is mm)
+                                    objects 10dm in the
+                                    <a href="#doc-editor-coordinate_system">x-axis</a>
+                                    and 100mm in the
+                                    <a href="#doc-editor-coordinate_system">y-axis</a> (here we are
+                                    assuming that the
+                                    <a href="doc-editor-settings_menu-default_unit">default unit</a>
+                                    is mm)
                                 </li>
                                 <li>
                                     "10cm," when drawing a rectangle - will create a rectangle with
@@ -586,8 +680,9 @@
                                 </li>
                                 <li>
                                     ",5dm" when moving an object - will move the selected objects so
-                                    that the <a href="">x-axis</a> will go to the mouse position and
-                                    the y-axis 5dm
+                                    that the
+                                    <a href="#doc-editor-coordinate_system">x-axis</a>
+                                    will go to the mouse position and the y-axis 5dm
                                 </li>
                             </ul>
                             <br />
@@ -614,7 +709,11 @@
                                         <li>Line cap - how lines should look at the ends</li>
                                         <li>Line join - how lines should look where they join</li>
                                         <li>
-                                            Polyline - if <a href="">polylines</a> should be active
+                                            Polyline - if
+                                            <a href="#doc-editor-drawing_objects-polylines"
+                                                >polylines</a
+                                            >
+                                            should be active
                                         </li>
                                         <li>
                                             Render movement info - if there should be information
@@ -661,7 +760,7 @@
                                 <li>
                                     Units and precision
                                     <ul>
-                                        <li>
+                                        <li id="doc-editor-settings_menu-default_unit">
                                             Default unit - the default unit of the project: mm, cm,
                                             dm or m
                                         </li>
@@ -697,10 +796,15 @@
 
                         <section id="doc-editor-shortcuts">
                             <h1>Shortcuts</h1>
-                            <p>TODO</p>
                             <ul>
-                                <li><strong>control + c</strong> - copy the selected objects to the clipboard</li>
-                                <li><strong>control + v</strong> - paste the copied objects from the clipboard</li>
+                                <li>
+                                    <strong>control + c</strong> - copy the selected objects to the
+                                    clipboard
+                                </li>
+                                <li>
+                                    <strong>control + v</strong> - paste the copied objects from the
+                                    clipboard
+                                </li>
                                 <li><strong>escape</strong> - escaped out of the current action</li>
                                 <li><strong>control + z</strong> - undoes the latest action</li>
                                 <li><strong>control + y</strong> - redoes the latest action</li>
@@ -735,7 +839,7 @@
                     </section>
                     <hr />
                     <section id="doc-tutorials">
-                        <h1>Tutorials:</h1>
+                        <h1>Tutorials (In the works):</h1>
                         <ul>
                             <li>How to download and install the application</li>
                             <li>How to pan and zoom</li>
@@ -761,16 +865,13 @@
                                 <strong>How can I report bugs and suggest features?</strong> - If
                                 you find an issue or want to request a feature, you can do so in the
                                 report-issue and request-feature forms which you find in the navbar
-                                of this website or in the bottom left corner of the desktop app. If
-                                you have any questions or have further feedback, don't hesitate to
-                                reach out at <a href="">TODO</a>.
+                                of this website or in the bottom left corner of the desktop app.
                             </li>
                             <li>
                                 <strong>Who created Build And Measure?</strong> - Build and Measure
-                                was created by a single developer: <a href="">Lucas Norman</a> as a
-                                hobby project and has gone through many iterations as a web app
-                                before finally landing a desktop app. You can find the old web app
-                                here:
+                                was created by a single developer as a hobby project and has gone
+                                through many iterations as a web app before finally landing as a
+                                desktop app. You can find the old web app here:
                                 <a href="https://buildandmeasure.netlify.app"
                                     >buildandmeasure.netlify.app</a
                                 >
@@ -780,26 +881,30 @@
                                 is completely and utterly free and doesn't require any accounts,
                                 trials or even advertisments. I make no money from this, in fact it
                                 even costs money to pay for the domain every month, so donations are
-                                wery welcome indeed - <a href="">Lucas Norman</a>
+                                wery welcome indeed.
                             </li>
                             <li>
                                 <strong
                                     >Why am I getting security warnings when downloading and
                                     installing the software?</strong
                                 >
-                                - I am have not paid for a code signing certificate for this app
-                                since it costs a lot of money and I am offering this for free, so
-                                there will be security warnings when downloading this app and it
-                                will therefore also not be available on macOS
+                                - I have not paid for a code signing certificate for this app since
+                                it costs a lot of money and I am offering this for free, so there
+                                will be security warnings when downloading this app and it will
+                                therefore also not be available on MacOS.
                             </li>
                             <li>
                                 <strong>What file formats can I export to?</strong> - You can
                                 currently export projects as either SVG or PDF but I might add more
-                                options in the future - <a href="">Lucas Norman</a>
+                                options in the future.
                             </li>
                         </ul>
                     </section>
                     <hr />
+                    <section>
+                        <p>- Written by Lucas Norman, last updated 2023-12-23</p>
+                        <small><strong>Hope you like it :)</strong></small>
+                    </section>
                 </div>
             </div>
         </main>
