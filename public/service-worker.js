@@ -1,10 +1,9 @@
-const CACHE_NAME = "BAM-cache";
-// const CACHE_NAME = "BAM-cache-2";
+// const CACHE_NAME = "BAM-cache";
+const CACHE_NAME = "BAM-cache-2";
 const FILES_TO_CACHE = [
     // default route
     ".",
     // html
-    "index.html",
     "index.html",
     "docs.html",
     "download.html",
@@ -22,12 +21,13 @@ const FILES_TO_CACHE = [
     "logo.ico",
     "images/editor.png",
     "images/editor2.png",
-    "images/example1.png",
+    "images/example-car.png",
+    "images/example-house.png",
+    "images/example-office-chairs.png",
+    "images/example-title-block.png",
     "images/example2.png",
-    "images/example3.png",
-    "images/example4.png",
-    "images/example5.png",
-    "images/editor.png",
+    "images/example-vedbod-ritn1.svg",
+    "images/example-vedbod-ritn2.svg",
     "images/hamburgerIcon.png",
     "images/logo-512.png",
     "images/logo-maskable.png",
@@ -73,4 +73,3 @@ async function fetchAssets(e) {
 self.addEventListener("fetch", async e => {
     e.respondWith(fetchAssets(e));
 });
-
