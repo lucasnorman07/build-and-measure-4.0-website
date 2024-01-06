@@ -29,7 +29,17 @@ section {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 2.5rem 10vw;
+    padding: 1rem 10vw;
+    padding-bottom: 2.5rem;
+    position: relative;
+}
+
+section .curved-divider {
+    position: absolute;
+    bottom: -1px; /*1px to avoid glitches*/
+    left: 0;
+    width: 100vw;
+    height: auto;
 }
 
 section:nth-child(odd) {
@@ -52,7 +62,6 @@ section:first-child {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 1rem;
-
 }
 .feature-section:nth-child(even) {
     flex-wrap: wrap-reverse;
@@ -60,6 +69,7 @@ section:first-child {
 .feature-section img {
     max-width: min(80vw, 30rem);
     max-height: 30rem;
+    outline: 0.1rem solid gray;
 }
 
 #start-links {
@@ -101,7 +111,7 @@ section:first-child {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    width: 100vw;
+    transform: translateX(1px); /*1px to fix issue when images sometimes don't appear*/
 }
 
 #sliding-examples > img {
@@ -123,7 +133,7 @@ section:first-child {
     transform: none;
     transition: none;
     opacity: 1;
-} 
+}
 #sliding-examples > img.fullscreen {
     position: fixed;
     left: 0;
@@ -215,6 +225,10 @@ section:first-child {
     p {
         font-size: 1.3rem;
     }
+
+    .spacing-for-curved-divider {
+        display: none;
+    }
 }
 
 @media (max-width: 600px) {
@@ -243,5 +257,9 @@ section:first-child {
     }
     p {
         font-size: 1rem;
+    }
+
+    .spacing-for-curved-divider {
+        display: none;
     }
 }
