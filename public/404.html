@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Build and Measure, page not found" />
+        <meta name="theme-color" content="#565659" />
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="shortcut icon" href="/logo.ico" type="image/x-icon" />
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                text-align: center;
+            }
+
+            body {
+                font-family: "Segoe UI", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+                background: linear-gradient(30deg, lightgray, white 30%, gray);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 100dvh;
+                padding: 0 2rem;
+            }
+
+            h1 {
+                font-size: 10rem;
+            }
+            h2 {
+                font-size: 5rem;
+            }
+            h3 {
+                font-size: 2rem;
+            }
+            a {
+                font-size: 1.5rem;
+            }
+
+            @media (max-width: 550px) {
+                h1 {
+                    font-size: 8rem;
+                }
+                h2 {
+                    font-size: 4rem;
+                }
+                h3 {
+                    font-size: 1.5rem;
+                }
+                a {
+                    font-size: 1.2rem;
+                }
+            }
+        </style>
+
+        <title>Page not found · BAM</title>
+    </head>
+    <body>
+        <main>
+            <h1>404</h1>
+            <h2>Page not found</h2>
+            <h3>Whoops! This is not the webpage you are looking for.</h3>
+            <a href="/">Go to main page -></a>
+        </main>
+        <script>
+            if ("serviceWorker" in navigator) {
+                navigator.serviceWorker.register("../service-worker.js");
+            }
+        </script>
+    </body>
+</html>

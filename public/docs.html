@@ -12,16 +12,6 @@
 
         <!-- update the version number as needed -->
         <script defer src="/__/firebase/10.5.2/firebase-app-compat.js"></script>
-        <!-- include only the Firebase features as you need -->
-        <script defer src="/__/firebase/10.5.2/firebase-auth-compat.js"></script>
-        <script defer src="/__/firebase/10.5.2/firebase-database-compat.js"></script>
-        <script defer src="/__/firebase/10.5.2/firebase-firestore-compat.js"></script>
-        <script defer src="/__/firebase/10.5.2/firebase-functions-compat.js"></script>
-        <script defer src="/__/firebase/10.5.2/firebase-messaging-compat.js"></script>
-        <script defer src="/__/firebase/10.5.2/firebase-storage-compat.js"></script>
-        <script defer src="/__/firebase/10.5.2/firebase-analytics-compat.js"></script>
-        <script defer src="/__/firebase/10.5.2/firebase-remote-config-compat.js"></script>
-        <script defer src="/__/firebase/10.5.2/firebase-performance-compat.js"></script>
         <!-- 
       initialize the SDK after all desired features are loaded, set useEmulator to false
       to avoid connecting the SDK to running emulators.
@@ -49,10 +39,13 @@
                     <a class="nav-link" href="docs.html#doc-faq">FAQ</a>
                 </li>
                 <li>
+                    <a class="nav-link" target="_blank" href="https://gofund.me/324017cd">Donate</a>
+                </li>
+                <li>
                     <a
                         class="nav-link"
                         target="_blank"
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSfwx2RZTZRKdL08w1I6hkX3iR_oFSmka5vkHmC4uCR77JUVcg/viewform?usp=sf_link"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSf-uSV4R492QMRVCQkedEgE5kBvrZKlujpjwPXrHkHiF7DOAw/viewform?usp=sf_link"
                         >Report issue</a
                     >
                 </li>
@@ -60,12 +53,12 @@
                     <a
                         class="nav-link"
                         target="_blank"
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSeKGur8yM9mvA4GAienLXH_NdfS9PxDFdiTtIk8YuBA0n4N_Q/viewform?usp=sf_link"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLScN8V4TjFnSuGrNC7TyZ21o7kOTUpv-BsHuzCMQXl51dnQUNA/viewform?usp=sf_link"
                         >Request Feature</a
                     >
                 </li>
             </ul>
-            <button id="hamburger-button" class="hamburger-button">
+            <button id="hamburger-button" class="hamburger-button" aria-label="Navigation dropdown">
                 <div class="hamburger-button-icon"></div>
             </button>
         </nav>
@@ -83,7 +76,7 @@
                                     placeholder="Search docs"
                                     list="search-options"
                                 />
-                                <button></button>
+                                <button aria-label="Search button"></button>
                                 <datalist id="search-options"></datalist>
                             </form>
                         </li>
@@ -193,6 +186,7 @@
                                         </li>
                                     </ul>
                                 </li>
+                                <li><a href="#doc-editor-bottom_panel">Bottom panel</a></li>
                                 <li><a href="#doc-editor-command_box">Command box</a></li>
                                 <li><a href="#doc-editor-settings_menu">Settings menu</a></li>
                                 <li><a href="#doc-editor-shortcuts">Shortcuts</a></li>
@@ -201,7 +195,11 @@
                         <li><a href="#doc-tutorials">Tutorials</a></li>
                         <li><a href="#doc-faq">FAQs</a></li>
                     </ul>
-                    <button id="toggle-table-of-content-button" class="hamburger-button">
+                    <button
+                        id="toggle-table-of-content-button"
+                        class="hamburger-button"
+                        aria-label="Toggle table of content"
+                    >
                         <div class="hamburger-button-icon"></div>
                     </button>
                 </div>
@@ -217,15 +215,11 @@
                                 experience for users.
                                 <br />
                                 Build and Measure is created and maintained by a single developer,
-                                and if you find any issue and bugs,
+                                and if you find any issues or bugs please
                                 <a
-                                    href="https://docs.google.com/forms/d/e/1FAIpQLSfwx2RZTZRKdL08w1I6hkX3iR_oFSmka5vkHmC4uCR77JUVcg/viewform?usp=sf_link"
+                                    target="_blank"
+                                    href="https://docs.google.com/forms/d/e/1FAIpQLSf-uSV4R492QMRVCQkedEgE5kBvrZKlujpjwPXrHkHiF7DOAw/viewform?usp=sf_link"
                                     >report them</a
-                                >
-                                them and
-                                <a
-                                    href="https://docs.google.com/forms/d/e/1FAIpQLSeKGur8yM9mvA4GAienLXH_NdfS9PxDFdiTtIk8YuBA0n4N_Q/viewform?usp=sf_link"
-                                    >send feedback</a
                                 >, it really helps!
                             </p>
                         </section>
@@ -234,11 +228,11 @@
                             <p>
                                 Get started with Build and Measure by diving into the
                                 <a href="#doc-tutorials">tutorials</a> or by reading the
-                                comprehensive documentation. You can find the download page
-                                <a href="download.html">here</a>. <br />
-                                Build and Measure is available for both Windows and Linux, although
-                                not yet for MacOS, because that would require a code signing
-                                certificate, and that would mean I wouldn't be able to keep this app
+                                comprehensive documentation. <br />
+                                Build and Measure is available to
+                                <a href="download.html">download</a> for both Windows and Linux,
+                                although not yet for MacOS, because that would require a code
+                                signing certificate, and that would cost too much to keep this app
                                 free to use.
                             </p>
                         </section>
@@ -246,6 +240,15 @@
                     <hr />
                     <section id="doc-project_management">
                         <h1>Project management</h1>
+
+                        <br />
+                        <img
+                            src="images/documentation-images/start-page.png"
+                            alt="Editor image"
+                            class="image"
+                        />
+                        <br />
+
                         <section id="doc-project_management-create_and_save_projects">
                             <h1>Creating and saving projects</h1>
                             <p>
@@ -280,6 +283,15 @@
                                 opened in the editor, when you press the
                                 <a href="#doc-editor-control_panel-save_button">save button</a> the
                                 changes will now be written to the opened file.
+                                <br />
+                                If you save a project, a project shortcut will appear in the start
+                                page. Each project shortcut has a name field, and a button to show a
+                                pop-up menu. The pop-up menu has options to open the project, rename
+                                the project, to open the location where the project file is stored
+                                and an option to delete the shortcut (please note this will not
+                                delete the project file just the shortcut). You can also press on
+                                the image of the shortcut to open the project and press on the name
+                                field to rename it.
                             </p>
                         </section>
                     </section>
@@ -292,29 +304,46 @@
                         </p>
 
                         <br />
-                        <img src="images/editor.png" alt="Editor image" class="image" />
+                        <img
+                            src="images/documentation-images/project-with-ui-descriptions.png"
+                            alt="Editor image"
+                            class="image"
+                        />
+                        <br />
+                        <br />
+                        <p>
+                            And export drawings to either svg or pdf in different title blocks and
+                            paper sizes.
+                        </p>
+                        <br />
+                        <img
+                            src="images/documentation-images/editor.png"
+                            alt="Editor image"
+                            class="image"
+                        />
                         <br />
 
                         <section id="doc-editor-coordinate_system">
                             <h1>Coordinate system</h1>
                             <p>
-                                The editor has a horizontal
-                                <a href="#doc-editor-coordinate_system">x</a>-axis, and a vertical
-                                y-axis, where the
-                                <a href="#doc-editor-coordinate_system">x-axis</a> starts at the
-                                left edge and goes to the right edge, and the y-axis goes from the
-                                top edge to the bottom edge. This means that the coordinates: (0, 0)
-                                will be in the top left corner of the screen and (screen_width,
-                                screen_height) will be the bottom right corner of the screen.
+                                The editor has a horizontal x-axis, and a vertical y-axis, where the
+                                x-axis starts at the left edge and goes to the right edge, and the
+                                y-axis goes from the top edge to the bottom edge. This means that
+                                the coordinates: (0, 0) will be in the top left corner of the screen
+                                and (screen_width, screen_height) will be the bottom right corner of
+                                the screen. When using the command box, the distances specified will
+                                be relative, meaning they wont go from (0, 0) but instead where the
+                                object started moving, or where the last drawing click was when
+                                drawing.
                             </p>
                         </section>
 
                         <section id="doc-editor-panning_and_zooming">
                             <h1>Panning and zooming</h1>
                             <p>
-                                In Build and Measure you can hold down the scrollwheel and move the
-                                mouse to pan around the canvas, and rotate/scroll the scrollwheel to
-                                zoom in and out.<br />
+                                In Build and Measure you can hold down the scroll wheel and move the
+                                mouse to pan around the canvas, and rotate/scroll the scroll wheel
+                                to zoom in and out.<br />
                                 You can also change the "zoom speed" in the
                                 <a href="#doc-editor-settings_menu">settings menu</a>.
                             </p>
@@ -330,6 +359,14 @@
                                 >
                                 of the project.
                             </p>
+
+                            <br />
+                            <img
+                                src="images/documentation-images/control-panel.png"
+                                alt="Editor image"
+                                class="image"
+                            />
+                            <br />
 
                             <section id="doc-editor-control_panel-home_button">
                                 <h1>Home button</h1>
@@ -355,15 +392,15 @@
                             </section>
 
                             <section id="doc-editor-control_panel-save_as_button">
-                                <h1>Save As</h1>
+                                <h1>Save As button</h1>
                                 <p>
                                     The save as button lets you choose a new file to save the
                                     project in, even if the project has already been saved. Please
                                     note that this will not change the location that the
                                     <a href="#doc-editor-control_panel-save_button">save button</a>
-                                    will save to, unless the it's the first time the project has
-                                    been saved, then the file location you choose will be saved and
-                                    will be used when saving with the
+                                    will save to, unless it's the first time the project has been
+                                    saved, then the file location you choose will be saved and will
+                                    be used when saving with the
                                     <a href="#doc-editor-control_panel-save_button">save button</a>.
                                 </p>
                             </section>
@@ -470,9 +507,9 @@
                             <section id="doc-editor-drawing_objects-polylines">
                                 <h1>Polylines</h1>
                                 <p>
-                                    Some objects are polylines meaning that don't stop drawing until
-                                    you escape by either pressing the escape key or by pressing on
-                                    another tool. You can also turn of polylines in the
+                                    Some objects are polylines meaning that they don't stop drawing
+                                    until you escape by either pressing the escape key or by
+                                    pressing on another tool. You can also turn off polylines in the
                                     <a href="#doc-editor-settings_menu">settings menu</a>, then they
                                     will have a click count of 2.
                                 </p>
@@ -490,12 +527,12 @@
                             </p>
                             <ul>
                                 <li>
-                                    End point - end points are <em>red</em> snap points, that are on
-                                    the edge of objects, like the four corners of rectangle.
+                                    End point - end points are <em>red</em> snap points that are on
+                                    the edge of objects, like the four corners of a rectangle.
                                 </li>
                                 <li>
-                                    Center point - center points are <em>blue</em> snap points, that
-                                    are position between two edge points, or in the middle of an
+                                    Center point - center points are <em>blue</em> snap points that
+                                    are positioned between two edge points, or in the middle of an
                                     object.
                                 </li>
                                 <li>
@@ -523,7 +560,7 @@
                                 select the objects that are fully within the area that appears (it
                                 checks if all of the red edge points are within that area).<br />
                                 If you press the control key while clicking on an object or dragging
-                                the mouse, any object that were previously select will remain
+                                the mouse, any object that was previously selected will remain
                                 selected, this allows you to select multiple objects by clicking on
                                 each one while holding control.
                             </p>
@@ -535,8 +572,17 @@
                                 The tool-bar which is located on the left side is used to select the
                                 current tool and to open the
                                 <a href="#doc-editor-drawing_palette">drawing palette</a>.<br />
-                                Here is a list of all the buttons:
                             </p>
+
+                            <br />
+                            <img
+                                src="images/documentation-images/tool-bar.png"
+                                alt="Editor image"
+                                class="image"
+                            />
+                            <br />
+
+                            <p>Here is a list of all the buttons:</p>
                             <ul>
                                 <li>Toggle drawing palette button</li>
                                 <li>Select tool - to select objects</li>
@@ -563,6 +609,14 @@
                                 selecting a tool it allows you to activate a command on the
                                 currently selected objects.
                             </p>
+
+                            <br />
+                            <img
+                                src="images/documentation-images/command-bar.png"
+                                alt="Editor image"
+                                class="image"
+                            />
+                            <br />
                         </section>
 
                         <section id="doc-editor-drawing_palette">
@@ -570,8 +624,17 @@
                             <p>
                                 The drawing palette lets you change different drawing
                                 properties/settings on the next object that will be drawn.<br />
-                                Here is a list of all of the drawing properties:
                             </p>
+
+                            <br />
+                            <img
+                                src="images/documentation-images/drawing-palette.png"
+                                alt="Editor image"
+                                class="image"
+                            />
+                            <br />
+
+                            <p>Here is a list of all of the drawing properties:</p>
                             <ul>
                                 <li>Stroke color - the color of the stroke</li>
                                 <li>Line width - the width of the stroke</li>
@@ -585,7 +648,7 @@
                                 </li>
                                 <li>
                                     Scale text by line width - whether to scale the text size by the
-                                    line width (multipled by 20) instead of the font size
+                                    line width (multiplied by 20) instead of the font size
                                 </li>
                                 <li>Selected image - the selected image of the image</li>
                                 <li>Image active - if the selected image should be visible</li>
@@ -612,12 +675,20 @@
                                 The context menu allows you to change properties of an object after
                                 it has been drawn and is similar to the
                                 <a href="#doc-editor-drawing_palette">drawing palette</a> in that it
-                                has the almost same drawing propeties, now called "object
+                                has the almost same drawing properties, now called "object
                                 properties" with the exception of one extra: "Text".<br />
                                 The context menu is only active when one or more objects are
                                 selected and the values in the context menu are the same as on the
                                 object.
                             </p>
+
+                            <br />
+                            <img
+                                src="images/documentation-images/context-menu.png"
+                                alt="Editor image"
+                                class="image"
+                            />
+                            <br />
 
                             <section id="doc-editor-context_menu-differing">
                                 <h1>Differing</h1>
@@ -629,8 +700,29 @@
                             </section>
                         </section>
 
+                        <section id="doc-editor-bottom_panel">
+                            <h1>Bottom panel</h1>
+                            <p>
+                                The bottom panel has buttons to change the project settings as well
+                                as some settings for the current view/sheet like the
+                                <a href="#doc-editor-views_and_sheets-views">crop region size</a>
+                                and <a href="#doc-editor-views_and_sheets-sheets">title block</a>.
+                                It also has links to the documentation, report issue form and
+                                request feature form.
+                            </p>
+
+                            <br />
+                            <img
+                                src="images/documentation-images/bottom-panel.png"
+                                alt="Editor image"
+                                class="image"
+                            />
+                            <br />
+                        </section>
+
                         <section id="doc-editor-command_box">
                             <h1>Command box</h1>
+
                             <p>
                                 The command box lets you specify precise distances when drawing and
                                 moving objects. The command box can either take a single value
@@ -639,13 +731,21 @@
                                 <a href="#doc-editor-coordinate_system">y-axis</a>
                             </p>
                             <br />
+                            <img
+                                src="images/documentation-images/command-box.png"
+                                alt="Editor image"
+                                class="image"
+                            />
+                            <br />
+
+                            <br />
                             <p>
                                 One cool feature that you can use with the command box is to leave
-                                one section empty (a section is basically a measurement). You can
-                                for example type ",100cm" or "100m," (note the ",") now you're still
-                                using two sections because of the "," but one of the sections is
-                                empty, when a section is empty it will default to the mouse
-                                position, so you could for example draw a line where the x
+                                one section empty (a section is basically a measurement or
+                                distance). You can for example type ",100cm" or "100m," (note the
+                                ",") now you're still using two sections because of the "," but one
+                                of the sections is empty, when a section is empty it will default to
+                                the mouse position, so you could for example draw a line where the x
                                 coordinate is calculated based on the number you provided in the
                                 command box and the y coordinate is calculated based on the mouse
                                 position.
@@ -702,10 +802,19 @@
                         <section id="doc-editor-settings_menu">
                             <h1>Settings menu</h1>
                             <p>
-                                The settings menu allows you change different settings that effect
-                                the entire project.<br />
-                                Here is a list of all the settings:
+                                The settings menu allows you to change different settings that
+                                affect the entire project.<br />
                             </p>
+
+                            <br />
+                            <img
+                                src="images/documentation-images/settings.png"
+                                alt="Editor image"
+                                class="image"
+                            />
+                            <br />
+
+                            <p>Here is a list of all the settings:</p>
                             <ul>
                                 <li>
                                     Appearance
@@ -845,19 +954,24 @@
                     </section>
                     <hr />
                     <section id="doc-tutorials">
-                        <h1>Tutorials (In the works):</h1>
-                        <ul>
+                        <h1>Tutorials (more coming soon):</h1>
+                        <video class="video" controls>
+                            <source src="videos/demoVideo.mp4" type="video/mp4" />
+                        </video>
+                        <!-- <ul>
                             <li>How to download and install the application</li>
-                            <li>How to pan and zoom</li>
                             <li>How to create and save project</li>
                             <li>How to open projects</li>
+                            <li>How to pan and zoom</li>
                             <li>How to draw objects</li>
+                            <li>Drawing palette</li>
                             <li>How to select objects</li>
-                            <li>How to manipulate objects with different commands</li>
+                            <li>How to use the context menu</li>
+                            <li>How to use commands</li>
                             <li>
                                 How to draw precise with the command box, snapping and snap grid
                             </li>
-                        </ul>
+                        </ul> -->
                         <br />
                         <!-- <video class="video" controls>
                             <source src="videos/Obstacle roll.mp4" type="video/mp4" />
@@ -865,7 +979,7 @@
                     </section>
                     <hr />
                     <section id="doc-faq">
-                        <h1>FAQs:</h1>
+                        <h1>Frequently asked questions:</h1>
                         <ul>
                             <li>
                                 <strong>How can I report bugs and suggest features?</strong> - If
@@ -878,17 +992,18 @@
                                 was created by a single developer as a hobby project and has gone
                                 through many iterations as a web app before finally landing as a
                                 desktop app. You can find the old web app here:
-                                <a href="https://buildandmeasure.netlify.app"
+                                <a target="_blank" href="https://buildandmeasure.netlify.app"
                                     >buildandmeasure.netlify.app</a
                                 >
                             </li>
                             <li>
                                 <strong>Is Build and Measure free?</strong> - Yes! Build and Measure
                                 is completely and utterly free and doesn't require any accounts,
-                                trials and has no advertisments. This was created as a hobby project
-                                and I make no money from this, in fact it even costs money to pay
-                                for the domain every month, so <a href="TODO">donations</a> are wery
-                                welcome indeed.
+                                trials and has no advertisements. This was created as a hobby
+                                project and I make no money from this, in fact it even costs money
+                                to pay for the domain every month, so
+                                <a target="_blank" href="https://gofund.me/324017cd">donations</a>
+                                are very welcome indeed.
                             </li>
                             <li>
                                 <strong
@@ -905,12 +1020,25 @@
                                 currently export projects as either SVG or PDF but I might add more
                                 options in the future.
                             </li>
+                            <li>
+                                <strong>How can I get support?</strong> - You can send an email to
+                                <em>buildandmeasure.app@gmail.com</em> and I will try to help as
+                                good as I can.
+                            </li>
                         </ul>
                     </section>
                     <hr />
                     <section>
-                        <p>- Written by Lucas Norman, last updated 2023-12-23</p>
-                        <small><strong>Hope you like it :)</strong></small>
+                        <em
+                            ><p>
+                                - Developer Lucas Norman. If you find an issue in this page, please
+                                <a
+                                    target="_blank"
+                                    href="https://docs.google.com/forms/d/e/1FAIpQLSf-uSV4R492QMRVCQkedEgE5kBvrZKlujpjwPXrHkHiF7DOAw/viewform?usp=sf_link"
+                                    >report it</a
+                                >.
+                            </p>
+                        </em>
                     </section>
                 </div>
             </div>

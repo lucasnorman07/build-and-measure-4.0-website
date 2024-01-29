@@ -1,16 +1,19 @@
-// const CACHE_NAME = "BAM-cache";
-const CACHE_NAME = "BAM-cache-2";
+const CACHE_NAME = "BAM-cache-v0";
 const FILES_TO_CACHE = [
     // default route
     ".",
     // html
     "index.html",
     "docs.html",
+    // "404.html",
+    "licence.html",
     "download.html",
     "release-notes.html",
     // js
     "js/main.js",
+    "js/docs.js",
     "js/startPageAnimations.js",
+    "js/release-notes.js",
     // css
     "css/style.css",
     "css/start.css",
@@ -19,29 +22,59 @@ const FILES_TO_CACHE = [
     "css/release-notes.css",
     // images
     "logo.ico",
-    "images/editor.png",
-    "images/editor2.png",
+    "images/documentation-images/bottom-panel.png",
+    "images/documentation-images/command-bar.png",
+    "images/documentation-images/command-box.png",
+    "images/documentation-images/context-menu.png",
+    "images/documentation-images/control-panel.png",
+    "images/documentation-images/drawing-palette.png",
+    "images/documentation-images/editor.png",
+    "images/documentation-images/project-with-ui-descriptions.png",
+    "images/documentation-images/settings.png",
+    "images/documentation-images/start-page.png",
+    "images/documentation-images/tool-bar.png",
+    "images/apple-icon.svg",
     "images/example-car.png",
+    "images/example-demo-details.svg",
+    "images/example-easy-to-use.png",
     "images/example-house.png",
     "images/example-office-chairs.png",
+    "images/example-precise-drawing.png",
     "images/example-title-block.png",
-    "images/example2.png",
+    "images/example-user-interface.png",
     "images/example-vedbod-ritn1.svg",
     "images/example-vedbod-ritn2.svg",
     "images/hamburgerIcon.png",
+    "images/linux-icon.svg",
     "images/logo-512.png",
     "images/logo-maskable.png",
     "images/logo.png",
     "images/searchIcon.png",
+    "images/windows-icon.svg",
+    // videos
+    "videos/demoVideo.mp4",
+    // robots.txt for google bots
+    "robots.txt",
     // manifest
     "manifest.json"
 ];
 
 self.addEventListener("install", async e => {
     console.log("[SW] install");
+    // add the FILES_TO_CACHE to the cache with the name CACHE_NAME
     const cache = await caches.open(CACHE_NAME);
     self.skipWaiting();
-    e.waitUntil(cache.addAll(FILES_TO_CACHE));
+    cache.addAll(FILES_TO_CACHE);
+});
+
+self.addEventListener("activate", async e => {
+    console.log("[SW] activate");
+    self.skipWaiting();
+    e.waitUntil(cleanUpCache());
+});
+
+self.addEventListener("fetch", async e => {
+    e.respondWith(fetchAssets(e));
 });
 
 async function cleanUpCache() {
@@ -55,11 +88,6 @@ async function cleanUpCache() {
     return Promise.all(keysToDelete);
 }
 
-self.addEventListener("activate", async e => {
-    console.log("[SW] activate");
-    e.waitUntil(cleanUpCache());
-});
-
 async function fetchAssets(e) {
     try {
         const response = await fetch(e.request);
@@ -69,7 +97,3 @@ async function fetchAssets(e) {
         return cache.match(e.request);
     }
 }
-
-self.addEventListener("fetch", async e => {
-    e.respondWith(fetchAssets(e));
-});

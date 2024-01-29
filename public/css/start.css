@@ -47,9 +47,7 @@ section:nth-child(odd) {
 }
 
 section:first-child {
-    /* background: linear-gradient(gray, lightgray); */
     background: linear-gradient(30deg, lightgray, white 30%, gray);
-    /* background-image: url(https://marketplace.canva.com/EAD2962NKnQ/2/0/1600w/canva-rainbow-gradient-pink-and-purple-virtual-background-_Tcjok-d9b4.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
     height: calc(100vh - var(--navbar-height));
@@ -60,8 +58,8 @@ section:first-child {
 .feature-section {
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;
     gap: 1rem;
+    white-space: wrap;
 }
 .feature-section:nth-child(even) {
     flex-wrap: wrap-reverse;
@@ -70,6 +68,10 @@ section:first-child {
     max-width: min(80vw, 30rem);
     max-height: 30rem;
     outline: 0.1rem solid gray;
+}
+.feature-section img.extra-spacing {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
 }
 
 #start-links {
@@ -81,7 +83,8 @@ section:first-child {
 }
 
 #start-links .start-link {
-    /* background-color: #0066b8; */
+    border: none;
+    background-color: transparent;
     text-decoration: underline #0066b8;
     border-radius: var(--border-radius-small);
     padding: 1rem 3rem;
@@ -90,9 +93,9 @@ section:first-child {
     transition: background-color 0.2s, color 0.2s;
     font-size: 1.2rem;
     white-space: nowrap;
+    font-family: var(--font-size);
 }
 #start-links .start-link:hover {
-    /* background-color: #02579c; */
     background-color: rgba(0, 0, 0, 0.13);
     color: #0066b8;
     text-decoration: none;
@@ -103,8 +106,15 @@ section:first-child {
     height: auto;
     max-width: 30rem;
     max-height: 90vh;
-    /* position: absolute;
-    top: var(--navbar-height); */
+}
+#logo-svg path {
+    fill: #000000;
+    fill-opacity: 0;
+    stroke-width: 20;
+    stroke-dasharray: 0, 100;
+    animation:
+        svg-logo-animation-line 2s 0.1s forwards linear,
+        svg-logo-animation-fade 0.5s 2.6s forwards linear;
 }
 
 #sliding-examples {
@@ -117,15 +127,14 @@ section:first-child {
 #sliding-examples > img {
     outline: 0.1rem solid black;
     border-radius: var(--border-radius-large);
-    box-shadow: 0 0 0.2rem black;
     width: 20%;
-    max-width: 20rem;
     transform: translateX(-100vw);
     cursor: zoom-in;
 }
 
 #sliding-examples > img:hover {
     scale: 1.1;
+    box-shadow: 0 0 0.2rem black;
 }
 
 #sliding-examples:has(img.fullscreen) {
@@ -183,16 +192,13 @@ section:first-child {
 }
 
 .fade-in {
-    opacity: 0;
     transition: 1s;
-    filter: blur(5px);
-    /* If the translate is 100%, then the intersection observer doesn't function properly */
-    transform: translateX(-99%);
+    opacity: 0;
+    transform: translateX(-100%);
 }
 
 .show {
     opacity: 1;
-    filter: blur(0);
     transform: translateX(0);
 }
 
@@ -229,6 +235,10 @@ section:first-child {
     .spacing-for-curved-divider {
         display: none;
     }
+
+    .feature-section img.extra-spacing {
+        margin: 0;
+    }
 }
 
 @media (max-width: 600px) {
@@ -261,5 +271,32 @@ section:first-child {
 
     .spacing-for-curved-divider {
         display: none;
+    }
+
+    .feature-section img.extra-spacing {
+        margin: 0;
+    }
+}
+
+@media (max-width: 1134px) {
+    .feature-section {
+        flex-wrap: wrap;
+    }
+}
+
+@keyframes svg-logo-animation-line {
+    0% {
+        stroke-dasharray: 0, 100;
+    }
+    100% {
+        stroke-dasharray: 100, 0;
+    }
+}
+@keyframes svg-logo-animation-fade {
+    0% {
+        fill-opacity: 0;
+    }
+    100% {
+        fill-opacity: 1;
     }
 }

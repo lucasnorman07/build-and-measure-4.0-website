@@ -12,16 +12,6 @@
 
         <!-- update the version number as needed -->
         <script defer src="/__/firebase/10.5.2/firebase-app-compat.js"></script>
-        <!-- include only the Firebase features as you need -->
-        <script defer src="/__/firebase/10.5.2/firebase-auth-compat.js"></script>
-        <script defer src="/__/firebase/10.5.2/firebase-database-compat.js"></script>
-        <script defer src="/__/firebase/10.5.2/firebase-firestore-compat.js"></script>
-        <script defer src="/__/firebase/10.5.2/firebase-functions-compat.js"></script>
-        <script defer src="/__/firebase/10.5.2/firebase-messaging-compat.js"></script>
-        <script defer src="/__/firebase/10.5.2/firebase-storage-compat.js"></script>
-        <script defer src="/__/firebase/10.5.2/firebase-analytics-compat.js"></script>
-        <script defer src="/__/firebase/10.5.2/firebase-remote-config-compat.js"></script>
-        <script defer src="/__/firebase/10.5.2/firebase-performance-compat.js"></script>
         <!-- 
       initialize the SDK after all desired features are loaded, set useEmulator to false
       to avoid connecting the SDK to running emulators.
@@ -48,10 +38,13 @@
                     <a class="nav-link" href="docs.html#doc-faq">FAQ</a>
                 </li>
                 <li>
+                    <a class="nav-link" target="_blank" href="https://gofund.me/324017cd">Donate</a>
+                </li>
+                <li>
                     <a
                         class="nav-link"
                         target="_blank"
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSfwx2RZTZRKdL08w1I6hkX3iR_oFSmka5vkHmC4uCR77JUVcg/viewform?usp=sf_link"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSf-uSV4R492QMRVCQkedEgE5kBvrZKlujpjwPXrHkHiF7DOAw/viewform?usp=sf_link"
                         >Report issue</a
                     >
                 </li>
@@ -59,12 +52,12 @@
                     <a
                         class="nav-link"
                         target="_blank"
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSeKGur8yM9mvA4GAienLXH_NdfS9PxDFdiTtIk8YuBA0n4N_Q/viewform?usp=sf_link"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLScN8V4TjFnSuGrNC7TyZ21o7kOTUpv-BsHuzCMQXl51dnQUNA/viewform?usp=sf_link"
                         >Request Feature</a
                     >
                 </li>
             </ul>
-            <button id="hamburger-button" class="hamburger-button">
+            <button id="hamburger-button" class="hamburger-button" aria-label="Navigation dropdown">
                 <div class="hamburger-button-icon"></div>
             </button>
         </nav>
@@ -72,14 +65,11 @@
         <main>
             <h1 id="download-heading">
                 Download <span class="nowrap">Build and Measure</span>
-                <p>Latest version: 4.0.0 (beta)</p>
+                <p>Latest version: 4.0.0</p>
             </h1>
             <div id="download-cards-wrapper">
                 <div class="download-card">
-                    <img
-                        src="images/windows-icon.svg"
-                        alt="Windows"
-                    />
+                    <img src="images/windows-icon.svg" alt="Windows" />
                     <a
                         href="https://github.com/lucasNormanGitHub/build-and-measure-4.0-website/releases/download/4.0.0/build-and-measure-setup-4.0.0.exe"
                     >
@@ -88,26 +78,24 @@
                     </a>
                 </div>
                 <div class="download-card">
-                    <img
-                        src="images/linux-icon.svg"
-                        alt="Linux"
-                    />
+                    <img src="images/linux-icon.svg" alt="Linux" />
                     <div class="download-button-split-wrapper">
-                        <a>
+                        <a
+                            href="https://github.com/lucasNormanGitHub/build-and-measure-4.0-website/releases/download/4.0.0/Build.and.Measure-4.0.0.AppImage"
+                        >
                             Linux
                             <small>.appImage</small>
                         </a>
-                        <a>
+                        <a
+                            href="https://github.com/lucasNormanGitHub/build-and-measure-4.0-website/releases/download/4.0.0/build-and-measure_4.0.0_amd64.snap"
+                        >
                             Linux
                             <small>.snap</small>
                         </a>
                     </div>
                 </div>
                 <div class="download-card">
-                    <img
-                        src="images/apple-icon.svg"
-                        alt="Mac"
-                    />
+                    <img src="images/apple-icon.svg" alt="Mac" />
                     <a>
                         In the works
                         <small>(Not finished)</small>

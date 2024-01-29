@@ -1,10 +1,7 @@
 .image,
 .video {
-    max-width: 60rem;
-    width: 60vw;
-    height: auto;
+    max-width: min(60rem, 100%);
     outline: 0.1rem solid black;
-    box-shadow: 0 0 0.5rem black;
     border-radius: var(--border-radius-small);
 }
 
@@ -66,6 +63,10 @@
     padding: 1rem;
 }
 
+#documentation-content section h1 {
+    margin-bottom: 0.5rem;
+}
+
 #documentation-content ul li:has(ul) {
     margin-left: 1rem;
     font-weight: bold;
@@ -79,7 +80,7 @@
 
 #search-box-wrapper {
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     display: flex;
     border-radius: var(--border-radius-medium);
 }
@@ -152,10 +153,5 @@
     #toggle-table-of-content-button {
         display: flex;
         left: 13rem;
-    }
-
-    .image,
-    .video {
-        width: 80vw;
     }
 }

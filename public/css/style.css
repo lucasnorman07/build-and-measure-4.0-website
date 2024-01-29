@@ -20,10 +20,11 @@
     --navbar-height: 3rem;
     
     scroll-behavior: smooth;
+    --font-size: "Segoe UI", "Helvetica Neue", "Helvetica", Arial, sans-serif;
 }
 
 body {
-    font-family: "Segoe UI", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-family: var(--font-size);
     overflow-x: hidden;
 }
 
@@ -123,7 +124,7 @@ small {
     transform: translateY(0.5rem);
 }
 
-@media (max-width: 1122px) {
+@media (max-width: 1100px) {
     .navbar {
         justify-content: space-between;
         padding: 0 1.5rem;
