@@ -112,8 +112,7 @@ section:first-child {
     fill-opacity: 0;
     stroke-width: 20;
     stroke-dasharray: 0, 100;
-    animation:
-        svg-logo-animation-line 2s 0.1s forwards linear,
+    animation: svg-logo-animation-line 2s 0.1s forwards linear,
         svg-logo-animation-fade 0.5s 2.6s forwards linear;
 }
 
@@ -121,6 +120,8 @@ section:first-child {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    width: 90vw;
+    max-width: 1500px;
     transform: translateX(1px); /*1px to fix issue when images sometimes don't appear*/
 }
 
@@ -180,15 +181,15 @@ section:first-child {
 }
 #sliding-examples.show > img:nth-child(2) {
     transform: none;
-    transition: transform 1s 0.1s, scale 0.3s;
+    transition: transform 1s 0.12s, scale 0.3s;
 }
 #sliding-examples.show > img:nth-child(3) {
     transform: none;
-    transition: transform 1s 0.2s, scale 0.3s;
+    transition: transform 1s 0.24s, scale 0.3s;
 }
 #sliding-examples.show > img:nth-child(4) {
     transform: rotate(5deg) translateY(1.5rem);
-    transition: transform 1s 0.3s, scale 0.3s;
+    transition: transform 1s 0.38s, scale 0.3s;
 }
 
 .fade-in {

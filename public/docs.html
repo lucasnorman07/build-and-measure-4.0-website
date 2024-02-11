@@ -343,9 +343,12 @@
                             <p>
                                 In Build and Measure you can hold down the scroll wheel and move the
                                 mouse to pan around the canvas, and rotate/scroll the scroll wheel
-                                to zoom in and out.<br />
-                                You can also change the "zoom speed" in the
-                                <a href="#doc-editor-settings_menu">settings menu</a>.
+                                to zoom in and out. To change how sensitive the zoom is, you can
+                                change the "zoom speed" in the
+                                <a href="#doc-editor-settings_menu">settings menu</a>.<br />If you
+                                are using trackpad and don't have access to a scrollwheel, you can
+                                zoom by moving two fingers and pan by holding down shift + alt when
+                                moving the mouse.
                             </p>
                         </section>
 
@@ -546,6 +549,16 @@
                                     objects, like for example splines).
                                 </li>
                             </ul>
+                            <br />
+                            <p>
+                                You can also snap to specific angles when drawing and moving objects
+                                by pressing the shift key to snap to 90 degrees and the alt key to
+                                snap to 22.5 degrees. You could for example use this to draw a
+                                completely horizontal/vertical line or a line that has a 45 degree
+                                angle. This also works when moving objects, or when specifying a
+                                flip angle. Shift also has some other uses like for example drawing
+                                a completely squared rectangle.
+                            </p>
                         </section>
 
                         <section id="doc-editor-selecting_objects">
@@ -617,6 +630,45 @@
                                 class="image"
                             />
                             <br />
+
+                            <p>Here is a list of all the commands:</p>
+                            <ul>
+                                <li>Delete command - deletes the selected objects</li>
+                                <li>Move command - to move the selected objects with a distance</li>
+                                <li>
+                                    Rotate command - to rotate the selected objects around a point
+                                </li>
+                                <li>
+                                    Duplicate command - to duplicate and move the selected objects
+                                </li>
+                                <li>
+                                    Scale command - to scale the selected objects with a scale
+                                    factor
+                                </li>
+                                <li>
+                                    Flip command - to flip the selected objects around a flip axis
+                                </li>
+                                <li>
+                                    Split command - to split the selected objects on multiple points
+                                    (only for lines and rectangles)
+                                </li>
+                                <li>
+                                    Move to front command - to move the selected objects to the
+                                    front of all other objects
+                                </li>
+                                <li>
+                                    Move to back command - to move the selected objects to the back
+                                    of all other objects
+                                </li>
+                                <li>
+                                    Point move - is activated by pressing an end point on a selected
+                                    object, and moves only that point
+                                </li>
+                                <li>
+                                    Center move - is activated by pressing a center point on a
+                                    selected object, and moves all points next to that center point
+                                </li>
+                            </ul>
                         </section>
 
                         <section id="doc-editor-drawing_palette">
@@ -955,9 +1007,25 @@
                     <hr />
                     <section id="doc-tutorials">
                         <h1>Tutorials (more coming soon):</h1>
+                        <br />
+                        <h2>Features demo</h2>
+                        <br />
                         <video class="video" controls>
                             <source src="videos/demoVideo.mp4" type="video/mp4" />
                         </video>
+                        <br />
+                        <br />
+                        <h2>Drawing a simple bedroom sketch demo</h2>
+                        <br />
+                        <iframe
+                            class="video"
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/iF44BF2jaGc?si=VNQomM_uxkFC4Jen"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                        ></iframe>
                         <!-- <ul>
                             <li>How to download and install the application</li>
                             <li>How to create and save project</li>

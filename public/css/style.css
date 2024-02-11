@@ -18,7 +18,7 @@
     --border-radius-large: 0.8rem;
 
     --navbar-height: 3rem;
-    
+
     scroll-behavior: smooth;
     --font-size: "Segoe UI", "Helvetica Neue", "Helvetica", Arial, sans-serif;
 }
@@ -78,7 +78,7 @@ small {
 
 .nav-brand-link {
     font-size: 1.4rem;
-    background-image: url(../images/logo.png);
+    background-image: url(../images/logo.svg);
     background-size: 2rem;
     background-repeat: no-repeat;
     background-position: left 50%;
@@ -157,7 +157,7 @@ small {
     .hamburger-button {
         display: flex;
     }
-    
+
     .hamburger-button.active .hamburger-button-icon {
         background-color: transparent;
         transform: translateX(-100%);

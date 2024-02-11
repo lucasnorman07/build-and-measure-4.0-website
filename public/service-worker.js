@@ -34,6 +34,7 @@ const FILES_TO_CACHE = [
     "images/documentation-images/start-page.png",
     "images/documentation-images/tool-bar.png",
     "images/apple-icon.svg",
+    "images/example-bedroom-layout.svg",
     "images/example-car.png",
     "images/example-demo-details.svg",
     "images/example-easy-to-use.png",
@@ -48,14 +49,17 @@ const FILES_TO_CACHE = [
     "images/linux-icon.svg",
     "images/logo-512.png",
     "images/logo-maskable.png",
+    "images/logo-maskable.webp",
     "images/logo.png",
+    "images/logo.svg",
     "images/searchIcon.png",
     "images/windows-icon.svg",
     // videos
     "videos/demoVideo.mp4",
-    // robots.txt for google bots
+    // for SEO
     "robots.txt",
-    // manifest
+    "sitemap.txt",
+    // manifest for PWA
     "manifest.json"
 ];
 
