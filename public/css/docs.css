@@ -1,11 +1,14 @@
 .image,
 .video {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 560 / 315;
     max-width: min(60rem, 100%);
     outline: 0.1rem solid black;
     border-radius: var(--border-radius-small);
+}
+
+.video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 560 / 315;
 }
 
 #documentation {

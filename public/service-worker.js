@@ -1,4 +1,4 @@
-const CACHE_NAME = "BAM-cache-v0";
+const CACHE_NAME = "BAM-cache-v6";
 const FILES_TO_CACHE = [
     // default route
     ".",
@@ -6,7 +6,7 @@ const FILES_TO_CACHE = [
     "index.html",
     "docs.html",
     // "404.html",
-    "licence.html",
+    "license.html",
     "download.html",
     "release-notes.html",
     // js
@@ -21,7 +21,7 @@ const FILES_TO_CACHE = [
     "css/download.css",
     "css/release-notes.css",
     // images
-    "logo.ico",
+    "favicon.ico",
     "images/documentation-images/bottom-panel.png",
     "images/documentation-images/command-bar.png",
     "images/documentation-images/command-box.png",
@@ -58,7 +58,7 @@ const FILES_TO_CACHE = [
     "videos/demoVideo.mp4",
     // for SEO
     "robots.txt",
-    "sitemap.txt",
+    "sitemap.xml",
     // manifest for PWA
     "manifest.json"
 ];
