@@ -192,6 +192,10 @@ section:first-child {
     transition: transform 1s 0.38s, scale 0.3s;
 }
 
+.sliding-fade-in {
+    transform: translateX(-100%);
+}
+
 .fade-in {
     transition: 1s;
     opacity: 0;
