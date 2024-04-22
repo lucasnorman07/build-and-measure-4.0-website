@@ -190,6 +190,7 @@
                                     </ul>
                                 </li>
                                 <li><a href="#doc-editor-bottom_panel">Bottom panel</a></li>
+                                <li><a href="#doc-editor-filter_menu">Filter menu</a></li>
                                 <li><a href="#doc-editor-command_box">Command box</a></li>
                                 <li><a href="#doc-editor-settings_menu">Settings menu</a></li>
                                 <li><a href="#doc-editor-shortcuts">Shortcuts</a></li>
@@ -247,7 +248,7 @@
                         <br />
                         <img
                             src="images/documentation-images/start-page.png"
-                            alt="Editor image"
+                            alt="Docs example"
                             class="image"
                         />
                         <br />
@@ -309,19 +310,19 @@
                         <br />
                         <img
                             src="images/documentation-images/project-with-ui-descriptions.png"
-                            alt="Editor image"
+                            alt="Docs example"
                             class="image"
                         />
                         <br />
                         <br />
                         <p>
-                            And export drawings to either svg or pdf in different title blocks and
-                            paper sizes.
+                            And export drawings to either SVG, PDF, PNG or JPG in different title
+                            blocks and paper sizes.
                         </p>
                         <br />
                         <img
                             src="images/documentation-images/editor.png"
-                            alt="Editor image"
+                            alt="Docs example"
                             class="image"
                         />
                         <br />
@@ -369,7 +370,7 @@
                             <br />
                             <img
                                 src="images/documentation-images/control-panel.png"
-                                alt="Editor image"
+                                alt="Docs example"
                                 class="image"
                             />
                             <br />
@@ -415,8 +416,9 @@
                                 <h1>Export button</h1>
                                 <p>
                                     The export button toggles a dropdown with two options to export
-                                    the view/sheet to either SVG or PDF. Both views and sheets can
-                                    be exported, a view will export everything inside of the
+                                    the view/sheet to either SVG, PDF, PNG or JPG. Both views and
+                                    sheets can be exported, a view will export everything inside of
+                                    the
                                     <a href="#doc-editor-views_and_sheets-views">crop region</a> and
                                     a sheet will export everything inside of the
                                     <a href="#doc-editor-views_and_sheets-sheets">title block</a>.
@@ -529,7 +531,7 @@
                                 certain "snap points" that will snap the mouse to that point. When
                                 drawing a line for example, you can hover over a snap point and the
                                 end of the line will snap to that point. <br />
-                                There are four different snap points:
+                                There are five different snap points:
                             </p>
                             <ul>
                                 <li>
@@ -551,16 +553,28 @@
                                     intersection between two objects (this doesn't work on all
                                     objects, like for example splines).
                                 </li>
+                                <li>
+                                    Grid point - grid points, are
+                                    <em>orange</em> snap points, that allow you to snap to the grid
+                                    which you can toggle in the
+                                    <a href="#doc-editor-settings_menu">settings menu</a> and also
+                                    the corners of the crop region in a view and the title block in
+                                    a sheet.
+                                </li>
                             </ul>
                             <br />
                             <p>
                                 You can also snap to specific angles when drawing and moving objects
-                                by pressing the shift key to snap to 90 degrees and the alt key to
-                                snap to 22.5 degrees. You could for example use this to draw a
-                                completely horizontal/vertical line or a line that has a 45 degree
-                                angle. This also works when moving objects, or when specifying a
-                                flip angle. Shift also has some other uses like for example drawing
-                                a completely squared rectangle.
+                                by pressing the shift key to snap to 90 degrees
+                                (horizontally/vertically) and the alt key to snap to a smaller angle
+                                that is specified in the
+                                <a href="#doc-editor-settings_menu-angular_snap_interval"
+                                    >settings menu</a
+                                >, the default is 22.5 degrees. You could for example use this to
+                                draw a completely horizontal/vertical line or a line that has a 45
+                                degree angle. This also works when moving objects, or when
+                                specifying a flip angle. Shift also has some other uses like for
+                                example drawing a completely squared rectangle.
                             </p>
                         </section>
 
@@ -593,7 +607,7 @@
                             <br />
                             <img
                                 src="images/documentation-images/tool-bar.png"
-                                alt="Editor image"
+                                alt="Docs example"
                                 class="image"
                             />
                             <br />
@@ -629,7 +643,7 @@
                             <br />
                             <img
                                 src="images/documentation-images/command-bar.png"
-                                alt="Editor image"
+                                alt="Docs example"
                                 class="image"
                             />
                             <br />
@@ -684,7 +698,7 @@
                             <br />
                             <img
                                 src="images/documentation-images/drawing-palette.png"
-                                alt="Editor image"
+                                alt="Docs example"
                                 class="image"
                             />
                             <br />
@@ -695,6 +709,10 @@
                                 <li>Line width - the width of the stroke</li>
                                 <li>Line dash - the dash of the stroke</li>
                                 <li>Font size - the size of the text</li>
+                                <li>Font family - which font family to use on text</li>
+                                <li>
+                                    Font style - whether the text should be italic, bold or both
+                                </li>
                                 <li>Fill color - the color inside of an object</li>
                                 <li>Fill active - if the fill should be visible</li>
                                 <li>
@@ -740,7 +758,7 @@
                             <br />
                             <img
                                 src="images/documentation-images/context-menu.png"
-                                alt="Editor image"
+                                alt="Docs example"
                                 class="image"
                             />
                             <br />
@@ -748,9 +766,10 @@
                             <section id="doc-editor-context_menu-differing">
                                 <h1>Differing</h1>
                                 <p>
-                                    Two selected objects can have different values and then the
-                                    object properties might look a little different, text/ number
-                                    inputs now have the text "diff" and button inputs are purple.
+                                    Two selected objects can have different object property values
+                                    and then the context menu inputs might look a little different,
+                                    text/number inputs now have the text "diff", button inputs are
+                                    purple and color inputs have a black/white pattern.
                                 </p>
                             </section>
                         </section>
@@ -769,10 +788,38 @@
                             <br />
                             <img
                                 src="images/documentation-images/bottom-panel.png"
-                                alt="Editor image"
+                                alt="Docs example"
                                 class="image"
                             />
                             <br />
+                        </section>
+
+                        <section id="doc-editor-filter_menu">
+                            <h1>Filter menu</h1>
+
+                            <p>
+                                The filter menu lets you filter through the selected objects and
+                                toggle which type of objects to select/deselect. This can be useful
+                                if you for example only want to select line and rectangle objects or
+                                if you want to deselect all textbox objects.
+                            </p>
+                            <br />
+                            <img
+                                src="images/documentation-images/filter-menu.png"
+                                alt="Docs example"
+                                class="image"
+                            />
+                            <br />
+
+                            <br />
+                            <p>
+                                When the filter menu is opened by pressing the filter icon in the
+                                bottom left hand corner next to the command box, you will be able to
+                                toggle a checkbox on each object category to specify if it should
+                                remain selected or not. You can then press the select button to
+                                apply the changes made in the filter menu. There are also two
+                                buttons to help check/uncheck all of the categories.
+                            </p>
                         </section>
 
                         <section id="doc-editor-command_box">
@@ -788,7 +835,7 @@
                             <br />
                             <img
                                 src="images/documentation-images/command-box.png"
-                                alt="Editor image"
+                                alt="Docs example"
                                 class="image"
                             />
                             <br />
@@ -864,7 +911,7 @@
                             <br />
                             <img
                                 src="images/documentation-images/settings.png"
-                                alt="Editor image"
+                                alt="Docs example"
                                 class="image"
                             />
                             <br />
@@ -901,6 +948,10 @@
                                         <li>
                                             Snap distance - how far away the mouse has to be to snap
                                             to a point
+                                        </li>
+                                        <li id="doc-editor-settings_menu-angular_snap_interval">
+                                            Angular snap interval - which angles to snap to when
+                                            pressing the alt key
                                         </li>
                                         <li>
                                             Snap to point - if the mouse can snap the end points
@@ -959,6 +1010,7 @@
                                             Reset settings - if this setting is checked when you
                                             save the settings, all of the settings will be reset
                                         </li>
+                                        <li>? - activate at your own risk!</li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1050,7 +1102,7 @@
                     </section>
                     <hr />
                     <section id="doc-faq">
-                        <h1>Frequently asked questions:</h1>
+                        <h1>FAQ (Frequently asked questions):</h1>
                         <ul>
                             <li>
                                 <strong>How can I report bugs and suggest features?</strong> - If
@@ -1060,9 +1112,13 @@
                             </li>
                             <li>
                                 <strong>Who created Build and Measure?</strong> - Build and Measure
-                                was created by a single developer as a hobby project and has gone
-                                through many iterations as a web app before finally landing as a
-                                desktop app. You can find the old web app here:
+                                was created by a
+                                <a target="_blank" href="https://www.linkedin.com/in/lucasnorman07"
+                                    >single developer</a
+                                >
+                                as a hobby project and has gone through many iterations as a web app
+                                before finally landing as a desktop app. You can find the old web
+                                app here:
                                 <a target="_blank" href="https://buildandmeasure.netlify.app"
                                     >buildandmeasure.netlify.app</a
                                 >
@@ -1088,8 +1144,8 @@
                             </li>
                             <li>
                                 <strong>What file formats can I export to?</strong> - You can
-                                currently export projects as either SVG or PDF but I might add more
-                                options in the future.
+                                currently export projects as either SVG, PDF, PNG or JPG but I might
+                                add more options in the future.
                             </li>
                             <li>
                                 <strong>How can I get support?</strong> - You can send an email to
@@ -1102,7 +1158,10 @@
                     <section>
                         <em
                             ><p>
-                                - Developer Lucas Norman. If you find an issue in this page, please
+                                - Developer
+                                <a target="_blank" href="https://www.linkedin.com/in/lucasnorman07"
+                                    >Lucas Norman</a
+                                >. If you find an issue in this page, please
                                 <a
                                     target="_blank"
                                     href="https://docs.google.com/forms/d/e/1FAIpQLSf-uSV4R492QMRVCQkedEgE5kBvrZKlujpjwPXrHkHiF7DOAw/viewform?usp=sf_link"

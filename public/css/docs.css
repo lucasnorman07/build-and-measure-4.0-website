@@ -30,8 +30,8 @@
     list-style: none;
     white-space: nowrap;
     border-radius: 0 var(--border-radius-large) var(--border-radius-large) 0;
-    width: 13rem;
-    overflow: auto;
+    width: 13.5rem;
+    overflow: hidden auto !important;
 }
 #table-of-content ul {
     list-style: none;
@@ -137,7 +137,7 @@
 @media (max-width: 900px) or (max-height: 600px) {
     #table-of-content-wrapper {
         position: fixed;
-        left: -13rem;
+        left: -13.5rem;
         top: 0;
         transition: left 0.65s;
     }
@@ -158,6 +158,6 @@
 
     #toggle-table-of-content-button {
         display: flex;
-        left: 13rem;
+        left: 13.5rem;
     }
 }
