@@ -2,6 +2,10 @@ main {
     overflow-x: hidden;
 }
 
+#hero {
+    padding-top: 10dvh;
+}
+
 #about h1 {
     font-size: 3.5rem;
 }
@@ -229,25 +233,21 @@ body:has(#fullscreen-image.active) {
     transition: transform 1s 0.38s, scale 0.3s;
 } */
 
-.sliding-fade-in {
-    transform: translateX(-100%);
-}
-
 .fade-in-left {
-    transition: 1s;
+    transition: opacity 1s, translate 1s;
     opacity: 0;
-    transform: translateX(-100%);
+    translate: -100% 0;
 }
 
 .fade-in-right {
-    transition: 1s;
+    transition: opacity 1s, translate 1s;
     opacity: 0;
-    transform: translateX(100%);
+    translate: 100% 0;
 }
 
 .show {
     opacity: 1;
-    transform: translateX(0);
+    translate: 0 0;
 }
 
 @media (prefers-reduced-motion) {

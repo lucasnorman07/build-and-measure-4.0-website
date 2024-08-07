@@ -198,6 +198,7 @@
                         </li>
                         <li><a href="#doc-tutorials">Tutorials</a></li>
                         <li><a href="#doc-faq">FAQs</a></li>
+                        <li><a href="#tips-and-tricks">Tips and tricks</a></li>
                     </ul>
                     <button
                         id="toggle-table-of-content-button"
@@ -415,10 +416,13 @@
                             <section id="doc-editor-control_panel-export_button">
                                 <h1>Export button</h1>
                                 <p>
-                                    The export button toggles a dropdown with two options to export
-                                    the view/sheet to either SVG, PDF, PNG or JPG. Both views and
-                                    sheets can be exported, a view will export everything inside of
-                                    the
+                                    The export button toggles the "export menu", which is a dropdown
+                                    with four options to export the view/sheet to either SVG, PDF,
+                                    PNG or JPG. And it also has some "export settings" to the right
+                                    where you can choose if the background should be transparent and
+                                    if only the selected objects should be featured in the export.
+                                    Both views and sheets can be exported, a view will export
+                                    everything inside of the
                                     <a href="#doc-editor-views_and_sheets-views">crop region</a> and
                                     a sheet will export everything inside of the
                                     <a href="#doc-editor-views_and_sheets-sheets">title block</a>.
@@ -503,6 +507,10 @@
                                 <li>Textbox - 1 click</li>
                                 <li>Textbox With Leader - 2 clicks</li>
                                 <li>
+                                    Image - 2 clicks (will keep it's aspect ratio unless the shift
+                                    key is pressed)
+                                </li>
+                                <li>
                                     Viewport - 1 click (only available in
                                     <a href="#doc-editor-views_and_sheets-sheets">sheets</a>)
                                 </li>
@@ -554,7 +562,7 @@
                                     objects, like for example splines).
                                 </li>
                                 <li>
-                                    Grid point - grid points, are
+                                    Canvas point - canvas points, are
                                     <em>orange</em> snap points, that allow you to snap to the grid
                                     which you can toggle in the
                                     <a href="#doc-editor-settings_menu">settings menu</a> and also
@@ -670,6 +678,10 @@
                                     (only for lines and rectangles)
                                 </li>
                                 <li>
+                                    Clip command - to clip the selected image objects to all of the
+                                    other selected objects
+                                </li>
+                                <li>
                                     Move to front command - to move the selected objects to the
                                     front of all other objects
                                 </li>
@@ -705,14 +717,15 @@
 
                             <p>Here is a list of all of the drawing properties:</p>
                             <ul>
-                                <li>Stroke color - the color of the stroke</li>
-                                <li>Line width - the width of the stroke</li>
-                                <li>Line dash - the dash of the stroke</li>
+                                <li>Stroke color - the color of the stroke/edges and text</li>
+                                <li>Line width - the width of the stroke/edges</li>
+                                <li>Line dash - the dash of the stroke/edges</li>
                                 <li>Font size - the size of the text</li>
                                 <li>Font family - which font family to use on text</li>
                                 <li>
                                     Font style - whether the text should be italic, bold or both
                                 </li>
+                                <li>Opacity - the opacity/transparency of an object</li>
                                 <li>Fill color - the color inside of an object</li>
                                 <li>Fill active - if the fill should be visible</li>
                                 <li>
@@ -723,18 +736,42 @@
                                     Scale text by line width - whether to scale the text size by the
                                     line width (multiplied by 20) instead of the font size
                                 </li>
-                                <li>Selected image - the selected image of the image</li>
-                                <li>Image active - if the selected image should be visible</li>
-                                <li>Insulation active - whether to activate insulation</li>
-                                <li>Insulation height - the height of the insulation</li>
-                                <li>Insulation radius - the radius of the insulation</li>
+                                <li>
+                                    Selected image - the selected image of the object (only image
+                                    objects)
+                                </li>
+                                <li>
+                                    Insulation active - whether to activate insulation (only on
+                                    lines)
+                                </li>
+                                <li>
+                                    Insulation height - the height of the insulation (only on lines)
+                                </li>
+                                <li>
+                                    Insulation radius - the radius of the insulation (only on lines)
+                                </li>
                                 <li>Visible angle - the amount of visible degrees</li>
                                 <li>
                                     Angle shift - how many degrees the visible angle should
                                     rotate/shift
                                 </li>
                                 <li>Border radius - the radius of the corners on the object</li>
+                                <li>Text align - the horizontal text alignment</li>
+                                <li>Text baseline - the vertical text alignment</li>
+                                <li>
+                                    Text align on leader - similar to the "text align" property, but
+                                    is for the "textbox with leader" object
+                                </li>
+                                <li>
+                                    Line ending type - which type of line ending to use, the default
+                                    is "none". You can choose between different arrows, circles and
+                                    other shapes
+                                </li>
+                                <li>
+                                    Line ending size - the size of the line ending that is choosen
+                                </li>
                             </ul>
+                            <br />
                             <p>
                                 Not every drawing property is available for every object, when you
                                 select a tool you can see which drawing properties that are grayed
@@ -749,10 +786,11 @@
                                 it has been drawn and is similar to the
                                 <a href="#doc-editor-drawing_palette">drawing palette</a> in that it
                                 has the almost same drawing properties, now called "object
-                                properties" with the exception of one extra: "Text".<br />
+                                properties" with the exception of one extra to open the "text
+                                editor".<br />
                                 The context menu is only active when one or more objects are
                                 selected and the values in the context menu are the same as on the
-                                object.
+                                objects.
                             </p>
 
                             <br />
@@ -768,9 +806,17 @@
                                 <p>
                                     Two selected objects can have different object property values
                                     and then the context menu inputs might look a little different,
-                                    text/number inputs now have the text "diff", button inputs are
-                                    purple and color inputs have a black/white pattern.
+                                    "text/number" inputs now have the text "DIFF" with a purple
+                                    background, "button" inputs become purple and get a different
+                                    icon, "dropdown" inputs get a purple background and "color"
+                                    inputs have a purple/white pattern.
                                 </p>
+                                <br />
+                                <img
+                                    src="images/documentation-images/differing.png"
+                                    alt="Docs example"
+                                    class="image"
+                                />
                             </section>
                         </section>
 
@@ -841,7 +887,7 @@
                             <br />
 
                             <br />
-                            <p>
+                            <p id="doc-editor-command_box-ommit_comma_feature">
                                 One cool feature that you can use with the command box is to leave
                                 one section empty (a section is basically a measurement or
                                 distance). You can for example type ",100cm" or "100m," (note the
@@ -991,6 +1037,14 @@
                                             influence how precise calculations are, it is just
                                             applies when displaying measurements)
                                         </li>
+                                        <li>
+                                            Display unit on measurements - whether units (like "mm",
+                                            "cm" and so on) should be displayed on measurements
+                                        </li>
+                                        <li>
+                                            Add space between number and unit - if there should be a
+                                            space between the number and unit on a measurement
+                                        </li>
                                     </ul>
                                 </li>
                                 <li>
@@ -1010,7 +1064,9 @@
                                             Reset settings - if this setting is checked when you
                                             save the settings, all of the settings will be reset
                                         </li>
-                                        <li>? - activate at your own risk!</li>
+                                        <li title="Open the app to find out!">
+                                            ? - activate at your own risk!
+                                        </li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1020,42 +1076,65 @@
                             <h1>Shortcuts</h1>
                             <ul>
                                 <li>
+                                    <strong>?</strong> - takes you right back where you belong, this
+                                    page!
+                                </li>
+                                <li><strong>escape</strong> - escaped out of the current action</li>
+                                <li><strong>shift + d</strong> - toggles the drawing palette</li>
+                                <li>
+                                    <strong>control + s</strong> - saves the project (same as
+                                    pressing the
+                                    <a href="#doc-editor-control_panel-save_button">save button</a>)
+                                </li>
+                                <li>
                                     <strong>control + c</strong> - copy the selected objects to the
                                     clipboard
                                 </li>
                                 <li>
-                                    <strong>control + v</strong> - paste the copied objects from the
-                                    clipboard
+                                    <strong>control + v</strong> - paste any copied objects, images
+                                    or text from the clipboard
                                 </li>
-                                <li><strong>escape</strong> - escaped out of the current action</li>
                                 <li><strong>control + z</strong> - undoes the latest action</li>
-                                <li><strong>control + y</strong> - redoes the latest action</li>
-                                <li><strong>control + a</strong> - selects all objects</li>
-                                <li><strong>control + r</strong> - resets the zoom</li>
-                                <li><strong>spacebar</strong> - activates the select tool</li>
-                                <li><strong>l</strong> - activates the line tool</li>
-                                <li><strong>r</strong> - activates the rectangle tool</li>
-                                <li><strong>c + i</strong> - activates the circle tool</li>
-                                <li><strong>e</strong> - activates the ellipse tool</li>
-                                <li><strong>a</strong> - activates the arc tool</li>
-                                <li><strong>d</strong> - activates the dimension tool</li>
-                                <li><strong>shift + v</strong> - activates the viewport tool</li>
-                                <li><strong>v</strong> - activates the angle tool</li>
-                                <li><strong>shift + s</strong> - activates the spline tool</li>
                                 <li>
-                                    <strong>shift + t</strong> - activates the textbox with leader
-                                    tool
+                                    <strong>control + y or control + shift</strong> - redoes the
+                                    latest action
                                 </li>
-                                <li><strong>t</strong> - activates the textbox tool</li>
+                                <li><strong>control + a</strong> - selects all objects</li>
+                                <li>
+                                    <strong>z</strong> - zooms to the crop region in a view or the
+                                    title block in a sheet
+                                </li>
+                                <li>
+                                    <strong>spacebar</strong> - activates the <em>select tool</em>
+                                </li>
+                                <li><strong>l</strong> - activates the <em>line tool</em></li>
+                                <li><strong>r</strong> - activates the <em>rectangle tool</em></li>
+                                <li><strong>c + i</strong> - activates the <em>circle tool</em></li>
+                                <li><strong>e</strong> - activates the <em>ellipse tool</em></li>
+                                <li><strong>a</strong> - activates the <em>arc tool</em></li>
+                                <li><strong>d</strong> - activates the <em>dimension tool</em></li>
+                                <li><strong>v</strong> - activates the <em>angle tool</em></li>
+                                <li>
+                                    <strong>w</strong> - activates the
+                                    <em>textbox with leader tool</em>
+                                </li>
+                                <li><strong>t</strong> - activates the <em>textbox tool</em></li>
+                                <li><strong>s + p</strong> - activates the <em>spline tool</em></li>
+                                <li><strong>i + m</strong> - activates the <em>image tool</em></li>
+                                <li>
+                                    <strong>v + p</strong> - activates the <em>viewport tool</em>
+                                </li>
                                 <li>
                                     <strong>delete or backspace</strong> - deletes the selected
                                     objects
                                 </li>
-                                <li><strong>c</strong> - activates the duplicate command</li>
-                                <li><strong>m</strong> - activates the move command</li>
-                                <li><strong>q</strong> - activates the rotate command</li>
-                                <li><strong>s</strong> - activates the scale command</li>
-                                <li><strong>f</strong> - activates the flip command</li>
+                                <li>
+                                    <strong>c</strong> - activates the <em>duplicate command</em>
+                                </li>
+                                <li><strong>m</strong> - activates the <em>move command</em></li>
+                                <li><strong>q</strong> - activates the <em>rotate command</em></li>
+                                <li><strong>s</strong> - activates the <em>scale command</em></li>
+                                <li><strong>f</strong> - activates the <em>flip command</em></li>
                             </ul>
                         </section>
                     </section>
@@ -1114,7 +1193,7 @@
                                 <strong>Who created Build and Measure?</strong> - Build and Measure
                                 was created by a
                                 <a target="_blank" href="https://www.linkedin.com/in/lucasnorman07"
-                                    >single developer</a
+                                    >Lucas Norman</a
                                 >
                                 as a hobby project and has gone through many iterations as a web app
                                 before finally landing as a desktop app. You can find the old web
@@ -1152,6 +1231,63 @@
                                 <em>buildandmeasure.app@gmail.com</em> and I will try to help as
                                 good as I can.
                             </li>
+                        </ul>
+                    </section>
+                    <hr />
+                    <section id="tips-and-tricks">
+                        <h1>Tips and tricks</h1>
+                        <ul>
+                            <li>
+                                If you're ever unsure about what a button does you can hover over
+                                that button to see a tooltip.
+                            </li>
+                            <li>
+                                If you find it hard to select an object, you can also press on the
+                                <a href="#doc-editor-snapping">snap points</a> of that object.
+                            </li>
+                            <li>
+                                To select an object underneath another object, you can delete the
+                                top object, click on the bottom object and then hit "control + z" to
+                                restore the top object.
+                            </li>
+                            <li>
+                                Check out
+                                <a href="#doc-editor-command_box-ommit_comma_feature">this</a> cool
+                                feature of the command box!
+                            </li>
+                            <li>
+                                Press "shift" to draw a perfect square or straight lines. You can
+                                also press "alt" to snap to specific angles when drawing, you can
+                                change the snap interval with the 
+                                <a href="#doc-editor-settings_menu-angular_snap_interval"
+                                    >angluar snap interval setting</a
+                                >.
+                            </li>
+                            <li>
+                                If you are having troubles panning with a trackpad, press "shift +
+                                alt" and move the mouse to pan.
+                            </li>
+                            <li>Press "escape" or "enter" to leave a text/number input box.</li>
+                            <li>
+                                You can right click to escape out of any action (works the same as
+                                the "escape key")
+                            </li>
+                            <li>
+                                Check out the three icons next to the settings icon in the bottom
+                                left corner of the editor. They will let you easily jump to the
+                                documentation or
+                                <a
+                                    target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSf-uSV4R492QMRVCQkedEgE5kBvrZKlujpjwPXrHkHiF7DOAw/viewform?usp=sf_link"
+                                    >report issue</a
+                                >
+                                and
+                                <a
+                                    target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScN8V4TjFnSuGrNC7TyZ21o7kOTUpv-BsHuzCMQXl51dnQUNA/viewform?usp=sf_link"
+                                    >request feature</a
+                                >
+                                forms when in the editor.
+                            </li>
+                            <li>There might be some easter eggs hidden? 🙂</li>
                         </ul>
                     </section>
                     <hr />
