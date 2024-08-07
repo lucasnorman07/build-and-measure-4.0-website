@@ -70,3 +70,30 @@ rightSlidingButton.onclick = () => {
     shift++;
     applyShift();
 };
+
+// swaping text animations:
+const swappingTextWrapper = document.getElementById("swapping-text-wrapper");
+const swappingTextElement = document.getElementById("swapping-text");
+const swappingTextElements = [...swappingTextElement.children];
+const animationDuration = 800;
+const swapDelay = 1500;
+let i = 0;
+let previousPosition = "0";
+function swapTextLoop() {
+    swappingTextWrapper.style.width = `${swappingTextElements[i].getBoundingClientRect().width}px`;
+    // console.log(performance.now());
+    swappingTextElement.animate(
+        [{ top: previousPosition }, { top: `calc(${i * -100}% + ${i * -0.5}rem)` }],
+        {
+            duration: animationDuration,
+            fill: "forwards"
+        }
+    );
+    previousPosition = `calc(${i * -100}% + ${i * -0.5}rem)`;
+    if (++i >= swappingTextElements.length) {
+        i = 1;
+        previousPosition = "0";
+    }
+    setTimeout(swapTextLoop, swapDelay);
+}
+swapTextLoop();

@@ -115,6 +115,27 @@ section:first-child {
         svg-logo-animation-fade 0.5s 2.6s forwards linear;
 }
 
+#swapping-text-wrapper {
+    display: inline-block;
+    position: relative;
+    overflow: clip;
+    transition: width 0.5s;
+}
+#swapping-text {
+    color: black;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+}
+#swapping-text-wrapper span {
+    white-space: nowrap;
+    width: max-content;
+    font-style: italic;
+}
+
 #sliding-examples {
     width: 90vw;
     max-width: 1500px;
