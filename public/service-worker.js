@@ -1,4 +1,4 @@
-const CACHE_NAME = "BAM-cache-v7";
+const CACHE_NAME = "BAM-cache-v16";
 const FILES_TO_CACHE = [
     // default route
     ".",
@@ -27,19 +27,27 @@ const FILES_TO_CACHE = [
     "images/documentation-images/command-box.png",
     "images/documentation-images/context-menu.png",
     "images/documentation-images/control-panel.png",
+    "images/documentation-images/differing.png",
     "images/documentation-images/drawing-palette.png",
     "images/documentation-images/editor.png",
+    "images/documentation-images/export-menu.png",
+    "images/documentation-images/filter-menu.png",
     "images/documentation-images/project-with-ui-descriptions.png",
     "images/documentation-images/settings.png",
     "images/documentation-images/start-page.png",
     "images/documentation-images/tool-bar.png",
     "images/apple-icon.svg",
+    "images/arrowIcon.png",
     "images/example-bedroom-layout.svg",
+    "images/example-bob.svg",
     "images/example-car.png",
     "images/example-demo-details.svg",
     "images/example-easy-to-use.png",
+    "images/example-factory-layout.svg",
     "images/example-house.png",
+    "images/example-logos-and-icons.svg",
     "images/example-office-chairs.png",
+    "images/example-poster.svg",
     "images/example-precise-drawing.png",
     "images/example-title-block.png",
     "images/example-user-interface.png",
