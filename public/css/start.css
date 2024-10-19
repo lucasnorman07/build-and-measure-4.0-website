@@ -83,8 +83,8 @@ section:first-child {
 
 #start-links .start-link {
     border: none;
-    background-color: transparent;
-    text-decoration: underline #0066b8;
+    background-color: rgba(0, 0, 0, 0.05);
+    text-decoration: none;
     border-radius: var(--border-radius-small);
     padding: 1rem 3rem;
     color: black;
@@ -93,9 +93,15 @@ section:first-child {
     font-size: 1.2rem;
     white-space: nowrap;
     font-family: var(--font-size);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+#start-links .start-link .read-more-arrow {
+    rotate: 90deg;
 }
 #start-links .start-link:hover {
-    background-color: rgba(0, 0, 0, 0.13);
+    background-color: rgba(0, 0, 0, 0.15);
     color: #0066b8;
     text-decoration: none;
 }
@@ -105,6 +111,7 @@ section:first-child {
     height: auto;
     max-width: 30rem;
     max-height: 90vh;
+    margin-bottom: 2rem;
 }
 #logo-svg path {
     fill: #000000;
@@ -327,7 +334,7 @@ body:has(#fullscreen-image.active) {
         transform: translateY(-50%);
     }
 
-    #start-links > .start-link {
+    #start-links .start-link {
         padding: 0.5rem 0.5rem;
     }
 
