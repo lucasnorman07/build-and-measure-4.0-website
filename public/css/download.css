@@ -1,5 +1,6 @@
 #download-heading {
-    margin-top: 5rem;
+    margin: 5rem 1rem;
+    margin-bottom: 0;
     text-align: center;
     font-weight: 400;
 }
@@ -14,6 +15,8 @@
     gap: 5rem;
     margin-top: 5rem;
     margin-bottom: 1rem;
+    padding: 2rem;
+    flex-wrap: wrap;
 }
 
 .download-card {
@@ -29,6 +32,10 @@
     gap: 1rem;
     text-align: center;
 }
+/* Apple download */
+.download-card:last-child a {
+    cursor: not-allowed;
+}
 .download-card > img {
     width: 8rem;
     height: 8rem;
@@ -38,7 +45,7 @@
     font-size: 1.1rem;
     width: 100%;
     background-color: #0066b8;
-    padding: 1rem 3rem;
+    padding: 1rem;
     color: white;
     transition: background-color 0.2s;
     text-decoration: none;
@@ -48,22 +55,12 @@
 }
 .download-card > .download-button-split-wrapper {
     display: flex;
-    gap: 0.3rem;
+    gap: 0.7rem;
     width: 100%;
 }
-.download-card > .download-button-split-wrapper > a {
-    width: 50%;
-    padding: 1rem 2rem;
-}
 
-@media (max-width: 900px) {
+@media (max-width: 1150px) {
     #download-cards-wrapper {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-@media (max-width: 1050px) {
-    #download-cards-wrapper {
-        gap: 1rem;
+        gap: 2rem;
     }
 }

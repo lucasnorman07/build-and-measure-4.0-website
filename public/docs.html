@@ -193,7 +193,9 @@
                                 <li><a href="#doc-editor-filter_menu">Filter menu</a></li>
                                 <li><a href="#doc-editor-command_box">Command box</a></li>
                                 <li><a href="#doc-editor-settings_menu">Settings menu</a></li>
-                                <li><a href="#doc-editor-shortcuts">Shortcuts</a></li>
+                                <li>
+                                    <a href="#doc-editor-keyboard-shortcuts">Keyboard shortcuts</a>
+                                </li>
                             </ul>
                         </li>
                         <li><a href="#doc-tutorials">Tutorials</a></li>
@@ -682,11 +684,19 @@
                                     factor
                                 </li>
                                 <li>
+                                    Offset command - to offset the selected object with a certain
+                                    distance factor
+                                </li>
+                                <li>
                                     Flip command - to flip the selected objects around a flip axis
                                 </li>
                                 <li>
-                                    Split command - to split the selected objects on multiple points
+                                    Split command - to split the selected object on multiple points
                                     (only for lines and rectangles)
+                                </li>
+                                <li>
+                                    Trim command - to trim/extend the selected line segments to a
+                                    target line segment
                                 </li>
                                 <li>
                                     Image clip command - to clip the selected image objects to all
@@ -993,6 +1003,10 @@
                                             Fixed line width - if all objects will have the same
                                             line width no matter the zoom
                                         </li>
+                                        <li>
+                                            Show title block frame corners - if the frame corners of
+                                            the title block should be visible (also when exporting)
+                                        </li>
                                     </ul>
                                 </li>
                                 <li>
@@ -1007,20 +1021,24 @@
                                             pressing the alt key
                                         </li>
                                         <li>
-                                            Snap to point - if the mouse can snap the end points
+                                            Snap to point - if the mouse can snap to end points
                                             (red)
                                         </li>
                                         <li>
-                                            Snap to center - if the mouse can snap the center points
+                                            Snap to center - if the mouse can snap to center points
                                             (blue)
                                         </li>
                                         <li>
-                                            Snap on line - if the mouse can snap to nearest point on
+                                            Snap on line - if the mouse can snap to the nearest point on
                                             a line (green)
                                         </li>
                                         <li>
-                                            Snap to intersection - if the mouse can snap the
+                                            Snap to intersection - if the mouse can snap to the
                                             intersection points between two objects (purple)
+                                        </li>
+                                        <li>
+                                            Snap to grid, crop region and title block - if the mouse can snap to the
+                                            points on a grid, the corners of the crop region and the corners of the title block (orange)
                                         </li>
                                     </ul>
                                 </li>
@@ -1079,15 +1097,40 @@
                             </ul>
                         </section>
 
-                        <section id="doc-editor-shortcuts">
-                            <h1>Shortcuts</h1>
+                        <section id="doc-editor-keyboard-shortcuts">
+                            <h1>Keyboard shortcuts</h1>
                             <ul>
                                 <li>
                                     <strong>?</strong> - takes you right back where you belong, this
                                     page!
                                 </li>
                                 <li><strong>escape</strong> - escaped out of the current action</li>
+                                <li>
+                                    <strong>shift</strong> - used to draw or move completely
+                                    horizontally or vertically
+                                </li>
+                                <li>
+                                    <strong>alt</strong> - used to snap to a certain amount of
+                                    degrees when drawing and using a command. It can be changed with
+                                    the
+                                    <a href="#doc-editor-settings_menu-angular_snap_interval"
+                                        >angluar snap interval setting</a
+                                    >
+                                    and defaults to 22.5 degrees
+                                </li>
+                                <li>
+                                    <strong>control</strong> - used to select multiple objects and
+                                    to duplicate the objects when using a command
+                                </li>
+                                <li>
+                                    <strong>shift + alt</strong> - used to pan around the screen
+                                    with the mouse (same as pressing the scroll wheel)
+                                </li>
                                 <li><strong>shift + d</strong> - toggles the drawing palette</li>
+                                <li>
+                                    <strong>control + ,</strong> - opens the
+                                    <a href="#doc-editor-settings_menu">settings menu</a>
+                                </li>
                                 <li>
                                     <strong>control + s</strong> - saves the project (same as
                                     pressing the
@@ -1098,15 +1141,20 @@
                                     clipboard
                                 </li>
                                 <li>
+                                    <strong>control + x</strong> - copy the selected objects to the
+                                    clipboard and then delete them (cut)
+                                </li>
+                                <li>
                                     <strong>control + v</strong> - paste any copied objects, images
                                     or text from the clipboard
                                 </li>
                                 <li><strong>control + z</strong> - undoes the latest action</li>
                                 <li>
-                                    <strong>control + y or control + shift</strong> - redoes the
+                                    <strong>control + y or control + shift + z</strong> - redoes the
                                     latest action
                                 </li>
                                 <li><strong>control + a</strong> - selects all objects</li>
+                                <li><strong>p</strong> - toggles the polyline setting</li>
                                 <li>
                                     <strong>z</strong> - zooms to the crop region in a view or the
                                     title block in a sheet
@@ -1141,7 +1189,9 @@
                                 <li><strong>m</strong> - activates the <em>move command</em></li>
                                 <li><strong>q</strong> - activates the <em>rotate command</em></li>
                                 <li><strong>s</strong> - activates the <em>scale command</em></li>
+                                <li><strong>o</strong> - activates the <em>offset command</em></li>
                                 <li><strong>f</strong> - activates the <em>flip command</em></li>
+                                <li><strong>k</strong> - activates the <em>trim command</em></li>
                             </ul>
                         </section>
                     </section>
