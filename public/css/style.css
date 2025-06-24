@@ -20,11 +20,11 @@
     --navbar-height: 3rem;
 
     scroll-behavior: smooth;
-    --font-size: "Segoe UI", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    --font-family: "Segoe UI", "Helvetica Neue", "Helvetica", Arial, sans-serif;
 }
 
 body {
-    font-family: var(--font-size);
+    font-family: var(--font-family);
     overflow-x: hidden;
 }
 
@@ -88,8 +88,6 @@ small {
 
 .hamburger-button {
     display: none;
-    /* background-image: url(../images/hamburgerIcon.png);
-    background-size: 2rem; */
     border: none;
     width: 2rem;
     height: 2rem;

@@ -178,12 +178,11 @@
                                 </li>
                                 <li><a href="#doc-editor-tool_bar">Tool-bar</a></li>
                                 <li><a href="#doc-editor-command_bar">Command-bar</a></li>
-                                <li><a href="#doc-editor-drawing_palette">Drawing palette</a></li>
                                 <li>
-                                    <a href="#doc-editor-context_menu">Context menu</a>
+                                    <a href="#doc-editor-properties_panel">Properties panel</a>
                                     <ul>
                                         <li>
-                                            <a href="#doc-editor-context_menu-differing"
+                                            <a href="#doc-editor-properties_panel-differing"
                                                 >Differing</a
                                             >
                                         </li>
@@ -526,19 +525,19 @@
                             <p>
                                 To change for example the line width and stroke color of the object
                                 that will be drawn, you can change the drawing properties in the
-                                <a href="#doc-editor-drawing_palette">drawing palette</a>.
+                                <a href="#doc-editor-properties_panel">properties panel</a>.
                             </p>
                             <section id="doc-editor-drawing_objects-polylines">
                                 <h1>Polylines</h1>
                                 <p>
-                                    TODO! The line and spline objects are polylines meaning that
-                                    they don't stop drawing until you escape by either pressing the
+                                    The line and spline objects are polylines meaning that they
+                                    don't stop drawing until you escape by either pressing the
                                     escape key, right-clicking or by pressing on another tool. You
                                     can also turn off polylines in the
                                     <a href="#doc-editor-settings_menu">settings menu</a>, then they
                                     will have a click count of 2.<br />
-                                    There is a also the keyboard shortcut "p" which is a quick way
-                                    to toggle the polyline setting.
+                                    To quickly toggle the polyline setting you can also use the
+                                    shortcut "p".
                                 </p>
                             </section>
                         </section>
@@ -619,8 +618,7 @@
                             <h1>Tool-bar</h1>
                             <p>
                                 The tool-bar which is located on the left side is used to select the
-                                current tool and to open the
-                                <a href="#doc-editor-drawing_palette">drawing palette</a>.<br />
+                                current tool.
                             </p>
 
                             <br />
@@ -721,26 +719,30 @@
                             </ul>
                         </section>
 
-                        <section id="doc-editor-drawing_palette">
+                        <section id="doc-editor-properties_panel">
                             <h1>Drawing palette</h1>
                             <p>
-                                The drawing palette lets you change different drawing
-                                properties/settings on the next object that will be drawn.<br />
+                                The properties panel lets you change different drawing
+                                properties/settings on the next object that will be drawn, and on
+                                the already existing objects if they are selected.<br />
                             </p>
 
                             <br />
                             <img
-                                src="images/documentation-images/drawing-palette.png"
+                                src="images/documentation-images/properties-panel.png"
                                 alt="Docs example"
                                 class="image"
                             />
                             <br />
 
-                            <p>Here is a list of all of the drawing properties:</p>
+                            <p>Here is a list of all of the properties:</p>
                             <ul>
                                 <li>Stroke color - the color of the stroke/edges and text</li>
+                                <li>Stroke opacity - the opacity of the stroke/edges and text</li>
                                 <li>Line width - the width of the stroke/edges</li>
                                 <li>Line dash - the dash of the stroke/edges</li>
+                                <li>Line cap - how lines should look at the ends</li>
+                                <li>Line join - how lines should look where they join</li>
                                 <li>Font size - the size of the text</li>
                                 <li>Font - which font family and font style to use on text</li>
                                 <li>
@@ -753,6 +755,7 @@
                                 </li>
                                 <li>Fill color - the color inside of an object</li>
                                 <li>Fill active - if the fill should be visible</li>
+                                <li>Fill opacity - the opacity of fill and images</li>
                                 <li>
                                     Selected image - the selected image of the object (only image
                                     objects)
@@ -787,38 +790,20 @@
                                 <li>
                                     Line ending size - the size of the line ending that is choosen
                                 </li>
+                                <li>
+                                    Text - the text in textboxes (only available when objects are
+                                    selected "object properties")
+                                </li>
                             </ul>
                             <br />
                             <p>
-                                Not every drawing property is available for every object, when you
-                                select a tool you can see which drawing properties that are grayed
-                                out and which ones that are available for that object.
-                            </p>
-                        </section>
-
-                        <section id="doc-editor-context_menu">
-                            <h1>Context menu</h1>
-                            <p>
-                                The context menu allows you to change properties of an object after
-                                it has been drawn and is similar to the
-                                <a href="#doc-editor-drawing_palette">drawing palette</a> in that it
-                                has the almost same drawing properties, now called "object
-                                properties" with the exception of one extra to open the "text
-                                editor".<br />
-                                The context menu is only active when one or more objects are
-                                selected and the values in the context menu are the same as on the
-                                objects.
+                                Not every property is available for every object, when you select a
+                                tool you can see which drawing properties that are available for
+                                that kind of object. When you select objects, only the properties
+                                that are available for all of those objects will be visible.
                             </p>
 
-                            <br />
-                            <img
-                                src="images/documentation-images/context-menu.png"
-                                alt="Docs example"
-                                class="image"
-                            />
-                            <br />
-
-                            <section id="doc-editor-context_menu-differing">
+                            <section id="doc-editor-properties_panel-differing">
                                 <h1>Differing</h1>
                                 <p>
                                     Two selected objects can have different object property values
@@ -986,8 +971,6 @@
                                     <ul>
                                         <li>Canvas background color - background color</li>
                                         <li>Selected object color - color of selected objects</li>
-                                        <li>Line cap - how lines should look at the ends</li>
-                                        <li>Line join - how lines should look where they join</li>
                                         <li>
                                             Polyline - if
                                             <a href="#doc-editor-drawing_objects-polylines"
@@ -1029,16 +1012,17 @@
                                             (blue)
                                         </li>
                                         <li>
-                                            Snap on line - if the mouse can snap to the nearest point on
-                                            a line (green)
+                                            Snap on line - if the mouse can snap to the nearest
+                                            point on a line (green)
                                         </li>
                                         <li>
                                             Snap to intersection - if the mouse can snap to the
                                             intersection points between two objects (purple)
                                         </li>
                                         <li>
-                                            Snap to grid, crop region and title block - if the mouse can snap to the
-                                            points on a grid, the corners of the crop region and the corners of the title block (orange)
+                                            Snap to grid, crop region and title block - if the mouse
+                                            can snap to the points on a grid, the corners of the
+                                            crop region and the corners of the title block (orange)
                                         </li>
                                     </ul>
                                 </li>
@@ -1127,6 +1111,9 @@
                                     with the mouse (same as pressing the scroll wheel)
                                 </li>
                                 <li><strong>shift + d</strong> - toggles the drawing palette</li>
+                                <li>
+                                    <strong>control + e</strong> - opens the text editor for selected text objects</a>
+                                </li>
                                 <li>
                                     <strong>control + ,</strong> - opens the
                                     <a href="#doc-editor-settings_menu">settings menu</a>
@@ -1217,24 +1204,7 @@
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen
                         ></iframe>
-                        <!-- <ul>
-                            <li>How to download and install the application</li>
-                            <li>How to create and save project</li>
-                            <li>How to open projects</li>
-                            <li>How to pan and zoom</li>
-                            <li>How to draw objects</li>
-                            <li>Drawing palette</li>
-                            <li>How to select objects</li>
-                            <li>How to use the context menu</li>
-                            <li>How to use commands</li>
-                            <li>
-                                How to draw precise with the command box, snapping and snap grid
-                            </li>
-                        </ul> -->
                         <br />
-                        <!-- <video class="video" controls>
-                            <source src="videos/Obstacle roll.mp4" type="video/mp4" />
-                        </video> -->
                     </section>
                     <hr />
                     <section id="doc-faq">
