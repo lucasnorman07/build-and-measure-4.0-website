@@ -71,6 +71,12 @@
     border-bottom-right-radius: var(--border-radius-medium);
 }
 
+.release-date {
+    display: inline-block;
+    margin-top: 0.5rem !important;
+    color: var(--color-info);
+}
+
 @media (max-width: 900px) or (max-height: 600px) {
     #list-of-release-notes-wrapper {
         position: fixed;

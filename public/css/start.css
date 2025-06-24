@@ -4,6 +4,7 @@ main {
 
 #hero {
     padding-top: 10dvh;
+    padding-bottom: 1.5rem;
 }
 
 #about h1 {
@@ -28,8 +29,8 @@ section {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 1rem 10vw;
-    padding-bottom: 2.5rem;
+    padding: 3rem 10vw;
+    padding-bottom: 10rem;
     position: relative;
 }
 
@@ -68,10 +69,6 @@ section:first-child {
     max-height: 30rem;
     outline: 0.01rem solid gray;
 }
-.feature-section img.extra-spacing {
-    margin-top: 2rem;
-    margin-bottom: 4rem;
-}
 
 #start-links {
     display: flex;
@@ -92,7 +89,7 @@ section:first-child {
     transition: background-color 0.2s, color 0.2s;
     font-size: 1.2rem;
     white-space: nowrap;
-    font-family: var(--font-size);
+    font-family: var(--font-family);
     display: flex;
     align-items: center;
     gap: 0.3rem;
@@ -319,10 +316,6 @@ body:has(#fullscreen-image.active) {
         font-size: 1.3rem;
     }
 
-    .spacing-for-curved-divider {
-        display: none;
-    }
-
     .feature-section img.extra-spacing {
         margin: 0;
     }
@@ -352,8 +345,9 @@ body:has(#fullscreen-image.active) {
         font-size: 1rem;
     }
 
-    .spacing-for-curved-divider {
-        display: none;
+    section {
+        padding: 1.5rem 10vw;
+        padding-bottom: 5rem;
     }
 
     .feature-section img.extra-spacing {

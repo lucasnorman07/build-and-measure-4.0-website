@@ -1,7 +1,7 @@
-const CACHE_NAME = "BAM-cache-v18";
+const CACHE_NAME = "BAM-cache-v21";
 const FILES_TO_CACHE = [
     // default route
-    ".",
+    ".",    
     // html
     "index.html",
     "docs.html",
@@ -25,10 +25,9 @@ const FILES_TO_CACHE = [
     "images/documentation-images/bottom-panel.png",
     "images/documentation-images/command-bar.png",
     "images/documentation-images/command-box.png",
-    "images/documentation-images/context-menu.png",
     "images/documentation-images/control-panel.png",
     "images/documentation-images/differing.png",
-    "images/documentation-images/drawing-palette.png",
+    "images/documentation-images/properties-panel.png",
     "images/documentation-images/editor.png",
     "images/documentation-images/export-menu.png",
     "images/documentation-images/filter-menu.png",
