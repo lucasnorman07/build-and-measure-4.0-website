@@ -1,6 +1,7 @@
-const CACHE_NAME = "BAM-cache-v22";
+const CACHE_NAME = "BAM-cache-v23";
 const FILES_TO_CACHE = [
     // default route
+    ".",    
     ".",    
     // html
     "index.html",
