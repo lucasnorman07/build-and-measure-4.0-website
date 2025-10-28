@@ -23,6 +23,9 @@
 
         <script defer src="js/docs.js"></script>
         <script defer src="js/main.js"></script>
+
+        <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+
         <title>Build and Measure - docs</title>
     </head>
     <body>
@@ -153,10 +156,16 @@
                                     <a href="#doc-editor-views_and_sheets">Views and Sheets</a>
                                     <ul>
                                         <li>
-                                            <a href="#doc-editor-views_and_sheets-views">Views</a>
+                                            <a
+                                                href="#doc-editor-views_and_sheets-views_and_crop_region"
+                                                >Views and crop region</a
+                                            >
                                         </li>
                                         <li>
-                                            <a href="#doc-editor-views_and_sheets-sheets">Sheets</a>
+                                            <a
+                                                href="#doc-editor-views_and_sheets-sheets_and_title_block"
+                                                >Sheets and title block</a
+                                            >
                                         </li>
                                     </ul>
                                 </li>
@@ -188,7 +197,6 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a href="#doc-editor-bottom_panel">Bottom panel</a></li>
                                 <li><a href="#doc-editor-filter_menu">Filter menu</a></li>
                                 <li><a href="#doc-editor-command_box">Command box</a></li>
                                 <li><a href="#doc-editor-settings_menu">Settings menu</a></li>
@@ -361,12 +369,14 @@
                         <section id="doc-editor-control_panel">
                             <h1>Control panel</h1>
                             <p>
-                                The control panel is positioned in the top left corner of the editor
-                                and has buttons to save/export and control the
+                                The control panel is positioned at the top of the screen, and has
+                                buttons to for example save/export and control the
                                 <a href="#doc-editor-control_panel-view_and_sheet_buttons"
                                     >views and sheets</a
                                 >
-                                of the project.
+                                of the project. It also displays the project's name and has buttons
+                                to the far right for quickly accessing the documentation (this
+                                page), and the report issue and request feature forms.
                             </p>
 
                             <br />
@@ -398,19 +408,41 @@
                                     specify a file location for the project, but after that it will
                                     always save in that file location.
                                 </p>
+                                <br />
+                                <p>
+                                    The save button has a status indicator in the bottom right
+                                    corner, it can look like the follwing:
+                                </p>
+                                <ol>
+                                    <li>
+                                        A red circle, indicates that the project has unsaved
+                                        changes.
+                                    </li>
+                                    <li>
+                                        A gray circle, indicates that the project doesn't have
+                                        unsaved changes, but is not saved to a file or shortcut
+                                        either. This happens when you create a new project, or open
+                                        an existing project that has not been saved as a project
+                                        shortcut.
+                                    </li>
+                                    <li>
+                                        A rotating hourglass, indicates that the project is in the
+                                        process of saving.
+                                    </li>
+                                    <li>
+                                        No icon with slightly grayed out text, indicates that the
+                                        project is fully saved.
+                                    </li>
+                                </ol>
                             </section>
 
                             <section id="doc-editor-control_panel-save_as_button">
                                 <h1>Save As button</h1>
                                 <p>
-                                    The save as button lets you choose a new file to save the
-                                    project in, even if the project has already been saved. Please
-                                    note that this will not change the location that the
+                                    The "save as" button lets you save a copy of the project in a
+                                    new file location. Note that the
                                     <a href="#doc-editor-control_panel-save_button">save button</a>
-                                    will save to, unless it's the first time the project has been
-                                    saved, then the file location you choose will be saved and will
-                                    be used when saving with the
-                                    <a href="#doc-editor-control_panel-save_button">save button</a>.
+                                    will still save to the original file location.
                                 </p>
                             </section>
 
@@ -419,14 +451,50 @@
                                 <p>
                                     The export button toggles the "export menu", which is a dropdown
                                     with four options to export the view/sheet to either SVG, PDF,
-                                    PNG or JPG. And it also has some "export settings" to the right
-                                    where you can choose if the background should be transparent and
-                                    if only the selected objects should be featured in the export.
+                                    PNG or JPG. It also has some "export settings" to the right:
+                                </p>
+                                <ul>
+                                    <li>
+                                        Transparent background - if the exported image/document
+                                        should have a transparent background
+                                    </li>
+                                    <li>
+                                        Only selected objects - if only the currently selected
+                                        objects should be featured in the export
+                                    </li>
+                                    <li>
+                                        Font embed type - how fonts should be embedded in the
+                                        export:
+                                        <ul>
+                                            <li>
+                                                Do not embed - fonts are linked by name, which saves
+                                                size, but does not gaurantee that the fonts will be
+                                                displayed correctly
+                                            </li>
+                                            <li>
+                                                Embed font files - the font files are embedded in
+                                                the export, which gaurantees the correct fonts, but
+                                                takes up a lot of space (makes the file bigger)
+                                            </li>
+                                            <li>
+                                                Text to paths - all text is converted into paths,
+                                                which preserves the correct fonts and uses little
+                                                space, however this also removes the ability to
+                                                select the text in for a example a PDF export.
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <p>
                                     Both views and sheets can be exported, a view will export
                                     everything inside of the
-                                    <a href="#doc-editor-views_and_sheets-views">crop region</a> and
-                                    a sheet will export everything inside of the
-                                    <a href="#doc-editor-views_and_sheets-sheets">title block</a>.
+                                    <a href="#doc-editor-views_and_sheets-views_and_crop_region"
+                                        >crop region</a
+                                    >
+                                    and a sheet will export everything inside of the
+                                    <a href="#doc-editor-views_and_sheets-sheets_and_title_block"
+                                        >title block</a
+                                    >.
                                 </p>
                                 <br />
                                 <img
@@ -444,46 +512,71 @@
                                         >views and sheets</a
                                     >
                                     of the project.<br />
-                                    First are the view tabs which are located between the "export"
-                                    and "new view" buttons, to change the current view/sheet click
-                                    on a view/sheet tab. You can also rename a view/sheet by
-                                    pressing on it after it is active (is the current
-                                    view/sheet).<br />
-                                    To create a view or sheet press the "new view" and "new sheet"
-                                    buttons to the right of the view tabs.<br />
-                                    To delete the current view/sheet press the "delete view/sheet"
-                                    button to the right of the "new sheet" button.
+                                    First is the view-dropdown button, which is followed with a
+                                    button to create a new view (has a plus icon). The dropdown
+                                    button shows a list of the "views" that exist in the project.
+                                    Press one of the views to switch to it, or press the delete
+                                    button to remove it. Following the view-dropdown is the
+                                    sheet-dropdown which works in the same way, although for the
+                                    "sheets". The last button shows the currently active view/sheet.
+                                    You can rename a view/sheet either by pressing that last button,
+                                    or by pressing the active view/sheet in the dropdown lists.
                                 </p>
+                                <br />
+                                <img
+                                    src="images/documentation-images/view-and-sheet-buttons.png"
+                                    alt="Docs example"
+                                    class="image"
+                                />
                             </section>
                         </section>
 
                         <section id="doc-editor-views_and_sheets">
                             <h1>Views and sheets</h1>
                             <p>
-                                A project is divided up into multiple "views" and "sheets". Views
-                                are used to draw something in 1:1 scale which can then be exported
-                                to a sheet view via the
-                                <a href="#doc-editor-tool_bar">viewport tool</a> and then exported
-                                with a frame/title block.
+                                A project is divided up into multiple "views" and "sheets". Both
+                                function as a way to structure projects by dividing them up into
+                                different logical "tabs", although they have slightly different use
+                                cases. Views are generally used to create drawings of stuff in 1:1
+                                scale, while sheets are used for creating exports with different
+                                papper sizes and title blocks. Views can be used to for example
+                                create drawings of a house, room layout or some icon, while sheets
+                                allow you to insert "viewports" (using the viewport tool) of
+                                different views and specify different types of papper sizes for
+                                exporting (usefull for PDF). Sheets can also be usefull when
+                                creating posters for printing on papper.
                             </p>
-                            <section id="doc-editor-views_and_sheets-views">
-                                <h1>Views</h1>
+                            <section id="doc-editor-views_and_sheets-views_and_crop_region">
+                                <h1>Views and crop region</h1>
                                 <p>
                                     Each view has a scale and a crop region size, which can be
-                                    changed in the input boxes in the bottom of a view. The scale of
-                                    a view defines which scale the view should be in when it is
-                                    drawn with a viewport in a sheet view. And the crop region is
-                                    the area of the view that will be visible from a viewport and
-                                    cannot be moved (but you can move the objects into the crop
-                                    region).
+                                    changed in the input boxes in the bottom of the editor. The
+                                    scale of a view defines which scale the view should be in when
+                                    it is drawn with a viewport in a sheet view. And the crop region
+                                    is the area of the view that will be visible from a viewport.
+                                    The crop region visibility can be toggled using the checkbox in
+                                    the bottom left corner of the editor (to the right of the view
+                                    scale input), and it can be resized with the width/height input
+                                    boxes to the right of that. Next to those inputs are two more
+                                    buttons. The first button selects the objects that are partially
+                                    inside of the crop region. The one to the right of that is used
+                                    for moving (fitting) the crop region to the selected objects.
+                                    Check out the
+                                    <a href="#doc-editor-settings_menu-crop_region"
+                                        >crop region settings</a
+                                    >
+                                    for more control of this feature.
                                 </p>
                             </section>
-                            <section id="doc-editor-views_and_sheets-sheets">
-                                <h1>Sheets</h1>
+                            <section id="doc-editor-views_and_sheets-sheets_and_title_block">
+                                <h1>Sheets and title block</h1>
                                 <p>
                                     A sheet view doesn't have a scale and crop region, but instead
                                     has a title block and paper size, which are used to create a
-                                    drawing frame/title block which will be used when exporting.
+                                    drawing frame/title block which will be used when exporting. You
+                                    can change the title block and papper size using the dropdown
+                                    menus in the bottom left corner of the editor (while in a
+                                    sheet).
                                 </p>
                             </section>
                         </section>
@@ -519,7 +612,9 @@
                                 </li>
                                 <li>
                                     Viewport - 1 click (only available in
-                                    <a href="#doc-editor-views_and_sheets-sheets">sheets</a>)
+                                    <a href="#doc-editor-views_and_sheets-sheets_and_title_block"
+                                        >sheets</a
+                                    >)
                                 </li>
                             </ul>
                             <p>
@@ -562,8 +657,9 @@
                                     object.
                                 </li>
                                 <li>
-                                    On line point - on line points are <em>green</em> snap points,
-                                    that allow you snap to the closest point on for example a line.
+                                    Edge point - Edge points are <em>green</em> snap points, that
+                                    allow you snap to the closest point on for example a line or the
+                                    edge of a circle.
                                 </li>
                                 <li>
                                     Intersection point - intersection points, are
@@ -600,18 +696,32 @@
                             <h1>Selecting objects</h1>
                             <p>
                                 To select an object you need to activate the select tool which is
-                                the second to top button in the
+                                the top button in the
                                 <a href="#doc-editor-tool_bar">tool-bar</a>.<br />
                                 You can select an object by clicking on it or by clicking on a
                                 <a href="#doc-editor-snapping">snap point</a> on that object.<br />
                                 You can also drag the mouse (with the left mouse button down) to
-                                select the objects that are fully within the area that appears (it
-                                checks if all of the red edge points are within that area).<br />
+                                select the objects that are fully within the area that appears.<br />
                                 If you press the control key while clicking on an object or dragging
                                 the mouse, any object that was previously selected will remain
                                 selected, this allows you to select multiple objects by clicking on
-                                each one while holding control.
+                                each one while holding control. <br /><br />When an object is
+                                selected, the stroke color will change to the
+                                <a href="#doc-editor-settings_menu-selected_object_color"
+                                    >selected object color</a
+                                >
+                                to indicate that it's selected. In addition, small circles will
+                                appear at the end points showing where you can snap to the object.
+                                These points can also be moved by clicking on them. Furthermore,
+                                small triangles will appear at the centers, which can also be
+                                snapped to and moved by clicking on them.
                             </p>
+                            <br />
+                            <img
+                                src="images/documentation-images/selected-objects.png"
+                                alt="Selected objects"
+                                class="image"
+                            />
                         </section>
 
                         <section id="doc-editor-tool_bar">
@@ -631,7 +741,6 @@
 
                             <p>Here is a list of all the buttons:</p>
                             <ul>
-                                <li>Toggle drawing palette button</li>
                                 <li>Select tool - to select objects</li>
                                 <li>Line tool</li>
                                 <li>Rectangle tool</li>
@@ -644,7 +753,12 @@
                                 <li>Textbox with Leader tool</li>
                                 <li>Textbox tool</li>
                                 <li>Image tool</li>
-                                <li>Viewport tool</li>
+                                <li>
+                                    Viewport tool (only available in
+                                    <a href="#doc-editor-views_and_sheets-sheets_and_title_block"
+                                        >sheets</a
+                                    >)
+                                </li>
                             </ul>
                         </section>
 
@@ -652,11 +766,13 @@
                             <h1>Command-bar</h1>
                             <p>
                                 The command-bar is similar to the
-                                <a href="#doc-editor-tool_bar">tool-bar</a> in many ways but it is
+                                <a href="#doc-editor-tool_bar">tool-bar</a> in many ways, but it is
                                 only available when you have one or more objects
-                                <a href="#doc-editor-selecting_objects">selected</a> and instead of
+                                <a href="#doc-editor-selecting_objects">selected</a>, and instead of
                                 selecting a tool it allows you to activate a command on the
-                                currently selected objects.
+                                currently selected objects. At the top of the command-bar is also
+                                another button that is used to toggle the
+                                <a href="#doc-editor-properties_panel">properties panel</a>.
                             </p>
 
                             <br />
@@ -720,11 +836,14 @@
                         </section>
 
                         <section id="doc-editor-properties_panel">
-                            <h1>Drawing palette</h1>
+                            <h1>Properties panel</h1>
                             <p>
-                                The properties panel lets you change different drawing
-                                properties/settings on the next object that will be drawn, and on
-                                the already existing objects if they are selected.<br />
+                                The properties panel is used to change different properties on
+                                objects like for example the line width, stroke color and font size.
+                                When a drawing tool is selected (like the line, rectangle or circle
+                                tools), it will let you specify the properties for any object that
+                                is about to be drawn. When some objects are selected though, it lets
+                                you change the already existing properties on those objects.
                             </p>
 
                             <br />
@@ -806,13 +925,31 @@
                             <section id="doc-editor-properties_panel-differing">
                                 <h1>Differing</h1>
                                 <p>
-                                    Two selected objects can have different object property values
-                                    and then the context menu inputs might look a little different,
-                                    "text/number" inputs now have the text "DIFF" with a purple
-                                    background, "button" inputs become purple and get a different
-                                    icon, "dropdown" inputs get a purple background and "color"
-                                    inputs have a purple/white pattern.
+                                    Multiple objects can have different property values. When this
+                                    happens, the property inputs can look a bit different, this is
+                                    called "differing". The inputs will change in the following way:
                                 </p>
+                                <ul>
+                                    <li>
+                                        Checkbox/button - the background will turn purple and the
+                                        icon will turn into a ≠ sign.
+                                    </li>
+                                    <li>
+                                        Text and number inputs - the background will turn purple and
+                                        the text: "DIFF" will appear.
+                                    </li>
+                                    <li>
+                                        Color inputs - the background will turn purple and the text:
+                                        "DIFF" will appear. In addition, the color box will turn
+                                        into purple/white.
+                                    </li>
+                                    <li>
+                                        Dropdown input - the background will turn purple and the
+                                        text: "DIFF" will appear. In addition, the icon will turn
+                                        into a ≠ sign.
+                                    </li>
+                                    <li>Pop-up button - the background will turn purple.</li>
+                                </ul>
                                 <br />
                                 <img
                                     src="images/documentation-images/differing.png"
@@ -820,26 +957,6 @@
                                     class="image"
                                 />
                             </section>
-                        </section>
-
-                        <section id="doc-editor-bottom_panel">
-                            <h1>Bottom panel</h1>
-                            <p>
-                                The bottom panel has buttons to change the project settings as well
-                                as some settings for the current view/sheet like the
-                                <a href="#doc-editor-views_and_sheets-views">crop region size</a>
-                                and <a href="#doc-editor-views_and_sheets-sheets">title block</a>.
-                                It also has links to the documentation, report issue form and
-                                request feature form.
-                            </p>
-
-                            <br />
-                            <img
-                                src="images/documentation-images/bottom-panel.png"
-                                alt="Docs example"
-                                class="image"
-                            />
-                            <br />
                         </section>
 
                         <section id="doc-editor-filter_menu">
@@ -968,9 +1085,12 @@
                             <ul>
                                 <li>
                                     Appearance
-                                    <ul>
+                                    <ul class="nested-ul">
                                         <li>Canvas background color - background color</li>
-                                        <li>Selected object color - color of selected objects</li>
+                                        <li id="doc-editor-settings_menu-selected_object_color">
+                                            Selected object color - the stroke color for selected
+                                            objects
+                                        </li>
                                         <li>
                                             Polyline - if
                                             <a href="#doc-editor-drawing_objects-polylines"
@@ -994,7 +1114,7 @@
                                 </li>
                                 <li>
                                     Snapping
-                                    <ul>
+                                    <ul class="nested-ul">
                                         <li>
                                             Snap distance - how far away the mouse has to be to snap
                                             to a point
@@ -1012,8 +1132,8 @@
                                             (blue)
                                         </li>
                                         <li>
-                                            Snap on line - if the mouse can snap to the nearest
-                                            point on a line (green)
+                                            Snap to edge - if the mouse can snap to the nearest
+                                            point on for example a line or the edge of a circle.
                                         </li>
                                         <li>
                                             Snap to intersection - if the mouse can snap to the
@@ -1028,14 +1148,32 @@
                                 </li>
                                 <li>
                                     Grid
-                                    <ul>
+                                    <ul class="nested-ul">
                                         <li>Grid active - if the grid should be active</li>
                                         <li>Grid snap interval - the spacing between grid lines</li>
                                     </ul>
                                 </li>
+                                <li id="doc-editor-settings_menu-crop_region">
+                                    Crop region
+                                    <ul class="nested-ul">
+                                        <li>
+                                            Crop region fit margin - an extra bit of space (margin)
+                                            that is applied around the crop region when it fits to
+                                            the selected objects
+                                        </li>
+                                        <li>
+                                            Fit crop region to grid - wether the crop region should
+                                            snap to the grid when it fits to the selected objects
+                                        </li>
+                                        <li>
+                                            Show crop region on export - wether the crop region
+                                            should turn visible when the export menu is opened
+                                        </li>
+                                    </ul>
+                                </li>
                                 <li>
                                     Units and precision
-                                    <ul>
+                                    <ul class="nested-ul">
                                         <li id="doc-editor-settings_menu-default_unit">
                                             Default unit - the default unit of the project: mm, cm,
                                             dm or m
@@ -1058,17 +1196,17 @@
                                 </li>
                                 <li>
                                     Zoom
-                                    <ul>
+                                    <ul class="nested-ul">
                                         <li>
-                                            Zoom speed - what factor to multiply the screen size
-                                            with every time you scroll/zoom (with other words how
-                                            much bigger/smaller the screen gets when you zoom)
+                                            Zoom speed - the factor to multiply the screen size with
+                                            every time you scroll/zoom (in other words: zoom
+                                            sensitivity)
                                         </li>
                                     </ul>
                                 </li>
                                 <li>
                                     Danger zone
-                                    <ul>
+                                    <ul class="nested-ul">
                                         <li>
                                             Reset settings - if this setting is checked when you
                                             save the settings, all of the settings will be reset
@@ -1110,9 +1248,13 @@
                                     <strong>shift + alt</strong> - used to pan around the screen
                                     with the mouse (same as pressing the scroll wheel)
                                 </li>
-                                <li><strong>shift + d</strong> - toggles the drawing palette</li>
                                 <li>
-                                    <strong>control + e</strong> - opens the text editor for selected text objects</a>
+                                    <strong>shift + d</strong> - toggles the
+                                    <a href="#doc-editor-properties_panel">properties panel</a>
+                                </li>
+                                <li>
+                                    <strong>control + e</strong> - opens the text editor for
+                                    selected text objects
                                 </li>
                                 <li>
                                     <strong>control + ,</strong> - opens the
@@ -1142,6 +1284,15 @@
                                 </li>
                                 <li><strong>control + a</strong> - selects all objects</li>
                                 <li><strong>p</strong> - toggles the polyline setting</li>
+                                <li>
+                                    <strong>x + s</strong> - selects the objects partially (or
+                                    fully) inside the crop region
+                                </li>
+                                <li>
+                                    <strong>x + f</strong> - fits the crop region to the selected
+                                    objects
+                                </li>
+                                <li><strong>c + r</strong> - toggles the crop region visibility</li>
                                 <li>
                                     <strong>z</strong> - zooms to the crop region in a view or the
                                     title block in a sheet
@@ -1178,13 +1329,14 @@
                                 <li><strong>s</strong> - activates the <em>scale command</em></li>
                                 <li><strong>o</strong> - activates the <em>offset command</em></li>
                                 <li><strong>f</strong> - activates the <em>flip command</em></li>
+                                <li><strong>b</strong> - activates the <em>split command</em></li>
                                 <li><strong>k</strong> - activates the <em>trim command</em></li>
                             </ul>
                         </section>
                     </section>
                     <hr />
                     <section id="doc-tutorials">
-                        <h1>Tutorials (more coming soon):</h1>
+                        <h1>Tutorials (more coming in the future):</h1>
                         <br />
                         <h2>Features demo</h2>
                         <br />
@@ -1208,7 +1360,7 @@
                     </section>
                     <hr />
                     <section id="doc-faq">
-                        <h1>FAQ (Frequently asked questions):</h1>
+                        <h1>FAQ (Frequently Asked Questions):</h1>
                         <ul>
                             <li>
                                 <strong>How can I report bugs and suggest features?</strong> - If

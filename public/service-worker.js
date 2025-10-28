@@ -1,4 +1,4 @@
-const CACHE_NAME = "BAM-cache-v21";
+const CACHE_NAME = "BAM-cache-v22";
 const FILES_TO_CACHE = [
     // default route
     ".",    
@@ -28,6 +28,7 @@ const FILES_TO_CACHE = [
     "images/documentation-images/control-panel.png",
     "images/documentation-images/differing.png",
     "images/documentation-images/properties-panel.png",
+    "images/documentation-images/selected-objects.png",
     "images/documentation-images/editor.png",
     "images/documentation-images/export-menu.png",
     "images/documentation-images/filter-menu.png",
@@ -35,6 +36,7 @@ const FILES_TO_CACHE = [
     "images/documentation-images/settings.png",
     "images/documentation-images/start-page.png",
     "images/documentation-images/tool-bar.png",
+    "images/documentation-images/view-and-sheet-buttons.png",
     "images/apple-icon.svg",
     "images/arrowIcon.png",
     "images/example-bedroom-layout.svg",

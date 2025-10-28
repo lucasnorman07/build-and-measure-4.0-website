@@ -73,13 +73,16 @@
     margin-bottom: 0.5rem;
 }
 
-#documentation-content ul li:has(ul) {
+#documentation-content ul ul {
     margin-left: 1rem;
+}
+#documentation-content ul li:has(ul.nested-ul) {
+    margin-left: 0;
     font-weight: bold;
     list-style-type: none;
 }
-#documentation-content ul ul li {
-    margin-left: 0;
+#documentation-content ul ul.nested-ul li {
+    margin-left: 1rem;
     font-weight: normal;
     list-style-type: disc;
 }
