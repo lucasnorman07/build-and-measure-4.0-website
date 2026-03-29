@@ -4,11 +4,15 @@ document.getElementById("readmore").onclick = () => aboutSection.scrollIntoView(
 // code for sliding/fading animations
 const intersectionObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add("show");
+    
+        if (entry.isIntersecting && entry.intersectionRatio > 0) {
+            console.log({target: entry.target});
+            entry.target.classList.add("show");
+        }
     });
 });
 
-document.querySelectorAll(".fade-in-left, .fade-in-right").forEach(hiddenElement => {
+document.querySelectorAll(".fade-in-left, .fade-in-right, .fade-in-upwards").forEach(hiddenElement => {
     intersectionObserver.observe(hiddenElement);
 });
 
@@ -81,7 +85,6 @@ let i = 0;
 let previousPosition = "0";
 function swapTextLoop() {
     swappingTextWrapper.style.width = `${swappingTextElements[i].getBoundingClientRect().width}px`;
-    // console.log(performance.now());
     swappingTextElement.animate(
         [{ top: previousPosition }, { top: `calc(${i * -100}% + ${i * -0.5}rem)` }],
         {

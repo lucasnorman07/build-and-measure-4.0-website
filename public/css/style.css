@@ -11,30 +11,114 @@
     --color-error: hsl(0, 85%, 52%);
     --color-warning: hsl(45, 90%, 52%);
     --color-info: hsl(209, 70%, 70%);
+    --color-action: hsl(207, 100%, 36%);
+    --color-background: white;
+    --color-secondary: hsl(0, 0%, 94%);
+
+    --muted-text-color: hsl(240, 7%, 45%);
+
+    --section-width: 1400px;
+    --large-section-spacing: 128px;
+    --medium-section-spacing: 80px;
+    --small-section-spacing: 40px;
+
+    --spacing-tiny: 4px;
+    --spacing-extra-small: 15px;
+    --spacing-small: 20px;
+    --spacing-medium: 24px;
+    --spacing-large: 32px;
+    --spacing-extra-large: 56px;
 
     --border-radius-extra-small: 0.2rem;
     --border-radius-small: 0.3rem;
     --border-radius-medium: 0.5rem;
     --border-radius-large: 0.8rem;
+    --border-radius-extra-large: 1rem;
 
-    --navbar-height: 3rem;
+    --font-weight-medium: 500;
+    --font-weight-normal: 400;
+    --font-weight-thin: 300;
+
+    --text-hero-h1: 40px;
+    --text-h1: 35px;
+    --text-h2: 30px;
+    --text-h3: 22px;
+    --text-h4: 20px;
+
+    --text-body-large: 18px;
+    --text-body: 16px;
+    --text-small: 13px;
+
+    --text-link-extra-large: 24px;
+    --text-link-large: 20px;
+    --text-link: 18px;
+    --text-link-small: var(--text-body);
+
+    --navbar-height: 3.5rem;
 
     scroll-behavior: smooth;
-    --font-family: "Segoe UI", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    --text-family:
+        ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 body {
-    font-family: var(--font-family);
+    font-family: var(--text-family);
     overflow-x: hidden;
+}
+
+h1 {
+    font-weight: var(--font-weight-medium);
+    font-size: var(--text-h1);
+    line-height: 1.4;
+    letter-spacing: -1px;
+}
+
+h2 {
+    font-weight: var(--font-weight-medium);
+    font-size: var(--text-h2);
+    line-height: 1.4;
+}
+
+h3 {
+    font-weight: var(--font-weight-medium);
+    font-size: var(--text-h3);
+    line-height: 1.4;
+}
+
+h4 {
+    font-weight: var(--font-weight-medium);
+    font-size: var(--text-h4);
+    line-height: 1.4;
+}
+
+ul li,
+ol li {
+    line-height: 1.6;
+}
+
+p {
+    font-weight: var(--font-weight-normal);
+    font-size: var(--text-body);
+    line-height: 1.4;
+}
+
+a {
+    font-size: var(--text-link-small);
 }
 
 button {
     cursor: pointer;
+    font-size: var(--text-button);
 }
 
 small {
     display: block;
-    font-size: 0.8rem;
+    font-size: var(--text-small);
+}
+
+.muted-text {
+    color: var(--muted-text-color);
 }
 
 .nowrap {
@@ -42,7 +126,10 @@ small {
 }
 
 .navbar {
-    background: linear-gradient(100deg, gray, #2c2c32);
+    /* background: linear-gradient(100deg, gray, #2c2c32); */
+    /* background-color: darkgray; */
+    /* background-color: whitesmoke; */
+    background: linear-gradient(30deg, lightgray, white 30%, gray);
     /* background-image: url(https://i.pinimg.com/originals/76/f2/59/76f25978aca6f32240ca289b41856466.jpg); */
     /* background-size: auto; */
     display: flex;
@@ -62,29 +149,69 @@ small {
 }
 
 .nav-link {
-    font-size: 1.1rem;
+    font-size: var(--text-link);
     text-decoration: none;
-    color: #9d9d9d;
+    color: black;
     padding: 0 1rem;
     transition: 0.2s;
 }
 .nav-link:hover {
-    color: white;
+    color: var(--color-action);
 }
 
 .active-nav-link {
-    color: white;
+    color: var(--color-action);
 }
 
 .nav-brand-link {
-    font-size: 1.4rem;
+    font-size: var(--text-link-extra-large);
     background-image: url(../images/logo.svg);
     background-size: 2rem;
     background-repeat: no-repeat;
     background-position: left 50%;
     padding-left: 2.5rem;
-    color: white;
+    color: black;
 }
+
+
+.arrow-open-button {
+    display: none;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: var(--border-radius-small);
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow-open-button-icon {
+    position: relative;
+    width: 75%;
+    scale: 0.9;
+    height: 0.25rem;
+    background-color: transparent;
+    transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.arrow-open-button-icon::before,
+.arrow-open-button-icon::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: 1rem;
+    transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.arrow-open-button-icon::before {
+    transform: translateY(-0.315rem) rotate(45deg) scale(0.7);
+}
+.arrow-open-button-icon::after {
+    transform: translateY(0.315rem) rotate(-45deg) scale(0.7);
+}
+
 
 .hamburger-button {
     display: none;
@@ -137,7 +264,9 @@ small {
         width: 100vw;
         align-items: flex-start;
         gap: 0.5rem;
-        transition: height 0.3s, padding 0.3s;
+        transition:
+            height 0.3s,
+            padding 0.3s;
         height: 0;
         padding: 0 0.5rem;
         pointer-events: none;
@@ -148,22 +277,27 @@ small {
         padding: 1rem 0.5rem;
         pointer-events: all;
     }
-    .nav-link {
+    .nav-link:not(.nav-brand-link) {
         color: white;
     }
 
-    .hamburger-button {
+    .hamburger-button,
+    .arrow-open-button {
         display: flex;
     }
 
-    .hamburger-button.active .hamburger-button-icon {
+    .hamburger-button.active .hamburger-button-icon,
+    .arrow-open-button.active .arrow-open-button-icon {
         background-color: transparent;
         transform: translateX(-100%);
+        scale: 1;
     }
-    .hamburger-button.active .hamburger-button-icon::before {
-        transform: translateX(100%) rotate(45deg);
-    }
-    .hamburger-button.active .hamburger-button-icon::after {
+    .hamburger-button.active .hamburger-button-icon::before,
+    .arrow-open-button.active .arrow-open-button-icon::before {
         transform: translateX(100%) rotate(-45deg);
+    }
+    .hamburger-button.active .hamburger-button-icon::after,
+    .arrow-open-button.active .arrow-open-button-icon::after {
+        transform: translateX(100%) rotate(45deg);
     }
 }

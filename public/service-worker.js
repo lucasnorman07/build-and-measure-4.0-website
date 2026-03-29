@@ -2,7 +2,6 @@ const CACHE_NAME = "BAM-cache-v24";
 const FILES_TO_CACHE = [
     // default route
     ".",    
-    ".",    
     // html
     "index.html",
     "docs.html",

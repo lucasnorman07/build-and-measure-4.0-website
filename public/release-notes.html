@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -66,7 +66,6 @@
             </ul>
             <button id="hamburger-button" class="hamburger-button" aria-label="Navigation dropdown">
                 <div class="hamburger-button-icon"></div>
-                <div class="hamburger-button-icon"></div>
             </button>
         </nav>
 
@@ -74,6 +73,7 @@
             <div id="release-notes-wrapper">
                 <div id="list-of-release-notes-wrapper">
                     <ul id="list-of-release-notes">
+                        <li><a href="#v-4.5.5">Version 4.5.5</a></li>
                         <li><a href="#v-4.5.0">Version 4.5.0</a></li>
                         <li><a href="#v-4.4.0">Version 4.4.0</a></li>
                         <li><a href="#v-4.3.0">Version 4.3.0</a></li>
@@ -86,17 +86,54 @@
                     </ul>
                     <button
                         id="toggle-list-of-release-notes-button"
-                        class="hamburger-button"
+                        class="arrow-open-button"
                         aria-label="Toggle list of release notes"
                     >
-                        <div class="hamburger-button-icon"></div>
+                        <div class="arrow-open-button-icon"></div>
                     </button>
                 </div>
 
                 <article id="release-notes">
+                    <section id="v-4.5.5" class="release">
+                        <h2>Release version 4.5.5</h2>
+                        <h3>Here are the key features of this update:</h3>
+                        <ul>
+                            <li>
+                                Refreshed start page with new features:
+                                <ul>
+                                    <li>
+                                        Sort projects by date modified, date opened, name and file
+                                        size
+                                    </li>
+                                    <li>Filter projects with a search bar</li>
+                                </ul>
+                            </li>
+                            <li>Improved fallback font handling for better support on Linux</li>
+                            <li>New setting to change the title block font</li>
+                            <li>
+                                New button to copy the crop region to clipboard as a PNG image (has
+                                the shortcut: "x + c")
+                            </li>
+                            <li>
+                                Objects can now get highlighted with a different color when you
+                                hover the mouse over them (if the new setting is enabled)
+                            </li>
+                            <li>
+                                Two new settings to change the hover color and activate/disable it
+                            </li>
+                            <li>
+                                New properties to modify the styles for dimension and angular
+                                dimension objects
+                            </li>
+                            <li>New setting for activating scale-aware annotations</li>
+                            <li>Improved/refreshed website</li>
+                            <li>More bug fixes...</li>
+                        </ul>
+                        <em class="release-date">TODO</em>
+                    </section>
                     <section id="v-4.5.0" class="release">
-                        <h3>Release version 4.5.0</h3>
-                        <h4>Here are the key features of this update:</h4>
+                        <h2>Release version 4.5.0</h2>
+                        <h3>Here are the key features of this update:</h3>
                         <ul>
                             <li>
                                 Two new buttons for controlling the crop region
@@ -125,8 +162,8 @@
                         <em class="release-date">2025-10-28</em>
                     </section>
                     <section id="v-4.4.0" class="release">
-                        <h3>Release version 4.4.0</h3>
-                        <h4>Here are the key features of this update:</h4>
+                        <h2>Release version 4.4.0</h2>
+                        <h3>Here are the key features of this update:</h3>
                         <ul>
                             <li>
                                 The drawing palette and context menu have now been replaced with a
@@ -163,9 +200,8 @@
                         <em class="release-date">2025-06-24</em>
                     </section>
                     <section id="v-4.3.0" class="release">
-                        <h3>Release version 4.3.0</h3>
-                        <h4>Here are the key features of this update:</h4>
-                        <h4>Here are the key features of this update:</h4>
+                        <h2>Release version 4.3.0</h2>
+                        <h3>Here are the key features of this update:</h3>
                         <ul>
                             <li>
                                 The command box is now used for entering values in the rotate, scale
@@ -181,10 +217,7 @@
                                 A quick way to toggle the polyline setting with the shortcut "p"
                             </li>
                             <li>New shortcut to open the settings menu: "control + ,"</li>
-                            <li>New shortcut to open the settings menu: "control + ,"</li>
                             <li>
-                                Improved the way the closest line is calculated in the split, trim
-                                and offset commands
                                 Improved the way the closest line is calculated in the split, trim
                                 and offset commands
                             </li>
@@ -204,12 +237,10 @@
                             <li>Fixed many more small issues...</li>
                         </ul>
                         <em class="release-date">2024-10-27</em>
-                        <em class="release-date">2024-10-27</em>
                     </section>
                     <section id="v-4.2.0" class="release">
-                        <h3>Release version 4.2.0</h3>
-                        <h4>Here are the key features of this update:</h4>
-                        <h4>Here are the key features of this update:</h4>
+                        <h2>Release version 4.2.0</h2>
+                        <h3>Here are the key features of this update:</h3>
                         <ul>
                             <li>New image system</li>
                             <li>New image object that preserves the aspect ratio when drawn</li>
@@ -232,12 +263,10 @@
                             <li title="Yeah yeah, I fixed many bugs and blah blah blah">...</li>
                         </ul>
                         <em class="release-date">2024-08-11</em>
-                        <em class="release-date">2024-08-11</em>
                     </section>
                     <section id="v-4.1.0" class="release">
-                        <h3>Release version 4.1.0</h3>
-                        <h4>Here are the key features of this update:</h4>
-                        <h4>Here are the key features of this update:</h4>
+                        <h2>Release version 4.1.0</h2>
+                        <h3>Here are the key features of this update:</h3>
                         <ul>
                             <li>Filter menu</li>
                             <li>Font families</li>
@@ -254,16 +283,13 @@
                             <li>Many bugs fixed...</li>
                         </ul>
                         <em class="release-date">2024-04-22</em>
-                        <em class="release-date">2024-04-22</em>
                     </section>
                     <section id="v-4.0.0" class="release">
-                        <h3>Release version 4.0.0</h3>
-                        <h4>
+                        <h2>Release version 4.0.0</h2>
+                        <h3>
                             This is the first release of Build and Measure as a desktop app. Here
                             are the key features of this update:
-                            This is the first release of Build and Measure as a desktop app. Here
-                            are the key features of this update:
-                        </h4>
+                        </h3>
                         <ul>
                             <li>Completely rewritten code</li>
                             <li>Much more stable than versions 1, 2 and 3</li>
@@ -278,38 +304,32 @@
                             <li>More drawing/object properties and settings</li>
                         </ul>
                         <em class="release-date">2024-01-29</em>
-                        <em class="release-date">2024-01-29</em>
                     </section>
                     <section id="v-3.0.0" class="release">
-                        <h3>Release version 3.0</h3>
-                        <h4>
+                        <h2>Release version 3.0</h2>
+                        <h3>
                             The version 3.0 is the last web version of Build and Measure and is
                             available at
-                            <a target="blank" href="https://buildandmeasure.netlify.app"
+                            <a target="_blank" href="https://buildandmeasure.netlify.app"
                                 >buildandmeasure.netlify.app</a
                             >.
-                        </h4>
-                        <em class="release-date">2022-10-9</em>
+                        </h3>
                         <em class="release-date">2022-10-9</em>
                     </section>
                     <section id="v-2.0.0" class="release">
-                        <h3>Release version 2.0</h3>
-                        <h4>
+                        <h2>Release version 2.0</h2>
+                        <h3>
                             The version 2.0 of Build and Measure is no longer available and has been
                             replaced with later versions.
-                            replaced with later versions.
-                        </h4>
-                        <em class="release-date">2022-08-21</em>
+                        </h3>
                         <em class="release-date">2022-08-21</em>
                     </section>
                     <section id="v-1.0.0" class="release">
-                        <h3>Release version 1.0</h3>
-                        <h4>
+                        <h2>Release version 1.0</h2>
+                        <h3>
                             The version 1.0 of Build and Measure is no longer available and has been
                             replaced with later versions.
-                            replaced with later versions.
-                        </h4>
-                        <em class="release-date">2022-07-30</em>
+                        </h3>
                         <em class="release-date">2022-07-30</em>
                     </section>
                 </article>
