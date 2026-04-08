@@ -318,7 +318,7 @@ body:has(#fullscreen-image.active) {
 #get-started p {
     color: var(--muted-text-color);
 }
-#get-started iframe {
+#get-started .promo-video {
     margin-top: var(--spacing-medium);
     width: 80dvw;
     max-width: 1000px;
@@ -451,17 +451,19 @@ footer p:not(:first-child) {
     }
 }
 
-@media (max-width: 800px) {
-    #about-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
+@media (max-width: 900px) {
     #sliding-examples-cards > img {
         min-width: 47.5%;
     }
 
     #sliding-examples.show > img {
         transform: none !important;
+    }
+}
+
+@media (max-width: 800px) {
+    #about-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .feature-section img.extra-spacing {
