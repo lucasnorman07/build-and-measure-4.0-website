@@ -1,5 +1,6 @@
 User-agent: *
 Disallow: /license.html
+Disallow: /privacy-notice.html
 Disallow: /404.html
 
 Sitemap: https://buildandmeasure.app/sitemap.xml

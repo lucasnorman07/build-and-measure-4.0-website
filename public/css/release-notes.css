@@ -87,6 +87,7 @@
         left: -7.3rem;
         top: 0;
         transition: left 0.5s;
+        height: 100%;
     }
 
     #list-of-release-notes-wrapper.active {
@@ -97,7 +98,7 @@
         position: absolute;
         left: 0;
         top: var(--navbar-height);
-        height: calc(100dvh - var(--navbar-height));
+        height: calc(100% - var(--navbar-height));
         border-radius: 0;
         border-left: none;
         border-right: 0.15rem solid #0071bc;

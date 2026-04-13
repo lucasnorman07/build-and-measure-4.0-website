@@ -61,8 +61,14 @@
     width: 100%;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
     #download-cards-wrapper {
         gap: 2rem;
+    }
+}
+
+@media (max-height: 700px) or (max-width: 766px) {
+    #download-cards-wrapper {
+        margin-top: 1rem;
     }
 }

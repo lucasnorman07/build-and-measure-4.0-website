@@ -484,6 +484,36 @@ footer p:not(:first-child) {
     .feature-section img.extra-spacing {
         margin: 0;
     }
+
+    #get-started .promo-video {
+        width: 90dvw;
+    }
+
+    section {
+        padding-top: var(--medium-section-spacing);
+        padding-bottom: var(--medium-section-spacing);
+    }
+    /* still keep the same top padding for the about-section */
+    #about-section {
+        padding-top: var(--large-section-spacing);
+    }
+}
+
+@media (max-width: 500px) {
+    #start-links {
+        gap: var(--spacing-extra-small);
+    }
+
+    #start-links .start-link {
+        padding: var(--spacing-extra-extra-small) var(--spacing-extra-small);
+        gap: var(--spacing-extra-extra-small);
+    }
+}
+
+@media (max-width: 340px) {
+    #start-links {
+        flex-direction: column-reverse;
+    }
 }
 
 @media (max-width: 430px) {

@@ -1,4 +1,4 @@
-const CACHE_NAME = "BAM-cache-v24";
+const CACHE_NAME = "BAM-cache-v27";
 const FILES_TO_CACHE = [
     // default route
     ".",    
