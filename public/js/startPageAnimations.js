@@ -6,7 +6,6 @@ const intersectionObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
     
         if (entry.isIntersecting && entry.intersectionRatio > 0) {
-            console.log({target: entry.target});
             entry.target.classList.add("show");
         }
     });
