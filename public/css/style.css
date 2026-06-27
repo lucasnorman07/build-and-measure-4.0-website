@@ -149,15 +149,27 @@ small {
     align-items: center;
 }
 
-.nav-link {
+.nav-link,
+.nav-dropdown-title,
+.nav-dropdown-link {
     font-size: var(--text-link);
     text-decoration: none;
     color: black;
     padding: 0 1rem;
     transition: 0.2s;
 }
-.nav-link:hover {
+.nav-link:hover,
+.nav-dropdown-link:hover {
     color: var(--color-action);
+}
+
+.nav-dropdown-title {
+    background-image: url(../images/dropdown-icon-dark.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 100% 0;
+    padding-right: 1.5rem;
+    margin-right: 1rem;
 }
 
 .active-nav-link {
@@ -174,6 +186,26 @@ small {
     color: black;
 }
 
+.nav-dropdown {
+    position: relative;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.nav-dropdown .nav-dropdown-links {
+    display: none;
+    position: absolute;
+    top: 3rem;
+    border-radius: var(--border-radius-medium);
+    width: max-content;
+    left: 0;
+    background-color: lightgray;
+    padding: 1rem 0;
+    gap: 0.5rem;
+}
+.nav-dropdown:hover .nav-dropdown-links {
+    display: flex;
+    flex-direction: column;
+}
 
 .arrow-open-button {
     display: none;
@@ -213,7 +245,6 @@ small {
     transform: translateY(0.315rem) rotate(-45deg) scale(0.7);
 }
 
-
 .hamburger-button {
     display: none;
     border: none;
@@ -250,7 +281,7 @@ small {
     transform: translateY(0.5rem);
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
     .navbar {
         justify-content: space-between;
         padding: 0 1.5rem;
@@ -278,7 +309,26 @@ small {
         padding: 1rem 0.5rem;
         pointer-events: all;
     }
-    .nav-link:not(.nav-brand-link) {
+    .nav-link:not(.nav-brand-link),
+    .nav-dropdown-title:not(.nav-brand-link) {
+        color: white;
+    }
+
+    .nav-dropdown {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .nav-dropdown .nav-dropdown-title {
+        background-image: url(../images/dropdown-icon-light.svg);
+    }
+    .nav-dropdown .nav-dropdown-links {
+        top: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        background-color: transparent;
+        padding: 0 1rem;
+    }
+    .nav-dropdown .nav-dropdown-links .nav-dropdown-link {
         color: white;
     }
 
