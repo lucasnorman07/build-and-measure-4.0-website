@@ -168,6 +168,15 @@ small {
     color: var(--color-action);
 }
 
+.nav-dropdown-title {
+    background-image: url(../images/dropdown-icon-dark.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 100% 0;
+    padding-right: 1.5rem;
+    margin-right: 1rem;
+}
+
 .active-nav-link {
     color: var(--color-action);
 }
